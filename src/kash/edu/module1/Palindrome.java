@@ -11,6 +11,7 @@ import java.util.Locale;
 
 public class Palindrome {
 
+    // First method: for-loop
     public static boolean isPalindrome1(String text) {
         text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // remove garbage
         text = text.toLowerCase();
@@ -25,44 +26,27 @@ public class Palindrome {
         return result;
     }
 
-    // build a reverse string
+    // Second method: Reverse String
     public static boolean isPalindrome2(String text) {
         text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // remove garbage
         text = text.toLowerCase();
         boolean result = true;
-
-//        for (int i = 35; i < 36; i++) {
-//            System.out.println(i + ". " + (char) i);
-//        }
-//        System.out.println(word1.length());
-//        boolean result = true;
-//        int length = word1.length();
-//        for (int i = 0; i < word1.length(); i++) {
-//            if (word1.charAt(i) != word1.charAt(length - 1 - i) ) {
-//                result = false;
-//                break;
-//            }
-//        }
-
-
-
+    // write code here
         return result;
     }
-    // use StringBuilder
+
+    // Third method: StringBuilder usage
     public static boolean isPalindrome3(String text) {
         text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // remove garbage
         text = text.toLowerCase();
         boolean result = true;
 
-//        StringBuilder builder = new StringBuilder(text);
-//        String reversed = builder.reverse().toString();
-//        System.out.println(reversed);
-//        if (text.equals(reversed)) {
-//            System.out.println(text + " is a palindrome.");
-//        } else {
-//            System.out.println(text + " is NOT a palindrome.");
-//        }
+        StringBuilder builder = new StringBuilder(text);
+        String reversed = builder.reverse().toString();
 
+        if (!text.equals(reversed)) {
+            result = false;
+        }
         return result;
     }
 

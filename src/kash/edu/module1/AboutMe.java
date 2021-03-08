@@ -10,46 +10,44 @@ package kash.edu.module1;
 public class AboutMe {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // type byte
+        byte myAge = 22;
+        System.out.println("My age is " + myAge + " years.");
 
-        // 8 primitive types in java
-        // byte +-127
-        byte myAge = 22; // +-127
-        System.out.println(" My age is " + myAge + " years.");
+        // type short
+        short yearOfBirth = 1998;
+        System.out.println("I was born in " + yearOfBirth + " year.");
 
-        // short 2^16 ~ 65000
-        short year = 2021;
-        System.out.println(" We have " + year + " year now.");
+        // type int
+        int numberOfDegrees = 2;
+        System.out.println("I have " + numberOfDegrees + " university degrees: " +
+                "the bachelor's degree in linguistics and " +
+                "the master's degree in economic cybernetics.");
 
-        // int 2^32 ~ 2 000 000 000
-        int mySalary = 100_000;
-        System.out.println(" My salary is " + mySalary + "$ a month.");
+        // type long
+        long numberOfStudents = 40_000l;
+        System.out.println("There are " + numberOfStudents +
+                " students in my university.");
 
-        // long 2^64
-        long populationGlobal = 7_000_000_000l;
-        System.out.println(" Global population is about " + populationGlobal + " humans.");
+        // type float
+        float diplomaScore = 91.5f;
+        System.out.println("My diploma score is " + diplomaScore + ".");
 
-        // float
-        float height = 185.5f;
-        System.out.println(" My height is " + height + " cms.");
+        // type double
+        double myHeight = 163.5;
+        System.out.println("My height is " + myHeight + " cm.");
 
-        // double 2.4444444444444444444444
-        double weight = 95.9;
-        System.out.println(" My weight is " + weight + " kgs.");
-
-        //char
+        // type char
         char sign = 'K';
-        System.out.println(" The first letter of my surname is " + sign);
+        System.out.println("The first letter of my surname is " + sign + ".");
 
-        //boolean true/false
-        boolean abcd = true;
-        System.out.println(" Today it is the 1st of March. It is" + abcd);
+        // type boolean
+        boolean wantImprove = true;
+        System.out.println("I want to level up my programming skills! " +
+                "It is" + wantImprove);
 
-        //string
-        String str = "Hello Java";
+        // type string
+        String str = "I would like to level up my programming skills!";
         System.out.println(str);
-
-        // 2 * 2 = 4 "Сколько будет 2 * 2 = 4?" 1 - True  0 - False
-        // 10 * 10 = 100  (2 + 2 = 100) двоичный код
     }
 }

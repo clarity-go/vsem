@@ -9,7 +9,7 @@ package kash.edu.module1;
 
 public class Integral {
 
-    public static double getIntegral(int secant){
+    public static double getIntegral(int secant) {
         double start = 0;
         double finish = Math.PI;
         int steps = 10;
@@ -20,7 +20,7 @@ public class Integral {
         for (int i = 0; i < steps; i++) {
             if(Math.sin(i * width) < 0.1 * secant) {
                 height = Math.sin(i * width);
-            } else{
+            } else {
                 height = 0.1 * secant;
             }
             double currentArea = height * width;
