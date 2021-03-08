@@ -1,4 +1,5 @@
-package kash.edu.module1;/*
+package kash.edu.module1;
+/*
   @author   Alona Kashpruk
   @project   vsem
   @class  Palindrome
@@ -47,12 +48,12 @@ public class Palindrome {
         String text = "Кинь лед зебре, бобер бездельник!";
 
         System.out.println(" The first way");
-        System.out.println(text + "is a palindrome? " + isPalindrome1(text));
+        System.out.println(text + " Is a palindrome? " + isPalindrome1(text));
 
         System.out.println(" The second way");
-        System.out.println(text + "is a palindrome? " + isPalindrome2(text));
+        System.out.println(text + " Is a palindrome? " + isPalindrome2(text));
 
         System.out.println(" The third way");
-        System.out.println(text + "is a palindrome? " + isPalindrome3(text));
+        System.out.println(text + " Is a palindrome? " + isPalindrome3(text));
     }
 }
