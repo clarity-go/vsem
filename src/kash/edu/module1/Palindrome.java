@@ -30,7 +30,21 @@ public class Palindrome {
         text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // remove garbage
         text = text.toLowerCase();
         boolean result = true;
-        // write code here
+
+//        for (int i = 35; i < 36; i++) {
+//            System.out.println(i + ". " + (char) i);
+//        }
+//        System.out.println(word1.length());
+//        boolean result = true;
+//        int length = word1.length();
+//        for (int i = 0; i < word1.length(); i++) {
+//            if (word1.charAt(i) != word1.charAt(length - 1 - i) ) {
+//                result = false;
+//                break;
+//            }
+//        }
+
+
 
         return result;
     }
@@ -39,7 +53,15 @@ public class Palindrome {
         text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // remove garbage
         text = text.toLowerCase();
         boolean result = true;
-        // write code here
+
+//        StringBuilder builder = new StringBuilder(text);
+//        String reversed = builder.reverse().toString();
+//        System.out.println(reversed);
+//        if (text.equals(reversed)) {
+//            System.out.println(text + " is a palindrome.");
+//        } else {
+//            System.out.println(text + " is NOT a palindrome.");
+//        }
 
         return result;
     }
