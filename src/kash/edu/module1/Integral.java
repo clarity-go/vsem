@@ -1,4 +1,5 @@
-package kash.edu.module1;/*
+package kash.edu.module1;
+/*
   @author   Alona Kashpruk
   @project   vsem
   @class  Integral
@@ -12,17 +13,17 @@ public class Integral {
         double start = 0;
         double finish = Math.PI;
         int steps = 10;
-        double step = (finish - start) / steps;
+        double width = (finish - start) / steps;
         double area = 0;
         double height = 0;
 
         for (int i = 0; i < steps; i++) {
-            if(Math.sin(i * step) < 0.1 * secant) {
-                height = Math.sin(i * step);
+            if(Math.sin(i * width) < 0.1 * secant) {
+                height = Math.sin(i * width);
             } else{
                 height = 0.1 * secant;
             }
-            double currentArea = height * step;
+            double currentArea = height * width;
             area = area + currentArea;
         }
         return area;
