@@ -44,7 +44,7 @@ public class Palindrome {
     }
 
     public static void main(String[] args) {
-        String text = "abcdcba";
+        String text = "Кинь лед зебре, бобер бездельник!";
 
         System.out.println(" The first way");
         System.out.println(text + "is a palindrome? " + isPalindrome1(text));
