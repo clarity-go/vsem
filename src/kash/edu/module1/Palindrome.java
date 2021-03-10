@@ -1,5 +1,5 @@
 package kash.edu.module1;
-/*
+/**
   @author   Alona Kashpruk
   @project   vsem
   @class  Palindrome
@@ -28,16 +28,20 @@ public class Palindrome {
 
     // Second method: Reverse String
     public static boolean isPalindrome2(String text) {
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // remove garbage
+        // remove garbage
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
         text = text.toLowerCase();
-        boolean result = true;
-    // write code here
-        return result;
+        String reversed = "";
+        for (int i = text.length() - 1; i >= 0; i--) {
+            reversed += text.charAt(i);
+        }
+        return reversed.equals(text);
     }
 
     // Third method: StringBuilder usage
     public static boolean isPalindrome3(String text) {
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // remove garbage
+        // remove garbage
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
         text = text.toLowerCase();
         boolean result = true;
 
@@ -48,18 +52,21 @@ public class Palindrome {
             result = false;
         }
         return result;
+
+        // тернарный оператор
+        // return (reversed.equals(text)) ? true : false;
     }
 
     public static void main(String[] args) {
-        String text = "Кинь лед зебре, бобер бездельник!";
+        String text = "No lemon, no melon";
 
-        System.out.println(" The first way");
-        System.out.println(text + " Is a palindrome? " + isPalindrome1(text));
+        System.out.println(" The 1st way:");
+        System.out.println(text + ". Is a palindrome: " + isPalindrome1(text));
 
-        System.out.println(" The second way");
-        System.out.println(text + " Is a palindrome? " + isPalindrome2(text));
+        System.out.println(" The 2nd way:");
+        System.out.println(text + ". Is a palindrome: " + isPalindrome2(text));
 
-        System.out.println(" The third way");
-        System.out.println(text + " Is a palindrome? " + isPalindrome3(text));
+        System.out.println(" The 3rd way:");
+        System.out.println(text + ". Is a palindrome: " + isPalindrome3(text));
     }
 }
