@@ -1,11 +1,11 @@
 package kash.edu.module1;
-/*
+/**
   @author   Alona Kashpruk
   @project   vsem
   @class  AboutMe
   @version  1.0.0 
   @since 08.03.2021 - 18.11
-*/
+**/
 
 public class AboutMe {
 
@@ -20,9 +20,7 @@ public class AboutMe {
 
         // type int
         int numberOfDegrees = 2;
-        System.out.println("I have " + numberOfDegrees + " university degrees: " +
-                "the bachelor's degree in linguistics and " +
-                "the master's degree in economic cybernetics.");
+        System.out.println("I have " + numberOfDegrees + " university degrees.");
 
         // type long
         long numberOfStudents = 40_000l;

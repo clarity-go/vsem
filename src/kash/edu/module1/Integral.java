@@ -1,11 +1,11 @@
 package kash.edu.module1;
-/*
+/**
   @author   Alona Kashpruk
   @project   vsem
   @class  Integral
   @version  1.0.0 
   @since 08.03.2021 - 19.55
-*/
+**/
 
 public class Integral {
 

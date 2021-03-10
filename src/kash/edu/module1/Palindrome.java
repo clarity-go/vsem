@@ -5,7 +5,7 @@ package kash.edu.module1;
   @class  Palindrome
   @version  1.0.0 
   @since 08.03.2021 - 18.14
-*/
+**/
 
 import java.util.Locale;
 
@@ -13,6 +13,7 @@ public class Palindrome {
 
     // First method: for-loop
     public static boolean isPalindrome1(String text) {
+        // remove garbage
         text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // remove garbage
         text = text.toLowerCase();
 
