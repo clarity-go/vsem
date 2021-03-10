@@ -28,7 +28,7 @@ public class Integral {
                 height = 0.1 * secant;
             }
             double currentArea = height * width;
-            area = area + currentArea;
+            area += currentArea;
         }
         return area;
     }
@@ -37,3 +37,6 @@ public class Integral {
         System.out.println(getIntegral(5));
     }
 }
+
+
+

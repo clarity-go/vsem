@@ -34,7 +34,7 @@ public class AboutMe {
         System.out.println("My diploma score is " + diplomaScore + ".");
 
         // type double
-        double myHeight = 163.5;
+        double myHeight = 162.5;
         System.out.println("My height is " + myHeight + " cm.");
 
         // type char

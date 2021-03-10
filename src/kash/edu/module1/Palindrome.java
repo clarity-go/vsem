@@ -13,10 +13,10 @@ import java.util.Locale;
 
 public class Palindrome {
 
-    // First method: for-loop
+    // First method: For-Loop
     public static boolean isPalindrome1(String text) {
         // remove garbage
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // remove garbage
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
         text = text.toLowerCase();
 
         boolean result = true;
@@ -41,7 +41,7 @@ public class Palindrome {
         return reversed.equals(text);
     }
 
-    // Third method: StringBuilder usage
+    // Third method: StringBuilder
     public static boolean isPalindrome3(String text) {
         // remove garbage
         text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
@@ -56,7 +56,7 @@ public class Palindrome {
         }
         return result;
 
-        // тернарный оператор
+        // the conditional (ternary) operator
         // return (reversed.equals(text)) ? true : false;
     }
 
