@@ -9,6 +9,8 @@ package kash.edu.module1;
 
 import java.util.Locale;
 
+// Task: Check a string as a palindrome.
+
 public class Palindrome {
 
     // First method: for-loop

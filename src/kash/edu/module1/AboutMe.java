@@ -7,6 +7,8 @@ package kash.edu.module1;
   @since 08.03.2021 - 18.11
 **/
 
+// Task: Write to console 8 facts about yourself using primitive types.
+
 public class AboutMe {
 
     public static void main(String[] args) {
@@ -19,8 +21,8 @@ public class AboutMe {
         System.out.println("I was born in " + yearOfBirth + " year.");
 
         // type int
-        int numberOfDegrees = 2;
-        System.out.println("I have " + numberOfDegrees + " university degrees.");
+        int degreeNumber = 2;
+        System.out.println("I have " + degreeNumber + " university degrees.");
 
         // type long
         long numberOfStudents = 40_000l;
@@ -28,7 +30,7 @@ public class AboutMe {
                 " students in my university.");
 
         // type float
-        float diplomaScore = 91.5f;
+        float diplomaScore = 90.5f;
         System.out.println("My diploma score is " + diplomaScore + ".");
 
         // type double
@@ -36,8 +38,8 @@ public class AboutMe {
         System.out.println("My height is " + myHeight + " cm.");
 
         // type char
-        char sign = 'K';
-        System.out.println("The first letter of my surname is " + sign + ".");
+        char surnameLetter = 'K';
+        System.out.println("The first letter of my surname: " + surnameLetter);
 
         // type boolean
         boolean wantImprove = true;
@@ -45,7 +47,7 @@ public class AboutMe {
                 "It is" + wantImprove);
 
         // type string
-        String str = "I would like to level up my programming skills!";
+        String str = "I would like to develop myself!";
         System.out.println(str);
     }
 }
