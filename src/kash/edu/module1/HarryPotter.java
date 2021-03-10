@@ -23,7 +23,7 @@ public class HarryPotter {
         // C:\Users\Lenovo\Desktop\MY
         String text = new String();
 
-        text = new String(Files.readAllBytes(Paths.get("C:\\Users\\Lenovo\\Desktop\\MY\\Java")));
+        text = new String(Files.readAllBytes(Paths.get("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\harry.txt")));
         text.substring(0, 100);
         System.out.println(text.length()); // count the number of symbols
 
