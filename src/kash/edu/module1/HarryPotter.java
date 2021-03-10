@@ -19,7 +19,7 @@ public class HarryPotter {
 
         // Download a text of a novel about Harry Potter to string
         String text = new String();
-        text = new String(Files.readAllBytes(Paths.get("C:\\Users\\Lenovo\\Desktop\\harry.txt")));
+        text = new String(Files.readAllBytes(Paths.get("D:\\harry.txt")));
         text.substring(0, 100);
 
         // Clean the words from a punctuation signs
