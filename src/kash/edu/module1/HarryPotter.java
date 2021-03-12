@@ -28,7 +28,7 @@ public class HarryPotter {
 
         // Download a text of a novel about Harry Potter to string
         String text = new String();
-        text = new String(Files.readAllBytes(Paths.get("C:\\Desktop\\MY\\Java\\harry.txt")));
+        text = new String(Files.readAllBytes(Paths.get("D:\\harry.txt")));
 
         // Clean the words from a punctuation signs
         text = text.replaceAll("[^A-Za-z ']", "");
@@ -37,6 +37,7 @@ public class HarryPotter {
         String[] words = text.split(" +");
         String stringOfDistincts = "";
 
+        // Select distinct words and insert into stringOfDistincts
         for (int i = 0; i < words.length; i++) {
             if(!stringOfDistincts.contains(words[i])) {
                 stringOfDistincts += words[i] + " ";
@@ -55,39 +56,6 @@ public class HarryPotter {
     }
 }
 /* OUTPUT:
-'Alohomora
-'Atta
-'Cause
-'Course
-'Dumbledore
-'Harry's
-'Jordan
-'Mr
-'NMat
-'Oh
-'Pig
-'Quidditch'
-'Scuse
-'Snot
-'Up'
-'Yes
-'You
-'YouKnowWho'
-'cause
-'cept
-'f'
-'gar'
-'hocus
-'m'
-'please'
-'s'
-'smatter
-'there's
-'til
-'to
-'undred
-'wand
-AAAAAAAAAARGH
 ALBUS
 ALL
 ALLEY

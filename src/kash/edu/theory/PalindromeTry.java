@@ -1,19 +1,12 @@
-package kash.edu.module1;
+package kash.edu.theory;/*
+  @author   Alona Kashpruk
+  @project   vsem
+  @class  PalindromeTry
+  @version  1.0.0 
+  @since 12.03.2021 - 22.08
+*/
 
-/**
- @author   Alona Kashpruk
- @project   vsem
- @class  Palindrome
- @version  1.0.0
- @since 08.03.2021 - 18.14
- **/
-
-import java.util.Locale;
-
-// Task: Check a string as a palindrome.
-
-public class Palindrome {
-
+public class PalindromeTry {
     // First method: For-Loop
     public static boolean isPalindrome1(String text) {
         // remove garbage
@@ -73,11 +66,3 @@ public class Palindrome {
         System.out.println(text + ". Is a palindrome: " + isPalindrome3(text));
     }
 }
-/*
- *       The 1st way:
- *  No lemon, no melon. Is a palindrome: true
- *      The 2nd way:
- *  No lemon, no melon. Is a palindrome: true
- *      The 3rd way:
- *  No lemon, no melon. Is a palindrome: true
- */

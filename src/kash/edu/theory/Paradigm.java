@@ -37,7 +37,5 @@ public class Paradigm {
 
         // the conditional (ternary) operator
         // return (reversed.equals(text)) ? true : false;
-        // Integral:
-        // Math.sin(i * width) < 0.1 * secant ? height = Math.sin(i * width) : height = 0.1 * secant;
 }
 }

@@ -21,6 +21,7 @@ public class Palindrome {
         text = text.toLowerCase();
 
         boolean result = true;
+
         for (int i = 0; i < text.length(); i++) {
             if (text.charAt(i) != text.charAt(text.length() - 1 - i)) {
                 result = false;
@@ -36,6 +37,7 @@ public class Palindrome {
         text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
         text = text.toLowerCase();
         String reversed = "";
+
         for (int i = text.length() - 1; i >= 0; i--) {
             reversed += text.charAt(i);
         }
@@ -45,20 +47,11 @@ public class Palindrome {
     // Third method: StringBuilder
     public static boolean isPalindrome3(String text) {
         // remove garbage
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", "").toLowerCase();;
-
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", "").toLowerCase();
         boolean result = true;
-
         StringBuilder builder = new StringBuilder(text);
-        String reversed = builder.reverse().toString();
-
-        if (!text.equals(reversed)) {
-            result = false;
-        }
-        return result;
+        return(builder.reverse().toString().equals(text));
     }
-    //      Optimized version:
-    //      return(builder.reverse().toString().equals(text));
 
     public static void main(String[] args) {
         String text = "No lemon, no melon";
@@ -73,7 +66,7 @@ public class Palindrome {
         System.out.println(text + ". Is a palindrome: " + isPalindrome3(text));
     }
 }
-/*
+/* Output:
 *       The 1st way:
 *  No lemon, no melon. Is a palindrome: true
 *      The 2nd way:
@@ -81,3 +74,5 @@ public class Palindrome {
 *      The 3rd way:
 *  No lemon, no melon. Is a palindrome: true
 */
+
+

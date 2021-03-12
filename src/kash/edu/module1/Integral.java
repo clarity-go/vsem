@@ -8,30 +8,23 @@ package kash.edu.module1;
   @since 08.03.2021 - 19.55
 **/
 
-// Task: Get the area limited by the following functions   x = 0 .. 3.14;
-// y = sin(x);   y = 0.1 * k, where k is the last cipher in your student card.
+// Task: Get the area limited by the following functions x = 0 .. 3.14; y = sin(x);
+// y = 0.1 * k, where k is the last cipher in your student card.
 
 public class Integral {
 
     public static double getIntegral(int secant) {
-        double beginning = 0;
-        double end = Math.PI;
+
+        double start = 0;
+        double finish = Math.PI;
         int numberOfSteps = 10;
         double area = 0;
         double height = 0;
-
-        double width = (end - beginning) / numberOfSteps;
-
-
+        double width = (finish - start) / numberOfSteps;
 
         for (int i = 0; i < numberOfSteps; i++) {
-            if(Math.sin(i * width) < 0.1 * secant) {
-                height = Math.sin(i * width);
-            } else {
-                height = 0.1 * secant;
-            }
-            double currentArea = height * width;
-            area += currentArea;
+            height = Math.sin(i * width) < 0.1 * secant ? Math.sin(i * width) : 0.1 * secant;
+            area += height * width;
         }
         return area;
     }

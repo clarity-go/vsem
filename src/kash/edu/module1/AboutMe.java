@@ -45,7 +45,7 @@ public class AboutMe {
         // type boolean
         boolean wantImprove = true;
         System.out.println("I want to level up my programming skills! " +
-                "It is" + wantImprove);
+                "It is " + wantImprove + ".");
 
         // type string
         String str = "I would like to develop myself!";
@@ -60,6 +60,6 @@ public class AboutMe {
 * My diploma score is 90.5.
 * My height is 162.5 cm.
 * The first letter of my surname: K
-* I want to level up my programming skills! It istrue
+* I want to level up my programming skills! It is true.
 * I would like to develop myself!
 */
