@@ -13,9 +13,18 @@ public class Exercise1 {
     public static void main(String[] args) {
         String string = "Hello world!";
 
+        // convert int to string
+        int firstType = 1234;
+        String c = String.valueOf(firstType);
+        System.out.println(c + 666);
+
+        // convert string to int
+        String stringType = "1234";
+        int secondInt = Integer.valueOf(stringType);
+        int addedNumber = secondInt + 1000;
+        System.out.println(addedNumber);
+
         Integer b = 567; // class оббертка
-        String str3 = " 1234";
-        int d = Integer.valueOf(str3);
 
         int[] arrInt = {4, 8, 9, 3, 11};
         Arrays.sort(arrInt);
@@ -26,7 +35,7 @@ public class Exercise1 {
         // ASC - по возрастанию
         // DESC - по убыванию
         Integer[] arrInt2 = {5, 6, 7, 8, 9};
-//       Arrays.sort(arrInt, Collections.reverseOrder());
+        Arrays.sort(arrInt2, Collections.reverseOrder());
 
         byte b1 = 2;
         Byte b2 = 2;

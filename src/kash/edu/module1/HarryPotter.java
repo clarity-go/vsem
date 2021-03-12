@@ -19,7 +19,7 @@ public class HarryPotter {
 
         // Download a text of a novel about Harry Potter to string
         String text = new String();
-        text = new String(Files.readAllBytes(Paths.get("D:\\harry.txt")));
+        text = new String(Files.readAllBytes(Paths.get("C:\\Desktop\\MY\\Java\\harry.txt")));
         text.substring(0, 100);
 
         // Clean the words from a punctuation signs
@@ -47,68 +47,104 @@ public class HarryPotter {
     }
 }
 /* OUTPUT:
-* ALBUS
-* ALL
-* ALLEY
-* ALLOWED
-* AM
-* AND
-* ANYTHING
-* AT
-* Aaah
-* Aargh
-* Abbott
-* About
-* Absolutely
-* According
-* Adalbert
-* Add
-* Adrian
-* Africa
-* African
-* After
-* Against
-* Ages
-* Agrippa
-* Ah
-* Aha
-* Ahead
-* Ahem
-* Ahern
-* Alas
-* Alberic
-* Albus
-* Algie
-* Alicia
-* All
-* Alley
-* Although
-* Always
-* Am
-* And
-* Angelina
-* Another
-* AntiCheating
-* AntiDark
-* Anyone
-* Anything
-* Anyway
-* Apothecary
-* Are
-* Aren't
-* Argus
-* Around
-* Arsenius
-* Arts
-* As
-* Asked
-* Astronomy
-* At
-* Ate
-* August
-* Aunt
-* Auntie
-* BC
-* BED
-* BEHIND
+'Alohomora
+'Atta
+'Cause
+'Course
+'Dumbledore
+'Harry's
+'Jordan
+'Mr
+'NMat
+'Oh
+'Pig
+'Quidditch'
+'Scuse
+'Snot
+'Up'
+'Yes
+'You
+'YouKnowWho'
+'cause
+'cept
+'f'
+'gar'
+'hocus
+'m'
+'please'
+'s'
+'smatter
+'there's
+'til
+'to
+'undred
+'wand
+AAAAAAAAAARGH
+ALBUS
+ALL
+ALLEY
+ALLOWED
+AM
+AND
+ANYTHING
+AT
+Aaah
+Aargh
+Abbott
+Abou'
+About
+Absolutely
+According
+Adalbert
+Add
+Adrian
+Africa
+African
+After
+Against
+Ages
+Agrippa
+Ah
+Aha
+Ahead
+Ahem
+Ahern
+Alas
+Alberic
+Albus
+Algie
+Alicia
+All
+Alley
+Although
+Always
+Am
+An'
+And
+Angelina
+Another
+AntiCheating
+AntiDark
+Anyone
+Anythin'
+Anything
+Anyway
+Apothecary
+Are
+Aren't
+Argus
+Around
+Arsenius
+Arts
+As
+Asked
+Astronomy
+At
+Ate
+August
+Aunt
+Auntie
+BC
+BED
+BEHIND
 */
