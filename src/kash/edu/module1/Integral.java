@@ -39,4 +39,4 @@ public class Integral {
     }
 }
 
-// Output: 1.9835235375094544
+// Output: 1.2937185326289742
