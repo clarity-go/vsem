@@ -22,6 +22,8 @@ public class Integral {
 
         double width = (end - beginning) / numberOfSteps;
 
+
+
         for (int i = 0; i < numberOfSteps; i++) {
             if(Math.sin(i * width) < 0.1 * secant) {
                 height = Math.sin(i * width);

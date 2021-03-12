@@ -1,12 +1,12 @@
 package kash.edu.module1;
 
 /**
-  @author   Alona Kashpruk
-  @project   vsem
-  @class  Palindrome
-  @version  1.0.0 
-  @since 08.03.2021 - 18.14
-**/
+ @author   Alona Kashpruk
+ @project   vsem
+ @class  Palindrome
+ @version  1.0.0
+ @since 08.03.2021 - 18.14
+ **/
 
 import java.util.Locale;
 
@@ -74,10 +74,10 @@ public class Palindrome {
     }
 }
 /*
-*       The 1st way:
-*  No lemon, no melon. Is a palindrome: true
-*      The 2nd way:
-*  No lemon, no melon. Is a palindrome: true
-*      The 3rd way:
-*  No lemon, no melon. Is a palindrome: true
-*/
+ *       The 1st way:
+ *  No lemon, no melon. Is a palindrome: true
+ *      The 2nd way:
+ *  No lemon, no melon. Is a palindrome: true
+ *      The 3rd way:
+ *  No lemon, no melon. Is a palindrome: true
+ */
