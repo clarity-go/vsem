@@ -55,9 +55,6 @@ public class Palindrome {
             result = false;
         }
         return result;
-
-        // the conditional (ternary) operator
-        // return (reversed.equals(text)) ? true : false;
     }
 
     public static void main(String[] args) {

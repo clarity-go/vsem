@@ -35,5 +35,7 @@ public class Paradigm {
 
         // ------------------- 5th paradigm: ARRAYS -------------------
 
+        // the conditional (ternary) operator
+        // return (reversed.equals(text)) ? true : false;
 }
 }
