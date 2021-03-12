@@ -35,8 +35,8 @@ public class Integral {
     }
 
     public static void main(String[] args) {
-        System.out.println(getIntegral(4));
+        System.out.println(getIntegral(5));
     }
 }
 
-// Output: 1.98
+// Output: 1.9835235375094544

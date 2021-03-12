@@ -26,7 +26,7 @@ public class Exercise1 {
         // ASC - по возрастанию
         // DESC - по убыванию
         Integer[] arrInt2 = {5, 6, 7, 8, 9};
-        Arrays.sort(arrInt, Collections.reverseOrder());
+//       Arrays.sort(arrInt, Collections.reverseOrder());
 
         byte b1 = 2;
         Byte b2 = 2;
