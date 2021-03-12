@@ -46,7 +46,7 @@ public class HarryPotter {
         }
     }
 }
-/*
+/* OUTPUT:
 * ALBUS
 * ALL
 * ALLEY
