@@ -35,7 +35,7 @@ public class Integral {
     }
 
     public static void main(String[] args) {
-        System.out.println(getIntegral(5));
+        System.out.println("The area: " + getIntegral(5));
     }
 }
 
