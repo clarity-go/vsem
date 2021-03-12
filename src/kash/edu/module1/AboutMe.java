@@ -22,8 +22,8 @@ public class AboutMe {
         System.out.println("I was born in " + yearOfBirth + " year.");
 
         // type int
-        int degreeNumber = 2;
-        System.out.println("I have " + degreeNumber + " university degrees.");
+        int numberOfDegrees = 2;
+        System.out.println("I have " + numberOfDegrees + " university degrees.");
 
         // type long
         long numberOfStudents = 40_000l;
