@@ -20,7 +20,7 @@ public class Integral {
         double area = 0;
         double height = 0;
 
-        double width = (beginning - end) / numberOfSteps;
+        double width = (end - beginning) / numberOfSteps;
 
         for (int i = 0; i < numberOfSteps; i++) {
             if(Math.sin(i * width) < 0.1 * secant) {
