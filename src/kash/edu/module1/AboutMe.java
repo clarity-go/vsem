@@ -51,3 +51,14 @@ public class AboutMe {
         System.out.println(str);
     }
 }
+/*
+* My age is 22 years.
+* I was born in 1998 year.
+* I have 2 university degrees.
+* There are 40000 students in my university.
+* My diploma score is 90.5.
+* My height is 162.5 cm.
+* The first letter of my surname: K
+* I want to level up my programming skills! It istrue
+* I would like to develop myself!
+*/

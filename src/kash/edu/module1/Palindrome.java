@@ -70,3 +70,11 @@ public class Palindrome {
         System.out.println(text + ". Is a palindrome: " + isPalindrome3(text));
     }
 }
+/*
+*       The 1st way:
+*  No lemon, no melon. Is a palindrome: true
+*      The 2nd way:
+*  No lemon, no melon. Is a palindrome: true
+*      The 3rd way:
+*  No lemon, no melon. Is a palindrome: true
+*/
