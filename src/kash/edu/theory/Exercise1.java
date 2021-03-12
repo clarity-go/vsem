@@ -1,20 +1,19 @@
-package kash.edu.theory;/*
+package kash.edu.theory;
+/*
   @author   Alona Kashpruk
   @project   vsem
   @class  Exercise1
   @version  1.0.0 
   @since 12.03.2021 - 19.00
 */
-
+import java.util.Arrays;
 import java.util.Collections;
 
 public class Exercise1 {
     public static void main(String[] args) {
         String string = "Hello world!";
 
-
-
-        Integer b = 567;
+        Integer b = 567; // class оббертка
         String str3 = " 1234";
         int d = Integer.valueOf(str3);
 
@@ -26,8 +25,8 @@ public class Exercise1 {
 
         // ASC - по возрастанию
         // DESC - по убыванию
-        Integer[] arrInt2 = {5, 6, 7, 8, 9}
-        Arrays.sort(arrInt, Collections.reverseOrder())
+        Integer[] arrInt2 = {5, 6, 7, 8, 9};
+        Arrays.sort(arrInt, Collections.reverseOrder());
 
         byte b1 = 2;
         Byte b2 = 2;
@@ -37,6 +36,8 @@ public class Exercise1 {
         Boolean bolleanType = true;
         char charType = '&';
         Character characterType = '?';
+        shortType = null;
+        bolleanType = false;
 
     }
 }
