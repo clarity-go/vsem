@@ -12,7 +12,6 @@ public class PalindromeTry {
         // remove garbage
         text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
         text = text.toLowerCase();
-
         boolean result = true;
         for (int i = 0; i < text.length(); i++) {
             if (text.charAt(i) != text.charAt(text.length() - 1 - i)) {
@@ -38,10 +37,8 @@ public class PalindromeTry {
     // Third method: StringBuilder
     public static boolean isPalindrome3(String text) {
         // remove garbage
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", "").toLowerCase();;
-
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", "").toLowerCase();
         boolean result = true;
-
         StringBuilder builder = new StringBuilder(text);
         String reversed = builder.reverse().toString();
 

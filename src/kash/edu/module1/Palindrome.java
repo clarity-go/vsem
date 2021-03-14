@@ -17,9 +17,7 @@ public class Palindrome {
     // First method: For-Loop
     public static boolean isPalindrome1(String text) {
         // remove garbage
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
-        text = text.toLowerCase();
-
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", "").toLowerCase();
         boolean result = true;
 
         for (int i = 0; i < text.length(); i++) {
@@ -34,8 +32,7 @@ public class Palindrome {
     // Second method: Reverse String
     public static boolean isPalindrome2(String text) {
         // remove garbage
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
-        text = text.toLowerCase();
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", "").toLowerCase();
         String reversed = "";
 
         for (int i = text.length() - 1; i >= 0; i--) {

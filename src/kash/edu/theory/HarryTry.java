@@ -19,7 +19,7 @@ public class HarryTry {
         String text = new String();
 
         text = new String(Files.readAllBytes(Paths.get("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\harry.txt")));
-        text.substring(0, 100);
+        System.out.println(text.substring(0, 100)); // prints the text as it is
         System.out.println(text.length()); // count the number of symbols
 
         // Clean the words from a punctuation signs
@@ -55,6 +55,10 @@ public class HarryTry {
             }
         }
         String[] distinctWords = stringOfDistincts.split(" ");
+        // get identity of the array, not the contents
+        System.out.println(distinctWords);
+        //get a String representation of an array's contents
+        System.out.println(Arrays.toString(distinctWords));
 
         // Order the words in alphabetic order
         Arrays.sort(distinctWords);
