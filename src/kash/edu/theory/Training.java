@@ -67,7 +67,7 @@ public class Training {
 */
 
         // ----------------- DISTINCT WORDS IN ALPHABETICAL ORDER -----------------
-/*
+
 
         // Create another array containing distinct words (unique words)
         String stringOfDistincts = "";
@@ -91,7 +91,7 @@ public class Training {
             System.out.println(i+1 + ". " + eachWord + ": " + hashCode);
 
         }
-*/
+
 
 
         // ----------------- DISTINCT WORDS: SORT BY HASH CODE AS STRING -----------------
@@ -123,7 +123,7 @@ public class Training {
 */
 
         // ----------------- DISTINCT WORDS: SORT BY HASH CODE -----------------
-
+/*
         // Create another array containing distinct words (unique words)
         String stringOfDistincts = "";
 
@@ -134,21 +134,25 @@ public class Training {
         }
 
         String[] distinctWords = stringOfDistincts.split(" ");
-        String fullString = "";
-
         int[] arrayOfHashes = new int[distinctWords.length];
+
         for (int i = 0; i < distinctWords.length; i++) {
-            String eachWord = distinctWords[i];
-            arrayOfHashes[i] = eachWord.hashCode();
-
-
-
-            System.out.println(distinctWords[i] + ": " + eachWord.hashCode());
-            fullString += eachWord.hashCode() + ":" + distinctWords[i] + " ";
+            arrayOfHashes[i] = distinctWords[i].hashCode();
         }
 
-        String[] arrayOfFullString = fullString.split(" ");
-        Arrays.sort(arrayOfFullString);
-        System.out.println(Arrays.toString(arrayOfFullString));
+        Arrays.sort(arrayOfHashes);
+        String wordOfHash = "";
+
+        for (int i = 0; i < arrayOfHashes.length; i++) {
+            System.out.print(arrayOfHashes[i] + ": ");
+            for (int j = 0; j < arrayOfHashes.length; j++) {
+                if(arrayOfHashes[i] == distinctWords[j].hashCode()){
+                    wordOfHash = distinctWords[j];
+                    System.out.println(wordOfHash);
+                    break;
+                }
+            }
+        }
+        */
     }
 }
