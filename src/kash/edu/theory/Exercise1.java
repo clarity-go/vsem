@@ -26,7 +26,7 @@ public class Exercise1 {
         // package of 10 bytes: "Hello wo" - 8, other 2 bytes - hashes
         // code of letter 'H' + 'e' + ... - previously calculated in this way
         String string = "Hello, world!";
-        System.out.println(string.hashCode());
+        System.out.println("Hash code: " + string.hashCode());
 
         //------------------- 1. PARADIGMS -------------------
         // 1st paradigm: Data types
