@@ -67,6 +67,8 @@ public class Training {
 */
 
         // ----------------- DISTINCT WORDS IN ALPHABETICAL ORDER -----------------
+/*
+
         // Create another array containing distinct words (unique words)
         String stringOfDistincts = "";
 
@@ -83,22 +85,70 @@ public class Training {
 
 
         // Print number + distinct word + hash number
-        int[] arrayOfHashes = new int[distinctWords.length];
         for (int i = 0; i < distinctWords.length; i++) {
             String eachWord = distinctWords[i];
             int hashCode = eachWord.hashCode();
             System.out.println(i+1 + ". " + eachWord + ": " + hashCode);
 
         }
+*/
 
 
-        // Order the words in alphabetic order
-/*        Arrays.sort(distinctWords);
-        System.out.println(distinctWords.length);
-        for (int i = 0; i < 100; i++) {
-            System.out.println(distinctWords[i]);
-        }*/
+        // ----------------- DISTINCT WORDS: SORT BY HASH CODE AS STRING -----------------
+
+/*
+        // Create another array containing distinct words (unique words)
+        String stringOfDistincts = "";
+
+        for (int i = 0; i < words.length; i++) {
+            if(!stringOfDistincts.contains(words[i])) {
+                stringOfDistincts += words[i] + " ";
+            }
+        }
+
+        String[] distinctWords = stringOfDistincts.split(" ");
+        String fullString = "";
+
+        int[] arrayOfHashes = new int[distinctWords.length];
+        for (int i = 0; i < distinctWords.length; i++) {
+            String eachWord = distinctWords[i];
+            arrayOfHashes[i] = eachWord.hashCode();
+            System.out.println(distinctWords[i] + ": " + eachWord.hashCode());
+            fullString += eachWord.hashCode() + ":" + distinctWords[i] + " ";
+        }
+
+        String[] arrayOfFullString = fullString.split(" ");
+        Arrays.sort(arrayOfFullString);
+        System.out.println(Arrays.toString(arrayOfFullString));
+*/
+
+        // ----------------- DISTINCT WORDS: SORT BY HASH CODE -----------------
+
+        // Create another array containing distinct words (unique words)
+        String stringOfDistincts = "";
+
+        for (int i = 0; i < words.length; i++) {
+            if(!stringOfDistincts.contains(words[i])) {
+                stringOfDistincts += words[i] + " ";
+            }
+        }
+
+        String[] distinctWords = stringOfDistincts.split(" ");
+        String fullString = "";
+
+        int[] arrayOfHashes = new int[distinctWords.length];
+        for (int i = 0; i < distinctWords.length; i++) {
+            String eachWord = distinctWords[i];
+            arrayOfHashes[i] = eachWord.hashCode();
 
 
+
+            System.out.println(distinctWords[i] + ": " + eachWord.hashCode());
+            fullString += eachWord.hashCode() + ":" + distinctWords[i] + " ";
+        }
+
+        String[] arrayOfFullString = fullString.split(" ");
+        Arrays.sort(arrayOfFullString);
+        System.out.println(Arrays.toString(arrayOfFullString));
     }
 }
