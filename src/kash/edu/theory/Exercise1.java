@@ -11,7 +11,12 @@ import java.util.Collections;
 
 public class Exercise1 {
     public static void main(String[] args) {
-        String string = "Hello world!";
+
+        // # - hash
+        // package of 10 bytes: "Hello wo" - 8, other 2 bytes - hashes
+        // code of letter 'H' + 'e' + ... - previously calculated in this way
+        String string = "Hello, world!";
+        System.out.println(string.hashCode());
 
         // convert int to string
         int firstType = 1234;
