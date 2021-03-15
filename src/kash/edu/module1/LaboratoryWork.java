@@ -79,7 +79,6 @@ public class LaboratoryWork {
                 numberOfMentionings++;
             }
         }
-        System.out.println(numberOfMentionings);
         // Output: 1084
 
 
