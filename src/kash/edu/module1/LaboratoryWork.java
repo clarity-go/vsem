@@ -26,8 +26,21 @@ public class LaboratoryWork {
 
         // Download a text of a novel about Harry Potter to string
         String text = new String();
-
         text = new String(Files.readAllBytes(Paths.get("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\harry.txt")));
+
+
+        // Count the LINES where the word "Harry" is met.
+        String[] linesOfText = text.split("\n");
+        int numberOfMentionings = 0;
+
+        for (int z = 0; z < linesOfText.length; z++) {
+            if(linesOfText[z].contains("Harry")){
+                numberOfMentionings++;
+            }
+        }
+        System.out.println(numberOfMentionings);
+        // Output: 1084
+
 
         // Clean the words from a punctuation signs
         text = text.replaceAll("[^A-Za-z ']", "");
@@ -68,18 +81,6 @@ public class LaboratoryWork {
         }
         System.out.println(longestWord);
         // Output: interestinglooking
-
-
-        // Count the LINES where the word "Harry" is met.
-        String[] linesOfText = text.split("\n");
-        int numberOfMentionings = 0;
-
-        for (int z = 0; z < linesOfText.length; z++) {
-            if(linesOfText[z].contains("Harry")){
-                numberOfMentionings++;
-            }
-        }
-        // Output: 1084
 
 
         // Create an array of hashes.
