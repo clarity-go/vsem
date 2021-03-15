@@ -55,7 +55,7 @@ public class LaboratoryWork {
             }
         }
         System.out.println(numberOfWordsWithC);
-        // Output: 8
+        // Output: 80
 
 
         // Find the longest word in the above text.
@@ -80,7 +80,7 @@ public class LaboratoryWork {
             }
         }
         System.out.println(numberOfMentionings);
-        // Output: 1080
+        // Output: 1084
 
 
         // Create an array of hashes.
@@ -89,12 +89,6 @@ public class LaboratoryWork {
         for (int i = 0; i < distinctWords.length; i++) {
             arrayOfHashes[i] = distinctWords[i].hashCode();
         }
-
-
-        // Count the intersections of hashes.
-        String hashString =
-
-
     }
 }
 
