@@ -71,75 +71,28 @@ public class LaboratoryWork {
 
 
         // Count the LINES where the word "Harry" is met.
+        String[] linesOfText = text.split("\n");
+        int numberOfMentionings = 0;
 
-        String[] linesOfText = text.split("/n");
-        for (int k = 0; k < linesOfText.length; k++) {
-            if("Harry"){
-
+        for (int z = 0; z < linesOfText.length; z++) {
+            if(linesOfText[z].contains("Harry")){
+                numberOfMentionings++;
             }
         }
-
-
-        System.out.println(Arrays.toString(linesOfText).length());
-
-
-
-
-
-
-
-
-        /*
-
-        for (int i = 0; i < distinctWords.length; i++) {
-
-        }
+        System.out.println(numberOfMentionings);
+        // Output: 1080
 
 
         // Create an array of hashes.
         int[] arrayOfHashes = new int[distinctWords.length];
 
         for (int i = 0; i < distinctWords.length; i++) {
-        arrayOfHashes[i] = distinctWords[i].hashCode();
+            arrayOfHashes[i] = distinctWords[i].hashCode();
         }
 
-
-
-
-
-
-
-*/
-
-
-
-
-
-//        int[] arrayOfHashes = new int[words.length];
-//
-//        for (int i = 0; i < words.length; i++) {
-//            arrayOfHashes[i] = words[i].hashCode();
-//        }
 
         // Count the intersections of hashes.
-
-//        int intersectionsOfHashes = 0;
-//        for (int i = 0; i < arrayOfHashes.length; i++) {
-//            if arrayOfHashes[i] =
-//        }
-
-
-        // Count the number of words with a specific number of letters
-//        int counter = 0;
-/*        int numberOfLetters = 16;
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].length() == numberOfLetters) {
-                System.out.println(words[i]);
-                counter++;
-            }
-        }
-        System.out.println("Words with " + numberOfLetters +
-                " letters: " + counter);*/
+        String hashString =
 
 
     }
