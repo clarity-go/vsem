@@ -30,7 +30,7 @@ public class LaboratoryWork {
 
 
         // Count the LINES where the word "Harry" is met.
-        String[] linesOfText = text.split("\n");
+        String[] linesOfText = text.split("\\n");
         int numberOfMentionings = 0;
 
         for (int z = 0; z < linesOfText.length; z++) {
@@ -56,14 +56,15 @@ public class LaboratoryWork {
                 stringOfDistincts += words[i] + " ";
             }
         }
-
         String[] distinctWords = stringOfDistincts.split(" ");
+        System.out.println(distinctWords.length);
+        // Output: 6000
 
 
         // How many distinct words begin from the letter "C".
         int numberOfWordsWithC = 0;
         for (int l = 0; l < distinctWords.length; l++) {
-            if (words[l].charAt(0) == 'C') {
+            if (distinctWords[l].charAt(0) == 'C') {
                 numberOfWordsWithC++;
             }
         }
@@ -89,6 +90,20 @@ public class LaboratoryWork {
         for (int i = 0; i < distinctWords.length; i++) {
             arrayOfHashes[i] = distinctWords[i].hashCode();
         }
+
+
+        // Count the intersections of hashes.
+        int numberOfIntersections = 0;
+        Arrays.sort(arrayOfHashes);
+
+        for (int r = 0; r < arrayOfHashes.length - 1; r++) {
+            if(arrayOfHashes[r] == arrayOfHashes[r + 1]){
+                numberOfIntersections++;
+            }
+        }
+        System.out.println(numberOfIntersections);
+        // Output: 0
+
     }
 }
 
