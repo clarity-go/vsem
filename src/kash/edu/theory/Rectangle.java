@@ -40,7 +40,8 @@ public class Rectangle {
     }
 
     public void setWidth(int width) {
-        this.width = width;
+        this.width = (width >= 0) ? width : 0;
+        // (width >= 0) ? this.width = width : this.width = 0
     }
 
     // method toString

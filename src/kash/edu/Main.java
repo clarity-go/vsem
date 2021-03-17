@@ -29,5 +29,8 @@ public class Main {
         // Calculate area of the rectangle
         System.out.println(r1.getArea()); // Output: 12
 
+        // Wrong input which is controlled by setter
+        r1.setWidth(-9);
+        System.out.println(r1); // Output: width = 0
     }
 }
