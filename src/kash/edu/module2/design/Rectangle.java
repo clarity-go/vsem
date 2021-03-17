@@ -67,4 +67,11 @@ public class Rectangle {
     public int hashCode() {
         return Objects.hash(length, width);
     }
+
+    // Create method to calculate area of the rectangle
+    public int getArea(){
+        return this.getLength() * this.getWidth(); // return length * width;
+    }
+
+
 }
