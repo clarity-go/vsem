@@ -1,14 +1,14 @@
-package kash.edu.module2.design;
+package kash.edu.theory;
 
 import java.util.Objects;
 
 /**
-  @author   Alona Kashpruk
-  @project   vsem
-  @class  Rectangle
-  @version  1.0.0 
-  @since 17.03.2021 - 19.33
-*/
+ @author   Alona Kashpruk
+ @project   vsem
+ @class  Rectangle
+ @version  1.0.0
+ @since 17.03.2021 - 19.33
+ */
 
 public class Rectangle {
     private int length;
@@ -72,6 +72,4 @@ public class Rectangle {
     public int getArea(){
         return this.getLength() * this.getWidth(); // return length * width;
     }
-
-
 }

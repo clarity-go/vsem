@@ -1,6 +1,6 @@
 package kash.edu;
 
-import kash.edu.module2.design.Rectangle;
+import kash.edu.theory.Rectangle;
 
 public class Main {
 
