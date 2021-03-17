@@ -26,7 +26,7 @@ public class LaboratoryWork {
 
         // Download a text of a novel about Harry Potter to string
         String text = new String();
-        text = new String(Files.readAllBytes(Paths.get("C:\\harry.txt")));
+        text = new String(Files.readAllBytes(Paths.get("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\harry.txt")));
 
 
         // Count the LINES where the word "Harry" is met.

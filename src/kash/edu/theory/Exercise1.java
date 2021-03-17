@@ -137,5 +137,9 @@ public class Exercise1 {
         Character characterType = '?';
         shortType = null;
         bolleanType = false;
+
+        // String longest = Arrays.stream(distincts).max(Comparator.comparing(String::length)...
+
+
     }
 }
