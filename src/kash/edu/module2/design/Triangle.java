@@ -12,5 +12,5 @@ public class Triangle {
     private double sideB;
 
     // 5 methods: one of them getArea, периметр, выста, медиана, угол...
-    //
+    // 5 number: rhombus
 }
