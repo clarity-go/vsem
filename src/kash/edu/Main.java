@@ -32,5 +32,15 @@ public class Main {
         // Wrong input which is controlled by setter
         r1.setWidth(-9);
         System.out.println(r1); // Output: width = 0
+
+
+
+
+
+
+        /*public static void main(String[] args) {
+            int result[] = something();
+            System.out.println(result[0] + result[1]);
+        }*/
     }
 }
