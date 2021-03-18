@@ -1,12 +1,13 @@
 package kash.edu;
 
+import kash.edu.module2.Rhombus;
 import kash.edu.theory.Rectangle;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello vsem");
 
+        // ----------------------------- Rectangle -------------------------------
         // Create the Object r1
         Rectangle r1 = new Rectangle(3, 4);
         int l1 = r1.getLength();
@@ -34,13 +35,46 @@ public class Main {
         System.out.println(r1); // Output: width = 0
 
 
+        // ----------------------------- Rhombus -------------------------------
 
+        // Create the Object
+        Rhombus firstRhombus = new Rhombus(3, 30);
 
+        // Create the empty Object setting own values afterwards
+        Rhombus secondRhombus = new Rhombus();
+        secondRhombus.setSide(3);
+        secondRhombus.setAngle(30);
 
+        // Compare the firstRhombus and the secondRhombus
+        System.out.println(firstRhombus.equals(secondRhombus));
+        // Output: true
 
-        /*public static void main(String[] args) {
-            int result[] = something();
-            System.out.println(result[0] + result[1]);
-        }*/
+        // Print hash codes of the firstRhombus and the secondRhombus
+        System.out.println("Hash code of 1st rhombus: " + firstRhombus.hashCode());
+        System.out.println("Hash code of 2nd rhombus: " + firstRhombus.hashCode());
+        // Output: Hash code of 1st rhombus: 20317121
+        // Output: Hash code of 2nd rhombus: 20317121
+
+        // Call the method toString()
+        System.out.println(firstRhombus.toString());
+        // Output: Rhombus {side = 3.0, angle = 30.0}
+
+        // Calculate the perimeter of the rhombus
+        System.out.println("Perimeter: " + firstRhombus.getPerimeter());
+        // Output: Perimeter: 12.0
+
+        // Calculate the area of the rhombus
+        System.out.println("Area: " + firstRhombus.getArea());
+
+        // Calculate the height of the rhombus
+        System.out.println("Height: " + firstRhombus.getHeight());
+
+        // Calculate the inradius of the rhombus
+        System.out.println("Inradius: " + firstRhombus.getInradius());
+
+        // Calculate the diagonals of the rhombus
+        int result[] = firstRhombus.getDiagonals();
+        System.out.println("Diagonals 1st - " + result[0] + "; 2nd - " + result[1]);
+
     }
 }

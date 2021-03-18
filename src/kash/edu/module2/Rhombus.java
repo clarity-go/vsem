@@ -11,8 +11,8 @@ import java.util.Objects;
 **/
 
 public class Rhombus {
-    private double side;
-    private double angle;
+    private int side;
+    private int angle;
 
 
 /*              Task:
@@ -30,9 +30,14 @@ public class Rhombus {
     // Note: a rhombus is a quadrilateral whose four sides
     // all have the same length.
 
+    // Create an empty constructor
+
+    public Rhombus() {
+    }
+
     // Create constructor
 
-    public Rhombus(double side, double angle) {
+    public Rhombus(int side, int angle) {
         this.side = side;
         this.angle = angle;
     }
@@ -43,7 +48,7 @@ public class Rhombus {
         return side;
     }
 
-    public void setSide(double side) {
+    public void setSide(int side) {
         this.side = side;
     }
 
@@ -52,27 +57,27 @@ public class Rhombus {
     }
 
     public void setAngle(double angle) {
-        this.angle = angle;
+        this.angle = (int) angle;
     }
 
     // Create method to calculate the perimeter of the rhombus
-    public double getPerimeter(){
-        return this.getSide() * 4;
+    public int getPerimeter(){
+        return (int) (this.getSide() * 4);
     }
 
     // Create method to calculate the area of the rhombus
-    public double getArea(){
-        return Math.pow(this.getSide(), 2) * Math.sin(this.getAngle());
+    public int getArea(){
+        return (int) (Math.pow(this.getSide(), 2) * Math.sin(this.getAngle()));
     }
 
     // Create method to calculate the height of the rhombus
-    public double getHeight(){
-        return this.getArea() / this.getSide();
+    public int getHeight(){
+        return (int) (this.getArea() / this.getSide());
     }
 
     // Create method to calculate the inradius of the rhombus
     // * inradius - the radius of a circle inscribed in the rhombus
-    public double getInradius(){
+    public int getInradius(){
         return this.getHeight() / 2;
     }
 
@@ -86,10 +91,10 @@ public class Rhombus {
     }*/
 
 
-    public double[] getDiagonals(){
-        double firstDiagonal = (2 * this.getSide()) * Math.cos(this.getAngle() / 2);
-        double secondDiagonal = (2 * this.getSide()) * Math.sin(this.getAngle() / 2);
-        return new double[] {firstDiagonal, secondDiagonal};
+    public int[] getDiagonals(){
+        int firstDiagonal = (int) ((2 * this.getSide()) * Math.cos(this.getAngle() / 2));
+        int secondDiagonal = (int) ((2 * this.getSide()) * Math.sin(this.getAngle() / 2));
+        return new int[] {firstDiagonal, secondDiagonal};
     }
 
     // Override toString() method
@@ -102,13 +107,13 @@ public class Rhombus {
     }
 
     // Override hash() and equals() methods
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rhombus rhombus = (Rhombus) o;
-        return Double.compare(rhombus.getSide(), getSide()) == 0 && Double.compare(rhombus.getAngle(), getAngle()) == 0;
+        return Double.compare(rhombus.getSide(), getSide())
+                == 0 && Double.compare(rhombus.getAngle(), getAngle()) == 0;
     }
 
     @Override
