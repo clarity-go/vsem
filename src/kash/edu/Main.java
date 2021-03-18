@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         // ----------------------------- Rectangle -------------------------------
+/*
         // Create the Object r1
         Rectangle r1 = new Rectangle(3, 4);
         int l1 = r1.getLength();
@@ -33,6 +34,7 @@ public class Main {
         // Wrong input which is controlled by setter
         r1.setWidth(-9);
         System.out.println(r1); // Output: width = 0
+*/
 
 
         // ----------------------------- Rhombus -------------------------------
@@ -73,8 +75,9 @@ public class Main {
         System.out.println("Inradius: " + firstRhombus.getInradius());
 
         // Calculate the diagonals of the rhombus
-        int result[] = firstRhombus.getDiagonals();
-        System.out.println("Diagonals 1st - " + result[0] + "; 2nd - " + result[1]);
+        double result[] = firstRhombus.getDiagonals();
+        System.out.println("1st diagonal: " + result[0]);
+        System.out.println("2nd diagonal: " + result[1]);
 
     }
 }

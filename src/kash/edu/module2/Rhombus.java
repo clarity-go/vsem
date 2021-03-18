@@ -11,7 +11,7 @@ import java.util.Objects;
 **/
 
 public class Rhombus {
-    private int side;
+    private double side;
     private int angle;
 
 
@@ -37,7 +37,7 @@ public class Rhombus {
 
     // Create constructor
 
-    public Rhombus(int side, int angle) {
+    public Rhombus(double side, int angle) {
         this.side = side;
         this.angle = angle;
     }
@@ -48,7 +48,7 @@ public class Rhombus {
         return side;
     }
 
-    public void setSide(int side) {
+    public void setSide(double side) {
         this.side = side;
     }
 
@@ -56,45 +56,46 @@ public class Rhombus {
         return angle;
     }
 
-    public void setAngle(double angle) {
-        this.angle = (int) angle;
+    public void setAngle(int angle) {
+        this.angle = angle;
     }
 
     // Create method to calculate the perimeter of the rhombus
-    public int getPerimeter(){
-        return (int) (this.getSide() * 4);
+    public double getPerimeter(){
+        return this.getSide() * 4;
     }
 
     // Create method to calculate the area of the rhombus
-    public int getArea(){
-        return (int) (Math.pow(this.getSide(), 2) * Math.sin(this.getAngle()));
+    public double getArea(){
+        // Convert angle value to radians
+        double radians = Math.toRadians(this.getAngle());
+        double areaResult = Math.pow(this.getSide(), 2) * Math.sin(radians);
+        return Math.round(areaResult * 100.0) / 100.0;
     }
 
     // Create method to calculate the height of the rhombus
-    public int getHeight(){
-        return (int) (this.getArea() / this.getSide());
+    public double getHeight(){
+        return this.getArea() / this.getSide();
     }
 
     // Create method to calculate the inradius of the rhombus
-    // * inradius - the radius of a circle inscribed in the rhombus
-    public int getInradius(){
+    // * inradius - is the radius of a circle inscribed in the rhombus
+    public double getInradius(){
         return this.getHeight() / 2;
     }
 
     // Create method to calculate the diagonals of the rhombus
     // longer diagonal: (2 * side) * cos(angle / 2)
     // smaller diagonal: (2 * side) * sin(angle / 2)
-/*    public double getDiagonal1(){
-        double firstDiagonal = (2 * this.getSide()) * Math.cos(this.getAngle() / 2);
-        double secondDiagonal = (2 * this.getSide()) * Math.sin(this.getAngle() / 2);
-        return firstDiagonal, secondDiagonal;
-    }*/
+
+    public double[] getDiagonals(){
+        double secondAngle = 180 - this.getAngle();
+        double longerDiagonal = (2 * this.getSide()) * Math.sin(secondAngle / 2);
+        double smallerDiagonal = (2 * this.getSide()) * Math.sin(this.getAngle() / 2);
 
 
-    public int[] getDiagonals(){
-        int firstDiagonal = (int) ((2 * this.getSide()) * Math.cos(this.getAngle() / 2));
-        int secondDiagonal = (int) ((2 * this.getSide()) * Math.sin(this.getAngle() / 2));
-        return new int[] {firstDiagonal, secondDiagonal};
+        return new double[] {Math.round(longerDiagonal * 100.0) / 100.0,
+                                Math.round(smallerDiagonal * 100.0) / 100.0};
     }
 
     // Override toString() method
@@ -112,12 +113,13 @@ public class Rhombus {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rhombus rhombus = (Rhombus) o;
-        return Double.compare(rhombus.getSide(), getSide())
-                == 0 && Double.compare(rhombus.getAngle(), getAngle()) == 0;
+        return Double.compare(rhombus.getSide(), getSide()) == 0 && Double.compare(rhombus.getAngle(), getAngle()) == 0;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(getSide(), getAngle());
     }
+
 }
+
