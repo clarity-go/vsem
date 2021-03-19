@@ -6,7 +6,7 @@ import java.util.Objects;
   @author   Alona Kashpruk
   @project   vsem
   @class  Rhombus
-  @version  1.0.0 
+  @version  1.0.0
   @since 17.03.2021 - 20.02
 **/
 
@@ -75,6 +75,7 @@ public class Rhombus {
     }
 
     // Create method to calculate the inradius of the rhombus
+    // * inradius - the radius of a circle inscribed in the rhombus
     public double getInradius(){
         return Math.round((this.getHeight() / 2) * 100.0) / 100.0;
     }

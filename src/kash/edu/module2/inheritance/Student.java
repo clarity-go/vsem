@@ -11,4 +11,5 @@ public class Student extends Person{
     private String group;
     private String chair;
     private String faculty;
+    private boolean isStipendiat; // has a scholarship
 }
