@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
   @author   Alona Kashpruk
   @project   vsem
-  @class  Triangle
+  @class  Rhombus
   @version  1.0.0 
   @since 17.03.2021 - 20.02
 **/
