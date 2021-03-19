@@ -2,6 +2,7 @@ package kash.edu;
 
 import kash.edu.module2.Rhombus;
 import kash.edu.theory.Rectangle;
+import kash.edu.theory.inheritance.Wall;
 
 public class Main {
 
@@ -80,6 +81,13 @@ public class Main {
         // Calculate the diagonals of the rhombus
         System.out.println("Diagonal: " + firstRhombus.getDiagonal() + " cm");
         // Output: Diagonal: 5.99 cm
+
+
+        // ----------------------------- Wall -------------------------------
+        Wall firstWall = new Wall(4, 3, "Green", true, true);
+        firstWall.setWidth(4);
+
+
 
     }
 }

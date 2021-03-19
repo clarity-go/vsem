@@ -75,7 +75,6 @@ public class Rhombus {
     }
 
     // Create method to calculate the inradius of the rhombus
-    // * inradius - is the radius of a circle inscribed in the rhombus
     public double getInradius(){
         return Math.round((this.getHeight() / 2) * 100.0) / 100.0;
     }
