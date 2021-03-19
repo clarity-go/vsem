@@ -10,11 +10,6 @@ import java.util.Objects;
   @since 17.03.2021 - 20.02
 **/
 
-public class Rhombus {
-    private double side;
-    private int angle;
-
-
 /*              Task:
     Create a class from the attached document according
     to the order in your group. (Number 5 - Rhombus).
@@ -27,8 +22,12 @@ public class Rhombus {
     5. Override hash() and equals() methods.
 */
 
-    // Note: a rhombus is a quadrilateral whose four sides
-    // all have the same length.
+// Note: a rhombus is a quadrilateral whose four sides
+// all have the same length.
+
+public class Rhombus {
+    private double side;
+    private int angle;
 
     // Create an empty constructor
 
