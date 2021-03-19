@@ -87,7 +87,5 @@ public class Main {
         Wall firstWall = new Wall(4, 3, "Green", true, true);
         firstWall.setWidth(4);
 
-
-
     }
 }
