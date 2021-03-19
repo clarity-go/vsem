@@ -54,5 +54,29 @@ public class Wall extends Rectangle {
     public void setWarmed(boolean warmed) {
         isWarmed = warmed;
     }
+    // Wall, window, table, field, garden, bigboard, monitor,
+    // roof, blank, floor
+    // returns price depending on the attributes
+    public int getPrice(){
+        return 0;
+    }
+
+
+    // toString
+    @Override
+    public String toString() {
+        return "Wall{" +
+                "length =" + super.getLength() +
+                // "color ='" + this.getColor() + '\'' +
+                "color ='" + color + '\'' +
+                ", isInner =" + isInner +
+                ", isWarmed =" + isWarmed +
+                '}';
+    }
+
+    public void toConsole(){
+        System.out.println(super.toString());
+        System.out.println(this.toString());
+    }
 
 }
