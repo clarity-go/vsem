@@ -22,8 +22,8 @@ public class Rhombus {
     The class must contain:
     1. Constructor.
     2. Getters/Setters.
-    3. 5 methods: one of them getArea, периметр, высота, медиана, угол...
-    4. Override toString() method
+    3. 5 methods.
+    4. Override toString() method.
     5. Override hash() and equals() methods.
 */
 
