@@ -101,7 +101,8 @@ public class Rhombus {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rhombus rhombus = (Rhombus) o;
-        return Double.compare(rhombus.getSide(), getSide()) == 0 && Double.compare(rhombus.getAngle(), getAngle()) == 0;
+        return Double.compare(rhombus.getSide(), getSide())
+                == 0 && Double.compare(rhombus.getAngle(), getAngle()) == 0;
     }
 
     @Override
