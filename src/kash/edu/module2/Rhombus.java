@@ -30,19 +30,16 @@ public class Rhombus {
     private int angle;
 
     // Create an empty constructor
-
     public Rhombus() {
     }
 
     // Create constructor
-
     public Rhombus(double side, int angle) {
         this.side = side;
         this.angle = angle;
     }
 
     // Create getters/setters
-
     public double getSide() {
         return side;
     }
