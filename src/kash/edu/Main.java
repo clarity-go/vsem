@@ -75,7 +75,7 @@ public class Main {
 
         // Calculate the inradius of the rhombus
         System.out.println("Inradius: " + firstRhombus.getInradius() + " cm");
-        // Output: Inradius: 0.75
+        // Output: Inradius: 0.75 cm
 
         // Calculate the diagonals of the rhombus
         System.out.println("Diagonal: " + firstRhombus.getDiagonal() + " cm");
