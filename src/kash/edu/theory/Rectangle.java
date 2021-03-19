@@ -73,4 +73,16 @@ public class Rectangle {
     public int getArea(){
         return this.getLength() * this.getWidth(); // return length * width;
     }
+
+    // Create method to calculate the diagonals of the rhombus
+    // longer diagonal: (2 * side) * cos(angle / 2)
+    // smaller diagonal: (2 * side) * sin(angle / 2)
+    // double diagonal = (2 * this.getSide()) * Math.sin(180 - this.getAngle() / 2);
+    // double smallerDiagonal = (2 * this.getSide()) * Math.sin(this.getAngle() / 2);
+    // return new double[] {Math.round(diagonal * 100.0) / 100.0};
+    //         // Calculate the diagonals of the rhombus
+    //        double result[] = firstRhombus.getDiagonal();
+    //        System.out.println("Diagonal: " + result[0]);
+    //
+    //        System.out.println("2nd diagonal: " + result[1]);
 }

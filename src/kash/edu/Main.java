@@ -62,22 +62,24 @@ public class Main {
         // Output: Rhombus {side = 3.0, angle = 30.0}
 
         // Calculate the perimeter of the rhombus
-        System.out.println("Perimeter: " + firstRhombus.getPerimeter());
-        // Output: Perimeter: 12.0
+        System.out.println("Perimeter: " + firstRhombus.getPerimeter() + " cm");
+        // Output: Perimeter: 12.0 cm
 
         // Calculate the area of the rhombus
-        System.out.println("Area: " + firstRhombus.getArea());
+        System.out.println("Area: " + firstRhombus.getArea() + " cm2");
+        // Output: Area: 4.5 cm2
 
         // Calculate the height of the rhombus
-        System.out.println("Height: " + firstRhombus.getHeight());
+        System.out.println("Height: " + firstRhombus.getHeight() + " cm");
+        // Output: Height: 1.5 cm
 
         // Calculate the inradius of the rhombus
-        System.out.println("Inradius: " + firstRhombus.getInradius());
+        System.out.println("Inradius: " + firstRhombus.getInradius() + " cm");
+        // Output: Inradius: 0.75
 
         // Calculate the diagonals of the rhombus
-        double result[] = firstRhombus.getDiagonals();
-        System.out.println("1st diagonal: " + result[0]);
-        System.out.println("2nd diagonal: " + result[1]);
+        System.out.println("Diagonal: " + firstRhombus.getDiagonal() + " cm");
+        // Output: Diagonal: 5.99 cm
 
     }
 }

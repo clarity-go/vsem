@@ -75,27 +75,19 @@ public class Rhombus {
 
     // Create method to calculate the height of the rhombus
     public double getHeight(){
-        return this.getArea() / this.getSide();
+        return Math.round((this.getArea() / this.getSide()) * 100.0) / 100.0;
     }
 
     // Create method to calculate the inradius of the rhombus
     // * inradius - is the radius of a circle inscribed in the rhombus
     public double getInradius(){
-        return this.getHeight() / 2;
+        return Math.round((this.getHeight() / 2) * 100.0) / 100.0;
     }
 
     // Create method to calculate the diagonals of the rhombus
-    // longer diagonal: (2 * side) * cos(angle / 2)
-    // smaller diagonal: (2 * side) * sin(angle / 2)
-
-    public double[] getDiagonals(){
-        double secondAngle = 180 - this.getAngle();
-        double longerDiagonal = (2 * this.getSide()) * Math.sin(secondAngle / 2);
-        double smallerDiagonal = (2 * this.getSide()) * Math.sin(this.getAngle() / 2);
-
-
-        return new double[] {Math.round(longerDiagonal * 100.0) / 100.0,
-                                Math.round(smallerDiagonal * 100.0) / 100.0};
+    public double getDiagonal(){
+        double diagonal = (2 * this.getSide()) * Math.sin(180 - this.getAngle() / 2);
+        return Math.round(diagonal * 100.0) / 100.0;
     }
 
     // Override toString() method
