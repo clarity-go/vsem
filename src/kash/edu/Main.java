@@ -1,7 +1,6 @@
 package kash.edu;
 
 import kash.edu.module2.Rhombus;
-import kash.edu.theory.Rectangle;
 import kash.edu.theory.inheritance.Wall;
 
 public class Main {

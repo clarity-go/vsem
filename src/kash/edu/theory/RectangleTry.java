@@ -10,7 +10,7 @@ import java.util.Objects;
  @since 17.03.2021 - 19.33
  */
 
-public class Rectangle {
+public class RectangleTry {
     private int length;
     private int width;
 
@@ -18,10 +18,10 @@ public class Rectangle {
     // call full constructor: Right Mouse Click - Generate - Constructor - Select alltogether - Create
     // class - description of the object
 
-    public Rectangle() {
+    public RectangleTry() {
     }
 
-    public Rectangle(int length, int width) {
+    public RectangleTry(int length, int width) {
         this.length = length;
         this.width = width;
     }
@@ -45,7 +45,6 @@ public class Rectangle {
     }
 
     // method toString
-
     @Override
     public String toString() {
         return "Rectangle {" +
@@ -55,12 +54,11 @@ public class Rectangle {
     }
 
     // equals -- compare the rectangles
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Rectangle rectangle = (Rectangle) o;
+        RectangleTry rectangle = (RectangleTry) o;
         return length == rectangle.length && width == rectangle.width;
     }
 

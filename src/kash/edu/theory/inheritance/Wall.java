@@ -1,6 +1,6 @@
 package kash.edu.theory.inheritance;
 
-import kash.edu.theory.Rectangle;
+import kash.edu.theory.RectangleTry;
 
 /*
   @author   Alona Kashpruk
@@ -10,7 +10,7 @@ import kash.edu.theory.Rectangle;
   @since 19.03.2021 - 18.09
 */
 
-public class Wall extends Rectangle {
+public class Wall extends RectangleTry {
     private String color;
     private boolean isInner;
     private boolean isWarmed;
