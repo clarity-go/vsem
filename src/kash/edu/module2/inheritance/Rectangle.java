@@ -40,9 +40,9 @@ public class Rectangle {
         this.width = width;
     }
 
-    // Create method to calculate the area of the rectangle
+    // Create method to calculate area of the rectangle
     public int getArea(){
-        return this.getLength() * this.getWidth();
+        return this.getLength() * this.getWidth(); // return length * width;
     }
 
     // Override toString() method

@@ -10,6 +10,8 @@ import java.util.Objects;
   @since 19.03.2021 - 18.37
 **/
 
+// Create a class Person and a class Student as its daughter (altogether 25 fields)
+
 public class Person {
     private String gender;
     private String race;

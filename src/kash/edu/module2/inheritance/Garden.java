@@ -10,6 +10,8 @@ import java.util.Objects;
   @since 21.03.2021 - 11.07
 **/
 
+// Task: Create a child Garden from the class Rectangle
+
 public class Garden extends Rectangle {
     private boolean withinCityLimits; // the garden is located in a city
     private boolean nearToRoad; // the garden is located near the carriageway

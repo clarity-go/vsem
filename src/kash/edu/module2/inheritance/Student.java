@@ -11,6 +11,8 @@ import java.util.Objects;
   @since 19.03.2021 - 18.35
 **/
 
+// Create a class Person and a class Student as its daughter (altogether 25 fields)
+
 public class Student extends Person{
     private String university;
     private String group;
