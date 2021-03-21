@@ -1,27 +1,28 @@
 package kash.edu;
 
 import kash.edu.module2.Rhombus;
+import kash.edu.module2.inheritance.Garden;
 import kash.edu.theory.inheritance.Wall;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        // ----------------------------- Rectangle -------------------------------
+        // ----------------------------- RectangleTry -------------------------------
 /*
         // Create the Object r1
-        Rectangle r1 = new Rectangle(3, 4);
+        RectangleTry r1 = new RectangleTry(3, 4);
         int l1 = r1.getLength();
         System.out.println(l1);
 
         // Create the Object r2
-        Rectangle r2 = new Rectangle();
+        RectangleTry r2 = new RectangleTry();
         r2.setLength(16);
         r2.setWidth(7);
         System.out.println(r2.toString());
 
         // Compare object r2 and r3
-        Rectangle r3 = new Rectangle(15, 7);
+        RectangleTry r3 = new RectangleTry(15, 7);
         System.out.println(r2.equals(r3)); // Output: false
 
         // Print hash codes of r2 and r3
@@ -34,7 +35,6 @@ public class Main {
         // Wrong input which is controlled by setter
         r1.setWidth(-9);
         System.out.println(r1); // Output: width = 0
-*/
 
 
         // ----------------------------- Rhombus -------------------------------
@@ -85,6 +85,12 @@ public class Main {
         // ----------------------------- Wall -------------------------------
         Wall firstWall = new Wall(4, 3, "Green", true, true);
         firstWall.setWidth(4);
+*/
+        // ----------------------------- Garden -------------------------------
+        Garden firstGarden = new Garden(10, 10, true, false, true);
 
+        int priceOfGarden[] = firstGarden.getPrice();
+        System.out.println("Minimum price: " + priceOfGarden[0] + "$"
+                + "\nMaximum price: " + priceOfGarden[1] + "$");
     }
 }

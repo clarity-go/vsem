@@ -11,8 +11,8 @@ import java.util.Objects;
 **/
 
 public class Garden extends Rectangle {
-    private boolean withinCityLimits; // in a city
-    private boolean nearToRoad;
+    private boolean withinCityLimits; // the garden is located in a city
+    private boolean nearToRoad; // the garden is located near the carriageway
     private boolean blackSoil; // the ground is covered by black soil
 
     // Create constructors
@@ -124,4 +124,16 @@ public class Garden extends Rectangle {
         return Objects.hash(super.hashCode(), isWithinCityLimits(),
                 isNearToRoad(), isBlackSoil());
     }
+
+/*   ----------------------------- CODE IN MAIN -------------------------------
+    Garden firstGarden = new Garden(10, 10, true, false, true);
+
+    int priceOfGarden[] = firstGarden.getPrice();
+        System.out.println("Minimum price: " + priceOfGarden[0] + "$"
+            + "\nMaximum price: " + priceOfGarden[1] + "$");
+
+    --------------------------------- OUTPUT ----------------------------------
+    Minimum price: 22000$
+    Maximum price: 44000$
+ */
 }
