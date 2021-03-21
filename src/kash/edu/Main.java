@@ -36,7 +36,7 @@ public class Main {
         r1.setWidth(-9);
         System.out.println(r1); // Output: width = 0
 
-
+*/
         // ----------------------------- Rhombus -------------------------------
 
         // Create the Object
@@ -81,16 +81,21 @@ public class Main {
         System.out.println("Diagonal: " + firstRhombus.getDiagonal() + " cm");
         // Output: Diagonal: 5.99 cm
 
-
+/*
         // ----------------------------- Wall -------------------------------
         Wall firstWall = new Wall(4, 3, "Green", true, true);
         firstWall.setWidth(4);
 */
         // ----------------------------- Garden -------------------------------
         Garden firstGarden = new Garden(10, 10, true, false, true);
+        Garden secondGarden = new Garden(10, 10, true, false, true);
+        System.out.println(firstGarden.equals(secondGarden));
 
         int priceOfGarden[] = firstGarden.getPrice();
         System.out.println("Minimum price: " + priceOfGarden[0] + "$"
                 + "\nMaximum price: " + priceOfGarden[1] + "$");
+
+        System.out.println(firstGarden.toString());
+        System.out.println(firstGarden.hashCode());
     }
 }

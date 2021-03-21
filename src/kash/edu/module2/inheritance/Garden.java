@@ -58,6 +58,7 @@ public class Garden extends Rectangle {
         this.blackSoil = blackSoil;
     }
 
+
     // Method to define the price of the garden depending on the attributes
     public int[] getPrice(){
         int areaOfGarden = getArea();
@@ -95,17 +96,37 @@ public class Garden extends Rectangle {
 
         return new int[]{minPrice, maxPrice};
     }
+/*
+    ----------------------------- CODE IN MAIN -------------------------------
+    Garden firstGarden = new Garden(10, 10, true, false, true);
+
+    int priceOfGarden[] = firstGarden.getPrice();
+        System.out.println("Minimum price: " + priceOfGarden[0] + "$"
+            + "\nMaximum price: " + priceOfGarden[1] + "$");
+
+    ------ Output -------
+    Minimum price: 22000$
+    Maximum price: 44000$
+ */
 
     // Override toString() method
     @Override
     public String toString() {
         return "Garden {" +
                 "area = " + super.getArea() +
-                " withinCityLimits = " + withinCityLimits +
-                ", nearToRoad = " + nearToRoad +
+                ", withinCityLimits = " + withinCityLimits + ",\n\t\t" +
+                " nearToRoad = " + nearToRoad +
                 ", blackSoil = " + blackSoil +
                 '}';
     }
+/*
+    -------------- CODE IN MAIN ---------------
+    System.out.println(firstGarden.toString());
+
+    ----------------- Output -------------------
+    Garden {area = 100, withinCityLimits = true,
+            nearToRoad = false, blackSoil = true}
+ */
 
     // Override hash() and equals() methods
     @Override
@@ -124,16 +145,14 @@ public class Garden extends Rectangle {
         return Objects.hash(super.hashCode(), isWithinCityLimits(),
                 isNearToRoad(), isBlackSoil());
     }
+/*
+    ---------------------- CODE IN MAIN ------------------------
+    Garden secondGarden = new Garden(10, 10, true, false, true);
+    System.out.println(firstGarden.equals(secondGarden));
+    System.out.println(firstGarden.hashCode());
 
-/*   ----------------------------- CODE IN MAIN -------------------------------
-    Garden firstGarden = new Garden(10, 10, true, false, true);
-
-    int priceOfGarden[] = firstGarden.getPrice();
-        System.out.println("Minimum price: " + priceOfGarden[0] + "$"
-            + "\nMaximum price: " + priceOfGarden[1] + "$");
-
-    --------------------------------- OUTPUT ----------------------------------
-    Minimum price: 22000$
-    Maximum price: 44000$
+    -- Output --
+    true
+    40308361
  */
 }
