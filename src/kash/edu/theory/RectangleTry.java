@@ -77,7 +77,11 @@ public class RectangleTry {
     // smaller diagonal: (2 * side) * sin(angle / 2)
     // double diagonal = (2 * this.getSide()) * Math.sin(180 - this.getAngle() / 2);
     // double smallerDiagonal = (2 * this.getSide()) * Math.sin(this.getAngle() / 2);
+
     // return new double[] {Math.round(diagonal * 100.0) / 100.0};
+
+
+
     //         // Calculate the diagonals of the rhombus
     //        double result[] = firstRhombus.getDiagonal();
     //        System.out.println("Diagonal: " + result[0]);
