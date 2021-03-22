@@ -24,7 +24,7 @@ public class Person {
     private String country;
     private String homeAddress;
     private String email;
-    private boolean isMarried;
+    private String maritalStatus;
     private boolean hasChildren;
     private boolean isWorking;
     private boolean hasProperty;
