@@ -1,5 +1,6 @@
 package kash.edu.module2.inheritance;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
 /**
@@ -51,7 +52,7 @@ public class Person {
         this.country = country;
         this.homeAddress = homeAddress;
         this.email = email;
-        this.isMarried = isMarried;
+        this.maritalStatus = maritalStatus;
         this.hasChildren = hasChildren;
         this.isWorking = isWorking;
         this.hasProperty = hasProperty;
@@ -148,11 +149,11 @@ public class Person {
     }
 
     public boolean isMarried() {
-        return isMarried;
+        return maritalStatus;
     }
 
     public void setMarried(boolean married) {
-        isMarried = married;
+        maritalStatus = married;
     }
 
     public boolean isHasChildren() {
@@ -209,7 +210,7 @@ public class Person {
                 ", country = '" + country + '\'' +
                 ", homeAddress = '" + homeAddress + '\'' +
                 ", email = '" + email + '\'' +
-                ", isMarried = " + isMarried +
+                ", isMarried = " + maritalStatus +
                 ", hasChildren = " + hasChildren +
                 ", isWorking = " + isWorking +
                 ", hasProperty = " + hasProperty +
@@ -250,4 +251,5 @@ public class Person {
                 getEmail(), isMarried(), isHasChildren(), isWorking(),
                 isHasProperty(), isHasAuto(), isHasDriversLicense());
     }
+
 }
