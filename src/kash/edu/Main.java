@@ -4,6 +4,7 @@ import kash.edu.module2.Rhombus;
 import kash.edu.module2.inheritance.Garden;
 import kash.edu.module2.inheritance.Person;
 import kash.edu.theory.inheritance.Wall;
+import kash.edu.theory.polymorphism.Rectangle2;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -103,14 +104,19 @@ public class Main {
         System.out.println(firstGarden.toString());
         System.out.println(firstGarden.hashCode());
 
-        Person britney = new Person("Britney", "Spears");
+        // ----------------------------- Polymorphism -------------------------------
+        Rectangle2 rectangle2 = new Rectangle2(3, 4);
+        System.out.println(rectangle2.toJSON());
+        System.out.println(rectangle2.toXML());
+
+
+
+
+/*        Person britney = new Person("Britney", "Spears");
         LocalDate.of(1985, Month.FEBRUARY, 12);
 
         System.out.println(britney.getAge());
-        System.out.println(britney.isAdult());
-
-
-
+        System.out.println(britney.isAdult());*/
 
 /*       IN PERSON
         public int getAge(){

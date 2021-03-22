@@ -16,6 +16,12 @@ public class Garden extends Rectangle {
     private boolean withinCityLimits; // the garden is located in a city
     private boolean nearToRoad; // the garden is located near the carriageway
     private boolean blackSoil; // the ground is covered by black soil
+    // min and max prices of 1 sq. meter of land in a city in $
+    int minPriceWithinCity = 200;
+    int maxPriceWithinCity = 400;
+    // min and max prices of 1 sq. meter of land outside a city in $
+    int minPriceOutsideCity = 1;
+    int maxPriceOutsideCity = 150;
 
     // Create constructors
     public Garden() {
@@ -66,13 +72,6 @@ public class Garden extends Rectangle {
         int areaOfGarden = getArea();
         int minPrice = 0;
         int maxPrice = 0;
-
-        // min and max prices of 1 sq. meter of land in a city in $
-        int minPriceWithinCity = 200;
-        int maxPriceWithinCity = 400;
-        // min and max prices of 1 sq. meter of land outside a city in $
-        int minPriceOutsideCity = 1;
-        int maxPriceOutsideCity = 150;
 
         // Approximate min and max prices depending on area and placement
         if (withinCityLimits) {
