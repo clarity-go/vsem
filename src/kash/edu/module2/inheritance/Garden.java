@@ -69,18 +69,17 @@ public class Garden extends Rectangle {
 
     // Method to define the price of the garden depending on the attributes
     public int[] getPrice(){
-        int areaOfGarden = getArea();
         int minPrice = 0;
         int maxPrice = 0;
 
         // Approximate min and max prices depending on area and placement
         if (withinCityLimits) {
-            minPrice = areaOfGarden * minPriceWithinCity;
-            maxPrice = areaOfGarden * maxPriceWithinCity;
+            minPrice = getArea() * minPriceWithinCity;
+            maxPrice = getArea() * maxPriceWithinCity;
         }
         else {
-            minPrice = areaOfGarden * minPriceOutsideCity;
-            maxPrice = areaOfGarden * maxPriceOutsideCity;
+            minPrice = getArea() * minPriceOutsideCity;
+            maxPrice = getArea() * maxPriceOutsideCity;
         }
 
         // Approximate min and max prices depending on nearToRoad and blackSoil
