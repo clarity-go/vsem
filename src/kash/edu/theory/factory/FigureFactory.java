@@ -1,0 +1,45 @@
+package kash.edu.theory.factory;
+
+import kash.edu.theory.designer.Square;
+import kash.edu.theory.designer.Triangle;
+import kash.edu.theory.polymorphism.interfaces.IGeometry;
+
+/*
+  @author   Alona Kashpruk
+  @project   vsem
+  @class  FigureFactory
+  @version  1.0.0 
+  @since 24.03.2021 - 19.54
+*/
+// --------------- Abstract Factory ----------------
+public class FigureFactory {
+    public static IGeometry create(int length, int width){
+
+        if (length == width) {
+            return new Square(length);
+        }
+
+        return new Rectangle3(length, width);
+    }
+
+    // OverLoad - change attributes, for ex., (double sideA, double sideB, double sideC)
+    public static IGeometry create(double sideA, double sideB, double sideC){
+        return new Triangle(sideA, sideB, sideC);
+    }
+
+    public static IGeometry create(double sideA, double sideB){
+        double sideC = Math.sqrt(sideA * sideA + sideB * sideB);
+        return new Triangle(sideA, sideB, sideC);
+    }
+
+    public static IGeometry create (double sideA, double sideB, Figures figure) {
+        if (figure.equals(Figures.TRIANGLE)){
+            return new Triangle(sideA, sideB, Math.sqrt(sideA * sideA + sideB * sideB));
+        }
+        else if (figure.equals(Figures.RECTANGLE)) {
+            return new Rectangle3((int) sideA, (int) sideB);
+        }
+        return null;
+    }
+
+}

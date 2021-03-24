@@ -7,7 +7,9 @@ package kash.edu.theory.designer;
   @since 24.03.2021 - 18.56
 */
 
-public class Triangle {
+import kash.edu.theory.polymorphism.interfaces.IGeometry;
+
+public class Triangle implements IGeometry {
     private double sideA;
     private double sideB;
     private double sideC;
@@ -52,5 +54,15 @@ public class Triangle {
                 ", sideB=" + sideB +
                 ", sideC=" + sideC +
                 '}';
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 0;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 }

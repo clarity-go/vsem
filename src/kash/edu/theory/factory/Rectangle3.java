@@ -7,7 +7,9 @@ package kash.edu.theory.factory;
   @since 24.03.2021 - 18.45
 */
 
-public class Rectangle3 {
+import kash.edu.theory.polymorphism.interfaces.IGeometry;
+
+public class Rectangle3 implements IGeometry {
     private int length;
     private int width;
 
@@ -42,7 +44,13 @@ public class Rectangle3 {
                 ", width=" + width +
                 '}';
     }
-    public int getArea(){
+
+    @Override
+    public double getPerimeter() {
+        return 0;
+    }
+
+    public double getArea(){
         return this.getLength() * this.getWidth();
     }
 
