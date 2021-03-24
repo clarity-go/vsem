@@ -1,5 +1,6 @@
 package kash.edu.theory.factory;
 
+import kash.edu.theory.designer.Cube;
 import kash.edu.theory.designer.Square;
 import kash.edu.theory.designer.Triangle;
 import kash.edu.theory.polymorphism.interfaces.IGeometry;
@@ -40,6 +41,12 @@ public class FigureFactory {
             return new Rectangle3((int) sideA, (int) sideB);
         }
         return null;
+    }
+
+    public static IGeometry create (double sideA, Figures figures){
+        if(figures.equals(Figures.TRIANGLE)) return new Triangle(sideA, sideA, sideA);
+        if(figures.equals(Figures.SQUARE)) return new Square((int) sideA);
+        if(figures.equals(Figures.CUBE)) return new Cube(sideA);
     }
 
 }

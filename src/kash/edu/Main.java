@@ -5,14 +5,13 @@ import kash.edu.module2.inheritance.Garden;
 import kash.edu.module2.inheritance.Person;
 import kash.edu.theory.designer.FullTimeWorker;
 import kash.edu.theory.designer.Triangle;
-import kash.edu.theory.factory.Rectangle3;
-import kash.edu.theory.factory.RectangleFactory;
-import kash.edu.theory.factory.TriangleFactory;
+import kash.edu.theory.factory.*;
 import kash.edu.theory.inheritance.Employee;
 import kash.edu.theory.inheritance.SoftwareDesigner;
 import kash.edu.theory.inheritance.Wall;
 import kash.edu.theory.polymorphism.Rectangle2;
 import kash.edu.theory.polymorphism.interfaces.IAccounting;
+import kash.edu.theory.polymorphism.interfaces.IGeometry;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -166,6 +165,8 @@ public class Main {
         Triangle triangle4 = TriangleFactory.create(1,1, 10);
         System.out.println(triangle4);
 
+        // ---------------- Abstract Factory ----------------------
+        IGeometry cube = FigureFactory.create(3, Figures.CUBE);
 
     }
 }

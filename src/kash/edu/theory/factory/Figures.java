@@ -8,5 +8,5 @@ package kash.edu.theory.factory;
 */
 
 public enum Figures {
-    TRIANGLE, RECTANGLE, RHOMBUS, TRAPEZOID
+    TRIANGLE, RECTANGLE, RHOMBUS, TRAPEZOID, SQUARE, CUBE
 }
