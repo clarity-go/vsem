@@ -16,6 +16,7 @@ import kash.edu.theory.polymorphism.interfaces.IGeometry;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -167,6 +168,14 @@ public class Main {
 
         // ---------------- Abstract Factory ----------------------
         IGeometry cube = FigureFactory.create(3, Figures.CUBE);
+
+/*-------------- Laboratory!!!!! ----------------------------
+
+        IGeometry cube = (Cube) FigureFactory.create(3, Figures.CUBE);
+        List<IGeometry> list = new ArrayList<>();
+        list.add(cube);
+
+*/
 
     }
 }
