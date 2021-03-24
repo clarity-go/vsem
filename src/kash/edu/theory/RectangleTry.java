@@ -10,7 +10,7 @@ import java.util.Objects;
  @since 17.03.2021 - 19.33
  */
 
-public class RectangleTry {
+public abstract class RectangleTry {
     private int length;
     private int width;
 
@@ -80,11 +80,7 @@ public class RectangleTry {
 
     // return new double[] {Math.round(diagonal * 100.0) / 100.0};
 
+    // Abstract method
+    public abstract double getDiagonal();
 
-
-    //         // Calculate the diagonals of the rhombus
-    //        double result[] = firstRhombus.getDiagonal();
-    //        System.out.println("Diagonal: " + result[0]);
-    //
-    //        System.out.println("2nd diagonal: " + result[1]);
 }

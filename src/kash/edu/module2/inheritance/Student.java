@@ -22,8 +22,36 @@ public class Student extends Person{
     private String degreeType; // for example, Bachelor's, Master's degree
     private LocalDate yearOfEntering; // year when entered the university
     private boolean isStipendiat; // has a scholarship
+/*    private double averageScore;
+    private boolean isBudget;*/
 
     public Student() {
+    }
+
+    public Student(String university, String group, String specialty, String chair, String faculty, String degreeType, LocalDate yearOfEntering, boolean isStipendiat) {
+        this.university = university;
+        this.group = group;
+        this.specialty = specialty;
+        this.chair = chair;
+        this.faculty = faculty;
+        this.degreeType = degreeType;
+        this.yearOfEntering = yearOfEntering;
+        this.isStipendiat = isStipendiat;
+    }
+
+    public Student(String gender, String race, String nationality, String firstName, String lastName, String patronymicName, String alias, LocalDate dateOfBirth, String country, String homeAddress, String email, boolean isMarried, boolean hasChildren, boolean isWorking, boolean hasProperty, boolean hasAuto, boolean hasDriversLicense, String university, String group, String specialty, String chair, String faculty, String degreeType, LocalDate yearOfEntering, boolean isStipendiat) {
+        super(gender, race, nationality, firstName, lastName, patronymicName, alias, dateOfBirth, country, homeAddress, email, isMarried, hasChildren, isWorking, hasProperty, hasAuto, hasDriversLicense);
+        this.university = university;
+        this.group = group;
+        this.specialty = specialty;
+        this.chair = chair;
+        this.faculty = faculty;
+        this.degreeType = degreeType;
+        this.yearOfEntering = yearOfEntering;
+        this.isStipendiat = isStipendiat;
+    }
+
+    /* public Student() {
     }
 
     public Student(String university, String group, String specialty,
@@ -160,5 +188,5 @@ public class Student extends Person{
         return Objects.hash(super.hashCode(), getUniversity(),
                 getGroup(), getSpecialty(), getChair(), getFaculty(),
                 getDegreeType(), getYearOfEntering(), isStipendiat());
-    }
+    }*/
 }

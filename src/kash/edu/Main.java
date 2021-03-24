@@ -3,8 +3,16 @@ package kash.edu;
 import kash.edu.module2.Rhombus;
 import kash.edu.module2.inheritance.Garden;
 import kash.edu.module2.inheritance.Person;
+import kash.edu.theory.designer.FullTimeWorker;
+import kash.edu.theory.designer.Triangle;
+import kash.edu.theory.factory.Rectangle3;
+import kash.edu.theory.factory.RectangleFactory;
+import kash.edu.theory.factory.TriangleFactory;
+import kash.edu.theory.inheritance.Employee;
+import kash.edu.theory.inheritance.SoftwareDesigner;
 import kash.edu.theory.inheritance.Wall;
 import kash.edu.theory.polymorphism.Rectangle2;
+import kash.edu.theory.polymorphism.interfaces.IAccounting;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -42,7 +50,7 @@ public class Main {
         r1.setWidth(-9);
         System.out.println(r1); // Output: width = 0
 
-*/
+
         // ----------------------------- Rhombus -------------------------------
 
         // Create the Object
@@ -87,11 +95,11 @@ public class Main {
         System.out.println("Diagonal: " + firstRhombus.getDiagonal() + " cm");
         // Output: Diagonal: 5.99 cm
 
-/*
+
         // ----------------------------- Wall -------------------------------
         Wall firstWall = new Wall(4, 3, "Green", true, true);
         firstWall.setWidth(4);
-*/
+
         // ----------------------------- Garden -------------------------------
         Garden firstGarden = new Garden(10, 10, true, false, true);
         Garden secondGarden = new Garden(10, 10, true, false, true);
@@ -109,7 +117,7 @@ public class Main {
         System.out.println(rectangle2.toJSON());
         System.out.println(rectangle2.toXML());
 
-
+*/
 
 
 /*        Person britney = new Person("Britney", "Spears");
@@ -133,5 +141,31 @@ public class Main {
             }
             return result;
         }*/
+
+        // ---------------- Abstract Classes ----------------------
+        SoftwareDesigner designer1 = new SoftwareDesigner();
+        // ------------------------ Or ----------------------------
+        Employee designer2 = new SoftwareDesigner();
+
+        // Error: Employee designer3 = new Employee();
+        // Abstract class does not have objects
+
+        IAccounting worker1 = new FullTimeWorker();
+        IAccounting worker2 = new FullTimeWorker();
+
+
+        // ---------------- Factory ----------------------
+        Rectangle3 rectangle1 = new Rectangle3(3, 4);
+        Rectangle3 rectangle2 = RectangleFactory.create(3, 4);
+        rectangle2.getWidth();
+        Rectangle3.getArea(7, 8); // static method - do not need to create object to calculate getArea
+
+
+        Triangle triangle3 = new Triangle(1, 1, 10);
+        System.out.println(triangle3);
+        Triangle triangle4 = TriangleFactory.create(1,1, 10);
+        System.out.println(triangle4);
+
+
     }
 }
