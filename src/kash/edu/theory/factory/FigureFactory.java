@@ -47,6 +47,7 @@ public class FigureFactory {
         if(figures.equals(Figures.TRIANGLE)) return new Triangle(sideA, sideA, sideA);
         if(figures.equals(Figures.SQUARE)) return new Square((int) sideA);
         if(figures.equals(Figures.CUBE)) return new Cube(sideA);
+        return null;
     }
 
 }
