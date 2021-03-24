@@ -7,9 +7,9 @@ package kash.edu.theory.designer;
   @since 24.03.2021 - 18.56
 */
 
-import kash.edu.theory.polymorphism.interfaces.IGeometry;
+import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 
-public class Triangle implements IGeometry {
+public class Triangle implements IGeometryTry {
     private double sideA;
     private double sideB;
     private double sideC;

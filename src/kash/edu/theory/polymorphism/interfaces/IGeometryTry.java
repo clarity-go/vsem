@@ -7,7 +7,7 @@ package kash.edu.theory.polymorphism.interfaces;
   @since 22.03.2021 - 19.16
 */
 
-public interface IGeometry {
+public interface IGeometryTry {
     public double getPerimeter();
     public double getArea();
 }

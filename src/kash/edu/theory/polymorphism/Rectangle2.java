@@ -1,6 +1,6 @@
 package kash.edu.theory.polymorphism;
 
-import kash.edu.theory.polymorphism.interfaces.IGeometry;
+import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 import kash.edu.theory.polymorphism.interfaces.IPacking;
 
 import java.util.Objects;
@@ -13,7 +13,7 @@ import java.util.Objects;
   @since 21.03.2021 - 10.59
 **/
 
-public class Rectangle2 implements IGeometry, IPacking {
+public class Rectangle2 implements IGeometryTry, IPacking {
     private int length;
     private int width;
 

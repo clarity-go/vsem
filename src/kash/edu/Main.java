@@ -1,22 +1,12 @@
 package kash.edu;
 
-import kash.edu.module2.Rhombus;
-import kash.edu.module2.inheritance.Garden;
-import kash.edu.module2.inheritance.Person;
 import kash.edu.theory.designer.FullTimeWorker;
 import kash.edu.theory.designer.Triangle;
 import kash.edu.theory.factory.*;
 import kash.edu.theory.inheritance.Employee;
 import kash.edu.theory.inheritance.SoftwareDesigner;
-import kash.edu.theory.inheritance.Wall;
-import kash.edu.theory.polymorphism.Rectangle2;
 import kash.edu.theory.polymorphism.interfaces.IAccounting;
-import kash.edu.theory.polymorphism.interfaces.IGeometry;
-
-import java.time.LocalDate;
-import java.time.Month;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
+import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 
 public class Main {
 
@@ -118,29 +108,15 @@ public class Main {
         System.out.println(rectangle2.toXML());
 
 */
+        // ----------------------------- DOB & Age -------------------------------
+/*
 
-
-/*        Person britney = new Person("Britney", "Spears");
-        LocalDate.of(1985, Month.FEBRUARY, 12);
+        Person britney = new Person("Britney", "Spears",
+                LocalDate.of(1985, Month.FEBRUARY, 12));
 
         System.out.println(britney.getAge());
-        System.out.println(britney.isAdult());*/
-
-/*       IN PERSON
-        public int getAge(){
-            int years = (int) ChronoUnit.YEARS.between(this.getDateOfBirth(), LocalDate.now());
-            return years;
-        }
-
-        public boolean isAdult(){
-            boolean result = true;
-            if (this.getAge() >= 18) {
-                result = true;
-            } else{
-                result = false;
-            }
-            return result;
-        }*/
+        System.out.println(britney.isAdult());
+*/
 
         // ---------------- Abstract Classes ----------------------
         SoftwareDesigner designer1 = new SoftwareDesigner();
@@ -167,7 +143,7 @@ public class Main {
         System.out.println(triangle4);
 
         // ---------------- Abstract Factory ----------------------
-        IGeometry cube = FigureFactory.create(3, Figures.CUBE);
+        IGeometryTry cube = FigureFactory.create(3, Figures.CUBE);
 
 /*-------------- Laboratory!!!!! ----------------------------
 

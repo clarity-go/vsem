@@ -6,9 +6,9 @@ package kash.edu.theory.designer;/*
   @since 24.03.2021 - 19.21
 */
 
-import kash.edu.theory.polymorphism.interfaces.IGeometry;
+import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 
-public class Square implements IGeometry {
+public class Square implements IGeometryTry {
     private int side;
 
     public Square() {

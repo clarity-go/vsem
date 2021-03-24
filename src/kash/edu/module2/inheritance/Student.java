@@ -16,77 +16,32 @@ import java.util.Objects;
 public class Student extends Person{
     private String university;
     private String group;
-    private String specialty;
+    private String fieldOfStudy;
     private String chair;
     private String faculty;
     private String degreeType; // for example, Bachelor's, Master's degree
     private LocalDate yearOfEntering; // year when entered the university
     private boolean isStipendiat; // has a scholarship
-/*    private double averageScore;
-    private boolean isBudget;*/
+    private double averageScore;
+    private boolean isBudget;
 
     public Student() {
     }
 
-    public Student(String university, String group, String specialty, String chair, String faculty, String degreeType, LocalDate yearOfEntering, boolean isStipendiat) {
-        this.university = university;
-        this.group = group;
-        this.specialty = specialty;
-        this.chair = chair;
-        this.faculty = faculty;
-        this.degreeType = degreeType;
-        this.yearOfEntering = yearOfEntering;
-        this.isStipendiat = isStipendiat;
-    }
-
-    public Student(String gender, String race, String nationality, String firstName, String lastName, String patronymicName, String alias, LocalDate dateOfBirth, String country, String homeAddress, String email, boolean isMarried, boolean hasChildren, boolean isWorking, boolean hasProperty, boolean hasAuto, boolean hasDriversLicense, String university, String group, String specialty, String chair, String faculty, String degreeType, LocalDate yearOfEntering, boolean isStipendiat) {
-        super(gender, race, nationality, firstName, lastName, patronymicName, alias, dateOfBirth, country, homeAddress, email, isMarried, hasChildren, isWorking, hasProperty, hasAuto, hasDriversLicense);
-        this.university = university;
-        this.group = group;
-        this.specialty = specialty;
-        this.chair = chair;
-        this.faculty = faculty;
-        this.degreeType = degreeType;
-        this.yearOfEntering = yearOfEntering;
-        this.isStipendiat = isStipendiat;
-    }
-
-    /* public Student() {
-    }
-
-    public Student(String university, String group, String specialty,
+    public Student(String university, String group, String fieldOfStudy,
                    String chair, String faculty, String degreeType,
-                   LocalDate yearOfEntering, boolean isStipendiat) {
+                   LocalDate yearOfEntering, boolean isStipendiat,
+                   double averageScore, boolean isBudget) {
         this.university = university;
         this.group = group;
-        this.specialty = specialty;
+        this.fieldOfStudy = fieldOfStudy;
         this.chair = chair;
         this.faculty = faculty;
         this.degreeType = degreeType;
         this.yearOfEntering = yearOfEntering;
         this.isStipendiat = isStipendiat;
-    }
-
-    public Student(String gender, String race, String nationality,
-                   String firstName, String lastName, String patronymicName,
-                   String alias, LocalDate dateOfBirth, String country,
-                   String homeAddress, String email, boolean isMarried,
-                   boolean hasChildren, boolean isWorking, boolean hasProperty,
-                   boolean hasAuto, boolean hasDriversLicense,
-                   String university, String group, String specialty,
-                   String chair, String faculty, String degreeType,
-                   LocalDate yearOfEntering, boolean isStipendiat) {
-        super(gender, race, nationality, firstName, lastName, patronymicName,
-                alias, dateOfBirth, country, homeAddress, email, isMarried,
-                hasChildren, isWorking, hasProperty, hasAuto, hasDriversLicense);
-        this.university = university;
-        this.group = group;
-        this.specialty = specialty;
-        this.chair = chair;
-        this.faculty = faculty;
-        this.degreeType = degreeType;
-        this.yearOfEntering = yearOfEntering;
-        this.isStipendiat = isStipendiat;
+        this.averageScore = averageScore;
+        this.isBudget = isBudget;
     }
 
     public String getUniversity() {
@@ -105,12 +60,12 @@ public class Student extends Person{
         this.group = group;
     }
 
-    public String getSpecialty() {
-        return specialty;
+    public String getFieldOfStudy() {
+        return fieldOfStudy;
     }
 
-    public void setSpecialty(String specialty) {
-        this.specialty = specialty;
+    public void setFieldOfStudy(String fieldOfStudy) {
+        this.fieldOfStudy = fieldOfStudy;
     }
 
     public String getChair() {
@@ -153,17 +108,35 @@ public class Student extends Person{
         isStipendiat = stipendiat;
     }
 
+    public double getAverageScore() {
+        return averageScore;
+    }
+
+    public void setAverageScore(double averageScore) {
+        this.averageScore = averageScore;
+    }
+
+    public boolean isBudget() {
+        return isBudget;
+    }
+
+    public void setBudget(boolean budget) {
+        isBudget = budget;
+    }
+
     @Override
     public String toString() {
-        return " Student {" +
-                " university = '" + university + '\'' +
+        return "Student{" +
+                "university = '" + university + '\'' +
                 ", group = '" + group + '\'' +
-                ", specialty = '" + specialty + '\'' +
+                ", fieldOfStudy = '" + fieldOfStudy + '\'' +
                 ", chair = '" + chair + '\'' +
                 ", faculty = '" + faculty + '\'' +
                 ", degreeType = '" + degreeType + '\'' +
                 ", yearOfEntering = " + yearOfEntering +
                 ", isStipendiat = " + isStipendiat +
+                ", averageScore = " + averageScore +
+                ", isBudget = " + isBudget +
                 '}';
     }
 
@@ -171,12 +144,13 @@ public class Student extends Person{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
         Student student = (Student) o;
         return isStipendiat() == student.isStipendiat()
+                && Double.compare(student.getAverageScore(), getAverageScore())
+                == 0 && isBudget() == student.isBudget()
                 && getUniversity().equals(student.getUniversity())
                 && getGroup().equals(student.getGroup())
-                && getSpecialty().equals(student.getSpecialty())
+                && getFieldOfStudy().equals(student.getFieldOfStudy())
                 && getChair().equals(student.getChair())
                 && getFaculty().equals(student.getFaculty())
                 && getDegreeType().equals(student.getDegreeType())
@@ -185,8 +159,8 @@ public class Student extends Person{
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), getUniversity(),
-                getGroup(), getSpecialty(), getChair(), getFaculty(),
-                getDegreeType(), getYearOfEntering(), isStipendiat());
-    }*/
+        return Objects.hash(getUniversity(), getGroup(), getFieldOfStudy(),
+                getChair(), getFaculty(), getDegreeType(), getYearOfEntering(),
+                isStipendiat(), getAverageScore(), isBudget());
+    }
 }

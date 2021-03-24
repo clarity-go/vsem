@@ -14,23 +14,23 @@ import java.util.Objects;
 // Create a class Person and a class Student as its daughter (altogether 25 fields)
 
 public class Person {
+    private String firstName;
+    private String lastName;
+    private LocalDate dateOfBirth;
     private String gender;
     private String race;
     private String nationality;
-    private String firstName;
-    private String lastName;
     private String patronymicName;
     private String alias;
-    private LocalDate dateOfBirth;
     private String country;
     private String homeAddress;
     private String email;
-    private boolean maritalStatus;
     private boolean hasChildren;
     private boolean isWorking;
     private boolean hasProperty;
     private boolean hasAuto;
     private boolean hasDriversLicense;
+    private String hobby;
 
     public Person() {
     }
@@ -38,9 +38,9 @@ public class Person {
     public Person(String gender, String race, String nationality,
                   String firstName, String lastName, String patronymicName,
                   String alias, LocalDate dateOfBirth, String country,
-                  String homeAddress, String email, boolean isMarried,
-                  boolean hasChildren, boolean isWorking, boolean hasProperty,
-                  boolean hasAuto, boolean hasDriversLicense) {
+                  String homeAddress, String email, boolean hasChildren,
+                  boolean isWorking, boolean hasProperty, boolean hasAuto,
+                  boolean hasDriversLicense, String hobby) {
         this.gender = gender;
         this.race = race;
         this.nationality = nationality;
@@ -52,12 +52,12 @@ public class Person {
         this.country = country;
         this.homeAddress = homeAddress;
         this.email = email;
-        this.maritalStatus = maritalStatus;
         this.hasChildren = hasChildren;
         this.isWorking = isWorking;
         this.hasProperty = hasProperty;
         this.hasAuto = hasAuto;
         this.hasDriversLicense = hasDriversLicense;
+        this.hobby = hobby;
     }
 
     public String getGender() {
@@ -148,14 +148,6 @@ public class Person {
         this.email = email;
     }
 
-    public boolean isMarried() {
-        return maritalStatus;
-    }
-
-    public void setMarried(boolean married) {
-        maritalStatus = married;
-    }
-
     public boolean isHasChildren() {
         return hasChildren;
     }
@@ -196,10 +188,18 @@ public class Person {
         this.hasDriversLicense = hasDriversLicense;
     }
 
+    public String getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
+
     @Override
     public String toString() {
         return "Person {" +
-                "gender = '" + gender + '\'' +
+                " gender = '" + gender + '\'' +
                 ", race = '" + race + '\'' +
                 ", nationality = '" + nationality + '\'' +
                 ", firstName = '" + firstName + '\'' +
@@ -210,12 +210,12 @@ public class Person {
                 ", country = '" + country + '\'' +
                 ", homeAddress = '" + homeAddress + '\'' +
                 ", email = '" + email + '\'' +
-                ", isMarried = " + maritalStatus +
                 ", hasChildren = " + hasChildren +
                 ", isWorking = " + isWorking +
                 ", hasProperty = " + hasProperty +
                 ", hasAuto = " + hasAuto +
                 ", hasDriversLicense = " + hasDriversLicense +
+                ", hobby = '" + hobby + '\'' +
                 '}';
     }
 
@@ -224,12 +224,11 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return isMarried() == person.isMarried() && isHasChildren()
-                == person.isHasChildren() && isWorking()
-                == person.isWorking() && isHasProperty()
-                == person.isHasProperty() && isHasAuto()
-                == person.isHasAuto() && isHasDriversLicense()
-                == person.isHasDriversLicense()
+        return isHasChildren() == person.isHasChildren()
+                && isWorking() == person.isWorking()
+                && isHasProperty() == person.isHasProperty()
+                && isHasAuto() == person.isHasAuto()
+                && isHasDriversLicense() == person.isHasDriversLicense()
                 && getGender().equals(person.getGender())
                 && getRace().equals(person.getRace())
                 && getNationality().equals(person.getNationality())
@@ -240,7 +239,8 @@ public class Person {
                 && getDateOfBirth().equals(person.getDateOfBirth())
                 && getCountry().equals(person.getCountry())
                 && getHomeAddress().equals(person.getHomeAddress())
-                && getEmail().equals(person.getEmail());
+                && getEmail().equals(person.getEmail())
+                && getHobby().equals(person.getHobby());
     }
 
     @Override
@@ -248,8 +248,18 @@ public class Person {
         return Objects.hash(getGender(), getRace(), getNationality(),
                 getFirstName(), getLastName(), getPatronymicName(),
                 getAlias(), getDateOfBirth(), getCountry(), getHomeAddress(),
-                getEmail(), isMarried(), isHasChildren(), isWorking(),
-                isHasProperty(), isHasAuto(), isHasDriversLicense());
+                getEmail(), isHasChildren(), isWorking(), isHasProperty(),
+                isHasAuto(), isHasDriversLicense(), getHobby());
     }
 
+    // Method to calculate the age of the person
+    public int getAge(){
+        int years = (int) ChronoUnit.YEARS.between(this.getDateOfBirth(), LocalDate.now());
+        return years;
+    }
+
+    // Method to calculate whether the person is adult (>= 18 years old)
+    public boolean isAdult() {
+        return this.getAge() >= 18 ? true : false;
+    }
 }

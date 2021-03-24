@@ -7,9 +7,9 @@ package kash.edu.theory.designer;
   @since 24.03.2021 - 20.31
 */
 
-import kash.edu.theory.polymorphism.interfaces.IGeometry;
+import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 
-public class Cube implements IGeometry {
+public class Cube implements IGeometryTry {
     private double sideA;
 
     public Cube(double sideA) {

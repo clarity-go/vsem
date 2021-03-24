@@ -7,9 +7,9 @@ package kash.edu.theory.factory;
   @since 24.03.2021 - 18.45
 */
 
-import kash.edu.theory.polymorphism.interfaces.IGeometry;
+import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 
-public class Rectangle3 implements IGeometry {
+public class Rectangle3 implements IGeometryTry {
     private int length;
     private int width;
 
