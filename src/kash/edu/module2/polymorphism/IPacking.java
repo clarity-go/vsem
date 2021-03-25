@@ -1,4 +1,5 @@
 package kash.edu.module2.polymorphism;
+
 /**
   @author   Alona Kashpruk
   @project   vsem
@@ -7,7 +8,11 @@ package kash.edu.module2.polymorphism;
   @since 24.03.2021 - 23.25
 **/
 
+// Task: Create and implement two interfaces for class Rhombus2
+
 public interface IPacking {
+
     String toJSON();
     String toXML();
+
 }

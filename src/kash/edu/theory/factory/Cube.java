@@ -1,4 +1,4 @@
-package kash.edu.theory.designer;
+package kash.edu.theory.factory;
 /*
   @author   Alona Kashpruk
   @project   vsem

@@ -1,4 +1,4 @@
-package kash.edu.theory.polymorphism.interfaces;
+package kash.edu.theory.designer;
 /*
   @author   Alona Kashpruk
   @project   vsem

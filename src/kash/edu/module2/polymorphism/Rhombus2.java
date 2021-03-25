@@ -1,5 +1,4 @@
 package kash.edu.module2.polymorphism;
-
 import java.util.Objects;
 
 /**
@@ -10,7 +9,7 @@ import java.util.Objects;
   @since 17.03.2021 - 20.02
 **/
 
-// Task: Create and implement  two interfaces for your class.
+// Task: Create and implement two interfaces for class Rhombus2
 
 public class Rhombus2 implements IGeometry, IPacking {
     private double side;

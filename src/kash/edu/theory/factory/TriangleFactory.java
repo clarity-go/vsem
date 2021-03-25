@@ -7,8 +7,6 @@ package kash.edu.theory.factory;
   @since 24.03.2021 - 19.00
 */
 
-import kash.edu.theory.designer.Triangle;
-
 public class TriangleFactory {
     public static Triangle create(int sideA, int sideB, int sideC){
         if (sideA + sideB <= sideC){

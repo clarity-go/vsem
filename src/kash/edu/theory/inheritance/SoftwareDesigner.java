@@ -22,7 +22,9 @@ public class SoftwareDesigner extends Employee{
         this.hours = hours;
     }
 
-    public SoftwareDesigner(String name, LocalDate entranceDay, String speciality, String qualification, int rate, int hours) {
+    public SoftwareDesigner(String name, LocalDate entranceDay,
+                            String speciality, String qualification,
+                            int rate, int hours) {
         super(name, entranceDay, speciality, qualification);
         this.rate = rate;
         this.hours = hours;

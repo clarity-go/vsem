@@ -7,7 +7,7 @@ package kash.edu.theory.factory;
   @since 24.03.2021 - 18.48
 */
 
-public class RectangleFactory {
+public class Rectangle3Factory {
     public static Rectangle3 create(int length, int width){
         // put logic here
         // static - do not presupposes the creation of the object

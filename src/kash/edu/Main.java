@@ -1,11 +1,14 @@
 package kash.edu;
 
+import kash.edu.module2.polymorphism.Rhombus2;
+import kash.edu.module2.polymorphism.Rhombus2Factory;
 import kash.edu.theory.designer.FullTimeWorker;
-import kash.edu.theory.designer.Triangle;
+import kash.edu.theory.designer.PartTimeWorker;
+import kash.edu.theory.factory.Triangle;
 import kash.edu.theory.factory.*;
 import kash.edu.theory.inheritance.Employee;
 import kash.edu.theory.inheritance.SoftwareDesigner;
-import kash.edu.theory.polymorphism.interfaces.IAccounting;
+import kash.edu.theory.designer.IAccounting;
 import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 
 public class Main {
@@ -127,12 +130,12 @@ public class Main {
         // Abstract class does not have objects
 
         IAccounting worker1 = new FullTimeWorker();
-        IAccounting worker2 = new FullTimeWorker();
+        IAccounting worker2 = new PartTimeWorker();
 
 
         // ---------------- Factory ----------------------
         Rectangle3 rectangle1 = new Rectangle3(3, 4);
-        Rectangle3 rectangle2 = RectangleFactory.create(3, 4);
+        Rectangle3 rectangle2 = Rectangle3Factory.create(3, 4);
         rectangle2.getWidth();
         Rectangle3.getArea(7, 8); // static method - do not need to create object to calculate getArea
 
@@ -140,7 +143,7 @@ public class Main {
         Triangle triangle3 = new Triangle(1, 1, 10);
         System.out.println(triangle3);
         Triangle triangle4 = TriangleFactory.create(1,1, 10);
-        System.out.println(triangle4);
+        System.out.println(triangle4); // null
 
         // ---------------- Abstract Factory ----------------------
         IGeometryTry cube = FigureFactory.create(3, Figures.CUBE);
@@ -152,6 +155,5 @@ public class Main {
         list.add(cube);
 
 */
-
     }
 }

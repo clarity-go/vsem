@@ -1,8 +1,5 @@
 package kash.edu.theory.factory;
 
-import kash.edu.theory.designer.Cube;
-import kash.edu.theory.designer.Square;
-import kash.edu.theory.designer.Triangle;
 import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 
 /*

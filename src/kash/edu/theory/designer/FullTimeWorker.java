@@ -7,8 +7,6 @@ package kash.edu.theory.designer;
   @since 24.03.2021 - 18.35
 */
 
-import kash.edu.theory.polymorphism.interfaces.IAccounting;
-
 public class FullTimeWorker implements IAccounting {
     private String name;
 

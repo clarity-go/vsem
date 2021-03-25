@@ -7,8 +7,6 @@ package kash.edu.theory.designer;
   @since 24.03.2021 - 18.37
 */
 
-import kash.edu.theory.polymorphism.interfaces.IAccounting;
-
 public class PartTimeWorker implements IAccounting {
     private String name;
     private int rate;
