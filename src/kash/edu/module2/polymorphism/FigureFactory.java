@@ -11,6 +11,8 @@ import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
   @since 26.03.2021 - 16.36
 **/
 
+// Task: develop abstract factory for Figures: Rhombus, Triangle, Square, Rectangle
+
 public class FigureFactory {
 
     // Create rhombus depending on the evident input: side and angle
