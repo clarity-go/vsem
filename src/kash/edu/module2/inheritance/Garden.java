@@ -12,7 +12,7 @@ import java.util.Objects;
 
 // Task: Create a child Garden from the class Rectangle
 
-public class Garden extends Rectangle {
+public class Garden extends Rectangle4 {
     private boolean withinCityLimits; // the garden is located in a city
     private boolean nearToRoad; // the garden is located near the carriageway
     private boolean blackSoil; // the ground is covered by black soil

@@ -7,6 +7,6 @@ package kash.edu.theory.factory;
   @since 24.03.2021 - 20.06
 */
 
-public enum Figures {
+public enum FiguresTry {
     TRIANGLE, RECTANGLE, RHOMBUS, TRAPEZOID, SQUARE, CUBE
 }

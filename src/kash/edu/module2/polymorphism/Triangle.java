@@ -1,15 +1,13 @@
-package kash.edu.theory.factory;
-/*
+package kash.edu.module2.polymorphism;
+/**
   @author   Alona Kashpruk
   @project   vsem
   @class  Triangle
   @version  1.0.0 
-  @since 24.03.2021 - 18.56
-*/
+  @since 26.03.2021 - 17.18
+**/
 
-import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
-
-public class Triangle implements IGeometryTry {
+public class Triangle implements IGeometry{
     private double sideA;
     private double sideB;
     private double sideC;
@@ -49,10 +47,10 @@ public class Triangle implements IGeometryTry {
 
     @Override
     public String toString() {
-        return "Triangle{" +
-                "sideA=" + sideA +
-                ", sideB=" + sideB +
-                ", sideC=" + sideC +
+        return "Triangle {" +
+                "sideA = " + sideA +
+                ", sideB = " + sideB +
+                ", sideC = " + sideC +
                 '}';
     }
 
@@ -63,6 +61,21 @@ public class Triangle implements IGeometryTry {
 
     @Override
     public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public double getHeight() {
+        return 0;
+    }
+
+    @Override
+    public double getInradius() {
+        return 0;
+    }
+
+    @Override
+    public double getDiagonal() {
         return 0;
     }
 }

@@ -50,6 +50,7 @@ public class Rectangle3 implements IGeometryTry {
         return 0;
     }
 
+
     public double getArea(){
         return this.getLength() * this.getWidth();
     }

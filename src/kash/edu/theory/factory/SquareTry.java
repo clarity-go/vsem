@@ -8,13 +8,13 @@ package kash.edu.theory.factory;/*
 
 import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 
-public class Square implements IGeometryTry {
+public class SquareTry implements IGeometryTry {
     private int side;
 
-    public Square() {
+    public SquareTry() {
     }
 
-    public Square(int side) {
+    public SquareTry(int side) {
         this.side = side;
     }
 

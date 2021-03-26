@@ -10,15 +10,15 @@ import java.util.Objects;
   @since 21.03.2021 - 10.59
 **/
 
-public class Rectangle {
+public class Rectangle4 {
     private int length;
     private int width;
 
     // Create constructors
-    public Rectangle() {
+    public Rectangle4() {
     }
 
-    public Rectangle(int length, int width) {
+    public Rectangle4(int length, int width) {
         this.length = length;
         this.width = width;
     }
@@ -59,7 +59,7 @@ public class Rectangle {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Rectangle rectangle = (Rectangle) o;
+        Rectangle4 rectangle = (Rectangle4) o;
         return getLength() == rectangle.getLength() && getWidth() == rectangle.getWidth();
     }
 

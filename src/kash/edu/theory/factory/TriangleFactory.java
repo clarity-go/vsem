@@ -8,10 +8,10 @@ package kash.edu.theory.factory;
 */
 
 public class TriangleFactory {
-    public static Triangle create(int sideA, int sideB, int sideC){
+    public static TriangleTry create(int sideA, int sideB, int sideC){
         if (sideA + sideB <= sideC){
             return null;
         }
-        return new Triangle(sideA, sideB, sideC);
+        return new TriangleTry(sideA, sideB, sideC);
     }
 }

@@ -9,10 +9,10 @@ package kash.edu.theory.factory;
 
 import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
 
-public class Cube implements IGeometryTry {
+public class CubeTry implements IGeometryTry {
     private double sideA;
 
-    public Cube(double sideA) {
+    public CubeTry(double sideA) {
         this.sideA = sideA;
     }
 

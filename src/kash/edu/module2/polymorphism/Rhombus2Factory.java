@@ -13,7 +13,7 @@ package kash.edu.module2.polymorphism;
 public class Rhombus2Factory {
 
     public static Rhombus2 create(double side, int angle) {
-        if (angle < 0 || angle >= 180){
+        if (angle < 0 || angle >= 180) {
             return null;
         }
         return new Rhombus2(side, angle);
