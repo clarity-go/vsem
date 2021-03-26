@@ -1,4 +1,4 @@
-package kash.edu.theory;/*
+package kash.edu.theory.module1try;/*
   @author   Alona Kashpruk
   @project   vsem
   @class  IntegralTry

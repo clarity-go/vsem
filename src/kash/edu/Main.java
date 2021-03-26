@@ -1,8 +1,10 @@
 package kash.edu;
 
+import kash.edu.module2.inheritance.Student;
 import kash.edu.module2.polymorphism.FigureFactory;
 import kash.edu.module2.polymorphism.Figures;
 import kash.edu.module2.polymorphism.IGeometry;
+import kash.edu.theory.StudentTry;
 import kash.edu.theory.designer.FullTimeWorker;
 import kash.edu.theory.designer.PartTimeWorker;
 import kash.edu.theory.factory.TriangleTry;
@@ -11,6 +13,8 @@ import kash.edu.theory.inheritance.Employee;
 import kash.edu.theory.inheritance.SoftwareDesigner;
 import kash.edu.theory.designer.IAccounting;
 import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
+
+import java.time.LocalDate;
 
 public class Main {
 
@@ -120,7 +124,7 @@ public class Main {
 
         System.out.println(britney.getAge());
         System.out.println(britney.isAdult());
-*/
+
 
         // ---------------- Abstract Classes ----------------------
         SoftwareDesigner designer1 = new SoftwareDesigner();
@@ -149,18 +153,45 @@ public class Main {
         // ---------------- Abstract Factory ----------------------
         IGeometryTry cube = FigureFactoryTry.create(3, FiguresTry.CUBE);
 
-/*-------------- Laboratory!!!!! ----------------------------
-
-        IGeometry cube = (Cube) FigureFactory.create(3, Figures.CUBE);
-        List<IGeometry> list = new ArrayList<>();
-        list.add(cube);
-
-*/
         IGeometry figure = FigureFactory.create(3, 3, 90);
         System.out.println(figure);
 
         IGeometry figure1 = FigureFactory.create(3, Figures.TRIANGLE);
         System.out.println(figure1);
+
+        // -------------- Laboratory!!!!! ----------------------------
+
+        IGeometry cube = (Cube) FigureFactory.create(3, Figures.CUBE);
+        List<IGeometry> list = new ArrayList<>();
+        list.add(cube);
+
+
+        // ---------------------- Builder -----------------------------
+        // Create student in an ordinary way
+        StudentTry student1 = new StudentTry("Ivan", "Ivanov", "Ivanovych",
+                LocalDate.of(2000, 1, 1), true, "0636527847");
+
+        // Create student using builder
+        StudentTry student2 = new StudentTry.Builder()
+                .setFirstName("Petro")
+                .setLastName("Petrov")
+                .setPatronymic("Petrovich")
+                .setBirth(LocalDate.of(2000, 1, 1))
+                .setPhone("0636527847")
+                .setGender(true)
+                .build();
+
+        StudentTry student3 = new StudentTry.Builder()
+                .setSimilarTo(student2)
+                .setFirstName("Brian")
+                .build;
+        System.out.println(student3);
+
+        // BAD variant
+        StudentTry student4 = student3; // the same objects, have the same addresses
+        student4.setFirstName("Mark"); // changes the student3 object's first name
+*/
+
 
     }
 }

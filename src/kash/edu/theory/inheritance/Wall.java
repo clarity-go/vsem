@@ -1,6 +1,6 @@
 package kash.edu.theory.inheritance;
 
-import kash.edu.theory.RectangleTry;
+import kash.edu.theory.module1try.RectangleTry;
 
 /*
   @author   Alona Kashpruk
