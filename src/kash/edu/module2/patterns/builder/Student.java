@@ -354,6 +354,9 @@ public class Student extends Person {
             return this;
         }
 
+        // Additional task: create setSimilarTo method to create the similar
+        // from the existing one Student object with the ability
+        // to change necessary fields/data
         public Student.Builder setSimilarTo(Student student){
 
             this.studentToBuild.setFirstName(student.getFirstName());
