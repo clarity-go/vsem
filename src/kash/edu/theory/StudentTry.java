@@ -30,7 +30,10 @@ public class StudentTry extends PersonNewTry {
         this.phone = phone;
     }
 
-    public StudentTry(String idCard, String firstName, String lastName, String patronymic, LocalDate birth, boolean gender, String phone) {
+    // Constructor which includes idCard from PersonNewTry which is extended by this class
+    public StudentTry(String idCard, String firstName, String lastName,
+                      String patronymic, LocalDate birth, boolean gender,
+                      String phone) {
         super(idCard);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -88,7 +91,6 @@ public class StudentTry extends PersonNewTry {
         this.phone = phone;
     }
 
-/*
     @Override
     public String toString() {
         return "StudentTry {" +
@@ -98,28 +100,35 @@ public class StudentTry extends PersonNewTry {
                 ", birth = " + birth +
                 ", gender = " + gender +
                 ", phone = '" + phone + '\'' +
+                ", idCard = '" + super.getIdCard() + '\'' +
                 '}';
     }
-*/
 
     // Create Builder for student
-    public static class Builder{
+    public static class Builder {
         private StudentTry studentToBuild;
 
-/*        // Create empty constructor
+       // Create empty constructor
         public Builder() {
-            this.studentToBuild = new StudentTry{
-        }*/
+            this.studentToBuild = new StudentTry();
+        }
 
         public Builder setFirstName(String firstName){
             studentToBuild.setFirstName(firstName);
             return this; // return the same builder
         }
 
-        public Builder setIdCard(String idCard){
-            studentToBuild.setIdCard(idCard);
-            return this;
+        public Builder setSimilarTo(StudentTry student){
+        this.studentToBuild.firstName = student.firstName;
+        this.studentToBuild.lastName = student.lastName;
+        this.studentToBuild.patronymic = student.patronymic;
+        this.studentToBuild.birth = student.birth;
+        this.studentToBuild.gender = student.gender;
+        this.studentToBuild.phone = student.phone;
+        return this;
         }
+        // this.studentToBuild.setFirstName(student.getFirstName());
+        //super.studentToBuild.firstName = student.firstName;
 
         public Builder setLastName(String lastName){
             studentToBuild.setLastName(lastName);
@@ -146,19 +155,16 @@ public class StudentTry extends PersonNewTry {
             return this;
         }
 
-        public Builder setSimilarTo(StudentTry student){
-            this.studentToBuild.firstName = student.firstName;
-            this.studentToBuild.lastName = student.lastName;
-            this.studentToBuild.patronymic = student.patronymic;
-            this.studentToBuild.birth = student.birth;
-            this.studentToBuild.gender = student.gender;
-            this.studentToBuild.phone = student.phone;
+        // Create builder for idCard from PersonNewTry which is extended by this class
+        public Builder setIdCard(String idCard){
+            studentToBuild.setIdCard(idCard);
             return this;
         }
-        public StudentTry build(){
+
+        public StudentTry build() {
             return studentToBuild;
         }
 
     }
-    // this.studentToBuild.setFirstName(student.getFirstName());
+
 }

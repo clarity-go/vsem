@@ -27,7 +27,7 @@ public class PersonNewTry {
     @Override
     public String toString() {
         return "PersonNewTry{" +
-                "idCard='" + idCard + '\'' +
+                " idCard = '" + idCard + '\'' +
                 '}';
     }
 }

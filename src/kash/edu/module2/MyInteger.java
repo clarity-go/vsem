@@ -1,25 +1,28 @@
-package kash.edu.theory.exercisesTry;
-/*
+package kash.edu.module2;
+/**
   @author   Alona Kashpruk
   @project   vsem
-  @class  MyInteger
+  @class  MyIntegerTry
   @version  1.0.0 
-  @since 26.03.2021 - 19.10
-*/
+  @since 28.03.2021 - 14.40
+**/
 
-public class MyIntegerTry {
-    // determine is the X number prime or not (divide by 1 and by X)
-    public static boolean isPrime(int numberToCheck){
+// Task: Create a class MyInteger.
+// Design a method public static boolean isPrime(int num).
+
+public class MyInteger {
+
+    public static boolean isPrime(int num){
 
         boolean isPrime = true;
 
-        if (numberToCheck == 1){
+        if (num == 1){
             isPrime = false;
         }
         else{
-            for (int i = 2; i < numberToCheck; i++) {
-                if(numberToCheck % i == 0){
-                    isPrime = false; // is not a prime number
+            for (int i = 2; i < num; i++) {
+                if(num % i == 0){
+                    isPrime = false;
                 }
             }
         }
