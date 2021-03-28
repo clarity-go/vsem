@@ -25,39 +25,63 @@ public class Person {
     private String country;
     private String homeAddress;
     private String email;
-    private boolean hasChildren;
+    private boolean isHavingChildren;
     private boolean isWorking;
-    private boolean hasProperty;
-    private boolean hasAuto;
-    private boolean hasDriversLicense;
+    private boolean isHavingProperty;
+    private boolean isHavingAuto;
+    private boolean isHavingDriversLicense;
     private String hobby;
 
     public Person() {
     }
 
-    public Person(String gender, String race, String nationality,
-                  String firstName, String lastName, String patronymicName,
-                  String alias, LocalDate dateOfBirth, String country,
-                  String homeAddress, String email, boolean hasChildren,
-                  boolean isWorking, boolean hasProperty, boolean hasAuto,
-                  boolean hasDriversLicense, String hobby) {
+    public Person(String firstName, String lastName, LocalDate dateOfBirth,
+                  String gender, String race, String nationality,
+                  String patronymicName, String alias, String country,
+                  String homeAddress, String email, boolean isHavingChildren,
+                  boolean isWorking, boolean isHavingProperty, boolean isHavingAuto,
+                  boolean isHavingDriversLicense, String hobby) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
         this.gender = gender;
         this.race = race;
         this.nationality = nationality;
-        this.firstName = firstName;
-        this.lastName = lastName;
         this.patronymicName = patronymicName;
         this.alias = alias;
-        this.dateOfBirth = dateOfBirth;
         this.country = country;
         this.homeAddress = homeAddress;
         this.email = email;
-        this.hasChildren = hasChildren;
+        this.isHavingChildren = isHavingChildren;
         this.isWorking = isWorking;
-        this.hasProperty = hasProperty;
-        this.hasAuto = hasAuto;
-        this.hasDriversLicense = hasDriversLicense;
+        this.isHavingProperty = isHavingProperty;
+        this.isHavingAuto = isHavingAuto;
+        this.isHavingDriversLicense = isHavingDriversLicense;
         this.hobby = hobby;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getGender() {
@@ -84,22 +108,6 @@ public class Person {
         this.nationality = nationality;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getPatronymicName() {
         return patronymicName;
     }
@@ -114,14 +122,6 @@ public class Person {
 
     public void setAlias(String alias) {
         this.alias = alias;
-    }
-
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
     }
 
     public String getCountry() {
@@ -148,12 +148,12 @@ public class Person {
         this.email = email;
     }
 
-    public boolean isHasChildren() {
-        return hasChildren;
+    public boolean isHavingChildren() {
+        return isHavingChildren;
     }
 
-    public void setHasChildren(boolean hasChildren) {
-        this.hasChildren = hasChildren;
+    public void setHavingChildren(boolean havingChildren) {
+        isHavingChildren = havingChildren;
     }
 
     public boolean isWorking() {
@@ -164,28 +164,28 @@ public class Person {
         isWorking = working;
     }
 
-    public boolean isHasProperty() {
-        return hasProperty;
+    public boolean isHavingProperty() {
+        return isHavingProperty;
     }
 
-    public void setHasProperty(boolean hasProperty) {
-        this.hasProperty = hasProperty;
+    public void setHavingProperty(boolean havingProperty) {
+        this.isHavingProperty = havingProperty;
     }
 
-    public boolean isHasAuto() {
-        return hasAuto;
+    public boolean isHavingAuto() {
+        return isHavingAuto;
     }
 
-    public void setHasAuto(boolean hasAuto) {
-        this.hasAuto = hasAuto;
+    public void setHavingAuto(boolean havingAuto) {
+        isHavingAuto = havingAuto;
     }
 
-    public boolean isHasDriversLicense() {
-        return hasDriversLicense;
+    public boolean isHavingDriversLicense() {
+        return isHavingDriversLicense;
     }
 
-    public void setHasDriversLicense(boolean hasDriversLicense) {
-        this.hasDriversLicense = hasDriversLicense;
+    public void setHavingDriversLicense(boolean havingDriversLicense) {
+        isHavingDriversLicense = havingDriversLicense;
     }
 
     public String getHobby() {
@@ -210,11 +210,11 @@ public class Person {
                 ", country = '" + country + '\'' +
                 ", homeAddress = '" + homeAddress + '\'' +
                 ", email = '" + email + '\'' +
-                ", hasChildren = " + hasChildren +
+                ", hasChildren = " + isHavingChildren +
                 ", isWorking = " + isWorking +
-                ", hasProperty = " + hasProperty +
-                ", hasAuto = " + hasAuto +
-                ", hasDriversLicense = " + hasDriversLicense +
+                ", hasProperty = " + isHavingProperty +
+                ", hasAuto = " + isHavingAuto +
+                ", hasDriversLicense = " + isHavingDriversLicense +
                 ", hobby = '" + hobby + '\'' +
                 '}';
     }
@@ -224,11 +224,11 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return isHasChildren() == person.isHasChildren()
+        return isHavingChildren() == person.isHavingChildren()
                 && isWorking() == person.isWorking()
-                && isHasProperty() == person.isHasProperty()
-                && isHasAuto() == person.isHasAuto()
-                && isHasDriversLicense() == person.isHasDriversLicense()
+                && isHavingProperty() == person.isHavingProperty()
+                && isHavingAuto() == person.isHavingAuto()
+                && isHavingDriversLicense() == person.isHavingDriversLicense()
                 && getGender().equals(person.getGender())
                 && getRace().equals(person.getRace())
                 && getNationality().equals(person.getNationality())
@@ -248,8 +248,8 @@ public class Person {
         return Objects.hash(getGender(), getRace(), getNationality(),
                 getFirstName(), getLastName(), getPatronymicName(),
                 getAlias(), getDateOfBirth(), getCountry(), getHomeAddress(),
-                getEmail(), isHasChildren(), isWorking(), isHasProperty(),
-                isHasAuto(), isHasDriversLicense(), getHobby());
+                getEmail(), isHavingChildren(), isWorking(), isHavingProperty(),
+                isHavingAuto(), isHavingDriversLicense(), getHobby());
     }
 
     // Method to calculate the age of the person

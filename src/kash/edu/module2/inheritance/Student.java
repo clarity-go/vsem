@@ -1,5 +1,7 @@
 package kash.edu.module2.inheritance;
 
+import kash.edu.theory.StudentTry;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -11,7 +13,8 @@ import java.util.Objects;
   @since 19.03.2021 - 18.35
 **/
 
-// Create a class Person and a class Student as its daughter (altogether 25 fields)
+// Task 1: Create a class Person and a class Student as its daughter (altogether 25 fields)
+// Task 2: Create a builder for the class Student.
 
 public class Student extends Person{
     private String university;
@@ -32,6 +35,33 @@ public class Student extends Person{
                    String chair, String faculty, String degreeType,
                    LocalDate yearOfEntering, boolean isStipendiat,
                    double averageScore, boolean isBudget) {
+        this.university = university;
+        this.group = group;
+        this.fieldOfStudy = fieldOfStudy;
+        this.chair = chair;
+        this.faculty = faculty;
+        this.degreeType = degreeType;
+        this.yearOfEntering = yearOfEntering;
+        this.isStipendiat = isStipendiat;
+        this.averageScore = averageScore;
+        this.isBudget = isBudget;
+    }
+
+    // Constructor which includes fields from Person which is extended by this class
+    public Student(String firstName, String lastName, LocalDate dateOfBirth,
+                   String gender, String race, String nationality,
+                   String patronymicName, String alias, String country,
+                   String homeAddress, String email, boolean isHavingChildren,
+                   boolean isWorking, boolean isHavingProperty,
+                   boolean isHavingAuto, boolean isHavingDriversLicense,
+                   String hobby, String university, String group,
+                   String fieldOfStudy, String chair, String faculty,
+                   String degreeType, LocalDate yearOfEntering,
+                   boolean isStipendiat, double averageScore, boolean isBudget) {
+        super(firstName, lastName, dateOfBirth, gender, race, nationality,
+                patronymicName, alias, country, homeAddress, email,
+                isHavingChildren, isWorking, isHavingProperty, isHavingAuto,
+                isHavingDriversLicense, hobby);
         this.university = university;
         this.group = group;
         this.fieldOfStudy = fieldOfStudy;
@@ -126,17 +156,34 @@ public class Student extends Person{
 
     @Override
     public String toString() {
-        return "Student{" +
-                "university = '" + university + '\'' +
-                ", group = '" + group + '\'' +
-                ", fieldOfStudy = '" + fieldOfStudy + '\'' +
-                ", chair = '" + chair + '\'' +
-                ", faculty = '" + faculty + '\'' +
-                ", degreeType = '" + degreeType + '\'' +
-                ", yearOfEntering = " + yearOfEntering +
-                ", isStipendiat = " + isStipendiat +
-                ", averageScore = " + averageScore +
-                ", isBudget = " + isBudget +
+        return "Student {" +
+                "\n gender = '" + super.getGender() + '\'' +
+                ",\n race = '" + super.getRace() + '\'' +
+                ",\n nationality = '" + super.getNationality() + '\'' +
+                ",\n firstName = '" + super.getFirstName() + '\'' +
+                ",\n lastName = '" + super.getLastName() + '\'' +
+                ",\n patronymicName = '" + super.getPatronymicName() + '\'' +
+                ",\n alias = '" + super.getAlias() + '\'' +
+                ",\n dateOfBirth = " + super.getDateOfBirth() +
+                ",\n country = '" + super.getCountry() + '\'' +
+                ",\n homeAddress = '" + super.getHomeAddress() + '\'' +
+                ",\n email = '" + super.getEmail() + '\'' +
+                ",\n hasChildren = " + super.isHavingChildren() +
+                ",\n isWorking = " + super.isWorking() +
+                ",\n hasProperty = " + super.isHavingProperty() +
+                ",\n hasAuto = " + super.isHavingAuto() +
+                ",\n hasDriversLicense = " + super.isHavingDriversLicense() +
+                ",\n hobby = '" + super.getHobby() + '\'' +
+                ",\n university = '" + university + '\'' +
+                ",\n group = '" + group + '\'' +
+                ",\n fieldOfStudy = '" + fieldOfStudy + '\'' +
+                ",\n chair = '" + chair + '\'' +
+                ",\n faculty = '" + faculty + '\'' +
+                ",\n degreeType = '" + degreeType + '\'' +
+                ",\n yearOfEntering = " + yearOfEntering +
+                ",\n isStipendiat = " + isStipendiat +
+                ",\n averageScore = " + averageScore +
+                ",\n isBudget = " + isBudget +
                 '}';
     }
 
@@ -146,8 +193,8 @@ public class Student extends Person{
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
         return isStipendiat() == student.isStipendiat()
-                && Double.compare(student.getAverageScore(), getAverageScore())
-                == 0 && isBudget() == student.isBudget()
+                && Double.compare(student.getAverageScore(), getAverageScore()) == 0
+                && isBudget() == student.isBudget()
                 && getUniversity().equals(student.getUniversity())
                 && getGroup().equals(student.getGroup())
                 && getFieldOfStudy().equals(student.getFieldOfStudy())
@@ -163,4 +210,158 @@ public class Student extends Person{
                 getChair(), getFaculty(), getDegreeType(), getYearOfEntering(),
                 isStipendiat(), getAverageScore(), isBudget());
     }
+
+    // Create Builder for the class Student
+    public static class Builder {
+        private Student studentToBuild;
+
+        // Create a constructor
+        public Builder() {
+            this.studentToBuild = new Student();
+        }
+
+        // Data / fields from class Person
+        public Builder setFirstName(String firstName){
+            studentToBuild.setFirstName(firstName);
+            return this;
+        }
+
+        public Builder setLastName(String lastName){
+            studentToBuild.setLastName(lastName);
+            return this;
+        }
+
+        public Builder setPatronymicName(String patronymicName){
+            studentToBuild.setPatronymicName(patronymicName);
+            return this;
+        }
+
+        public Builder setDateOfBirth(LocalDate dateOfBirth){
+            studentToBuild.setDateOfBirth(dateOfBirth);
+            return this;
+        }
+
+        public Builder setGender(String gender){
+            studentToBuild.setGender(gender);
+            return this;
+        }
+
+        public Builder setRace(String race){
+            studentToBuild.setRace(race);
+            return this;
+        }
+
+        public Builder setNationality(String nationality){
+            studentToBuild.setNationality(nationality);
+            return this;
+        }
+
+        public Builder setAlias(String alias){
+            studentToBuild.setAlias(alias);
+            return this;
+        }
+
+        public Builder setCountry(String country){
+            studentToBuild.setCountry(country);
+            return this;
+        }
+
+        public Builder setHomeAddress(String homeAddress){
+            studentToBuild.setHomeAddress(homeAddress);
+            return this;
+        }
+
+        public Builder setEmail(String email){
+            studentToBuild.setEmail(email);
+            return this;
+        }
+
+        public Builder setIsHavingChildren(boolean isHavingChildren){
+            studentToBuild.setHavingChildren(isHavingChildren);
+            return this;
+        }
+
+        public Builder setIsWorking(boolean isWorking){
+            studentToBuild.setWorking(isWorking);
+            return this;
+        }
+
+        public Builder setIsHavingProperty(boolean isHavingProperty){
+            studentToBuild.setHavingProperty(isHavingProperty);
+            return this;
+        }
+
+        public Builder setIsHavingAuto(boolean isHavingAuto){
+            studentToBuild.setHavingAuto(isHavingAuto);
+            return this;
+        }
+
+        public Builder setIsHavingDriversLicense(boolean isHavingDriversLicense){
+            studentToBuild.setHavingDriversLicense(isHavingDriversLicense);
+            return this;
+        }
+
+        public Builder setHobby(String hobby){
+            studentToBuild.setHobby(hobby);
+            return this;
+        }
+
+        // Data / fields from class Student
+        public Builder setGroup(String group){
+            studentToBuild.setGroup(group);
+            return this;
+        }
+
+        public Builder setUniversity(String university){
+            studentToBuild.setUniversity(university);
+            return this;
+        }
+
+        public Builder setFieldOfStudy(String fieldOfStudy){
+            studentToBuild.setFieldOfStudy(fieldOfStudy);
+            return this;
+        }
+
+        public Builder setChair(String chair){
+            studentToBuild.setChair(chair);
+            return this;
+        }
+
+        public Builder setFaculty(String faculty){
+            studentToBuild.setFaculty(faculty);
+            return this;
+        }
+
+        public Builder setDegreeType(String degreeType){
+            studentToBuild.setDegreeType(degreeType);
+            return this;
+        }
+
+        public Builder setYearOfEntering(LocalDate yearOfEntering){
+            studentToBuild.setYearOfEntering(yearOfEntering);
+            return this;
+        }
+
+        public Builder setIsStipendiat(boolean isStipendiat){
+            studentToBuild.setStipendiat(isStipendiat);
+            return this;
+        }
+
+        public Builder setAverageScore(double averageScore){
+            studentToBuild.setAverageScore(averageScore);
+            return this;
+        }
+
+        public Builder setIsBudget(boolean isBudget){
+            studentToBuild.setBudget(isBudget);
+            return this;
+        }
+
+        // Create building method
+        public Student build() {
+            return studentToBuild;
+        }
+
+    }
+
 }

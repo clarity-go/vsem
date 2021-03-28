@@ -170,7 +170,7 @@ public class Main {
         // Create student in an ordinary way
 /*        StudentTry student1 = new StudentTry("Ivan", "Ivanov", "Ivanovych",
                 LocalDate.of(2000, 1, 1), true, "0636527847");
-*/
+
         // Create student using builder
         StudentTry student2 = new StudentTry.Builder()
                 .setFirstName("Petro")
@@ -190,16 +190,15 @@ public class Main {
                 .build();
         System.out.println(student3);
 
-
         // BAD variant, the same objects, have the same addresses
         // changes the student3 object's first name
         StudentTry student4 = student3;
         student4.setFirstName("Mark");
-
-        StudentTry student5 = new StudentTry.Builder()
-                .setSimilarTo(student2)
-                .setFirstName("Ron")
-                .setIdCard("123")
+*/
+        // ---------------------- Builder: My -----------------------------
+        Student student5 = new Student.Builder()
+                .setFirstName("Alona")
+                .setUniversity("KNUTE")
                 .build();
         System.out.println(student5);
     }
