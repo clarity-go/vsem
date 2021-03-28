@@ -1,4 +1,6 @@
-package kash.edu.module2.polymorphism;
+package kash.edu.module2.patterns.factory;
+import kash.edu.module2.polymorphism.IGeometry;
+
 /**
   @author   Alona Kashpruk
   @project   vsem
@@ -7,7 +9,7 @@ package kash.edu.module2.polymorphism;
   @since 26.03.2021 - 16.48
 **/
 
-public class Square implements IGeometry{
+public class Square implements IGeometry {
     private double side;
 
     public Square() {

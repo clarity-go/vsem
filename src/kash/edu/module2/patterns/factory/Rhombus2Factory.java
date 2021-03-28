@@ -1,4 +1,5 @@
-package kash.edu.module2.polymorphism;
+package kash.edu.module2.patterns.factory;
+import kash.edu.module2.polymorphism.Rhombus2;
 
 /**
   @author   Alona Kashpruk

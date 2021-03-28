@@ -1,20 +1,6 @@
 package kash.edu;
 
-import kash.edu.module2.inheritance.Student;
-import kash.edu.module2.polymorphism.FigureFactory;
-import kash.edu.module2.polymorphism.Figures;
-import kash.edu.module2.polymorphism.IGeometry;
-import kash.edu.theory.StudentTry;
-import kash.edu.theory.designer.FullTimeWorker;
-import kash.edu.theory.designer.PartTimeWorker;
-import kash.edu.theory.factory.TriangleTry;
-import kash.edu.theory.factory.*;
-import kash.edu.theory.inheritance.Employee;
-import kash.edu.theory.inheritance.SoftwareDesigner;
-import kash.edu.theory.designer.IAccounting;
-import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
-
-import java.time.LocalDate;
+import kash.edu.module2.patterns.builder.Student;
 
 public class Main {
 
@@ -166,7 +152,7 @@ public class Main {
         list.add(cube);
 */
 
-        // ---------------------- Builder -----------------------------
+        // ---------------------- Builder: Training -----------------------------
         // Create student in an ordinary way
 /*        StudentTry student1 = new StudentTry("Ivan", "Ivanov", "Ivanovych",
                 LocalDate.of(2000, 1, 1), true, "0636527847");
@@ -201,5 +187,11 @@ public class Main {
                 .setUniversity("KNUTE")
                 .build();
         System.out.println(student5);
+
+        Student student6 = new Student.Builder()
+                .setSimilarTo(student5)
+                .setUniversity("KNLU")
+                .build();
+        System.out.println(student6);
     }
 }

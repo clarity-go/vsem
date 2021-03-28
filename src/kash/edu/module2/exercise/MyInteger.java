@@ -1,4 +1,5 @@
-package kash.edu.module2;
+package kash.edu.module2.exercise;
+
 /**
   @author   Alona Kashpruk
   @project   vsem

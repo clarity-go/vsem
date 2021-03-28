@@ -1,4 +1,4 @@
-package kash.edu.module2;
+package kash.edu.theory;
 
 import java.time.LocalDate;
 import java.time.Month;

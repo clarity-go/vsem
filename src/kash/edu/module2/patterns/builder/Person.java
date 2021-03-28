@@ -1,4 +1,4 @@
-package kash.edu.module2.inheritance;
+package kash.edu.module2.patterns.builder;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Objects;

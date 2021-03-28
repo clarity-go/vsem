@@ -1,7 +1,4 @@
-package kash.edu.module2.inheritance;
-
-import kash.edu.theory.StudentTry;
-
+package kash.edu.module2.patterns.builder;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -16,7 +13,7 @@ import java.util.Objects;
 // Task 1: Create a class Person and a class Student as its daughter (altogether 25 fields)
 // Task 2: Create a builder for the class Student.
 
-public class Student extends Person{
+public class Student extends Person {
     private String university;
     private String group;
     private String fieldOfStudy;
@@ -158,32 +155,32 @@ public class Student extends Person{
     public String toString() {
         return "Student {" +
                 "\n gender = '" + super.getGender() + '\'' +
-                ",\n race = '" + super.getRace() + '\'' +
-                ",\n nationality = '" + super.getNationality() + '\'' +
-                ",\n firstName = '" + super.getFirstName() + '\'' +
-                ",\n lastName = '" + super.getLastName() + '\'' +
-                ",\n patronymicName = '" + super.getPatronymicName() + '\'' +
+                ", race = '" + super.getRace() + '\'' +
+                ", nationality = '" + super.getNationality() + '\'' +
+                ", firstName = '" + super.getFirstName() + '\'' +
+                ", lastName = '" + super.getLastName() + '\'' +
+                ", patronymicName = '" + super.getPatronymicName() + '\'' +
                 ",\n alias = '" + super.getAlias() + '\'' +
-                ",\n dateOfBirth = " + super.getDateOfBirth() +
-                ",\n country = '" + super.getCountry() + '\'' +
-                ",\n homeAddress = '" + super.getHomeAddress() + '\'' +
-                ",\n email = '" + super.getEmail() + '\'' +
-                ",\n hasChildren = " + super.isHavingChildren() +
-                ",\n isWorking = " + super.isWorking() +
+                ", dateOfBirth = " + super.getDateOfBirth() +
+                ", country = '" + super.getCountry() + '\'' +
+                ", homeAddress = '" + super.getHomeAddress() + '\'' +
+                ", email = '" + super.getEmail() + '\'' +
+                ", hasChildren = " + super.isHavingChildren() +
+                ", isWorking = " + super.isWorking() +
                 ",\n hasProperty = " + super.isHavingProperty() +
-                ",\n hasAuto = " + super.isHavingAuto() +
-                ",\n hasDriversLicense = " + super.isHavingDriversLicense() +
-                ",\n hobby = '" + super.getHobby() + '\'' +
-                ",\n university = '" + university + '\'' +
-                ",\n group = '" + group + '\'' +
-                ",\n fieldOfStudy = '" + fieldOfStudy + '\'' +
+                ", hasAuto = " + super.isHavingAuto() +
+                ", hasDriversLicense = " + super.isHavingDriversLicense() +
+                ", hobby = '" + super.getHobby() + '\'' +
+                ", university = '" + university + '\'' +
+                ", group = '" + group + '\'' +
+                ", fieldOfStudy = '" + fieldOfStudy + '\'' +
                 ",\n chair = '" + chair + '\'' +
-                ",\n faculty = '" + faculty + '\'' +
-                ",\n degreeType = '" + degreeType + '\'' +
-                ",\n yearOfEntering = " + yearOfEntering +
-                ",\n isStipendiat = " + isStipendiat +
-                ",\n averageScore = " + averageScore +
-                ",\n isBudget = " + isBudget +
+                ", faculty = '" + faculty + '\'' +
+                ", degreeType = '" + degreeType + '\'' +
+                ", yearOfEntering = " + yearOfEntering +
+                ", isStipendiat = " + isStipendiat +
+                ", averageScore = " + averageScore +
+                ", isBudget = " + isBudget +
                 '}';
     }
 
@@ -354,6 +351,39 @@ public class Student extends Person{
 
         public Builder setIsBudget(boolean isBudget){
             studentToBuild.setBudget(isBudget);
+            return this;
+        }
+
+        public Student.Builder setSimilarTo(Student student){
+
+            this.studentToBuild.setFirstName(student.getFirstName());
+            this.studentToBuild.setLastName(student.getLastName());
+            this.studentToBuild.setDateOfBirth(student.getDateOfBirth());
+            this.studentToBuild.setGender(student.getGender());
+            this.studentToBuild.setRace(student.getRace());
+            this.studentToBuild.setNationality(student.getNationality());
+            this.studentToBuild.setPatronymicName(student.getPatronymicName());
+            this.studentToBuild.setAlias(student.getAlias());
+            this.studentToBuild.setCountry(student.getCountry());
+            this.studentToBuild.setHomeAddress(student.getHomeAddress());
+            this.studentToBuild.setEmail(student.getEmail());
+            this.studentToBuild.setHavingChildren(student.isHavingChildren());
+            this.studentToBuild.setWorking(student.isWorking());
+            this.studentToBuild.setHavingProperty(student.isHavingProperty());
+            this.studentToBuild.setHavingAuto(student.isHavingAuto());
+            this.studentToBuild.setHavingDriversLicense(student.isHavingDriversLicense());
+            this.studentToBuild.setHobby(student.getHobby());
+
+            this.studentToBuild.university = student.university;
+            this.studentToBuild.group = student.group;
+            this.studentToBuild.fieldOfStudy = student.fieldOfStudy;
+            this.studentToBuild.chair = student.chair;
+            this.studentToBuild.faculty = student.faculty;
+            this.studentToBuild.degreeType = student.degreeType;
+            this.studentToBuild.yearOfEntering = student.yearOfEntering;
+            this.studentToBuild.isStipendiat = student.isStipendiat;
+            this.studentToBuild.averageScore = student.averageScore;
+            this.studentToBuild.isBudget = student.isBudget;
             return this;
         }
 

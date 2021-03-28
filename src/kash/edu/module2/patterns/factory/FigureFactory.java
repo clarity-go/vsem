@@ -1,7 +1,6 @@
-package kash.edu.module2.polymorphism;
-
-import kash.edu.theory.factory.*;
-import kash.edu.theory.polymorphism.interfaces.IGeometryTry;
+package kash.edu.module2.patterns.factory;
+import kash.edu.module2.polymorphism.IGeometry;
+import kash.edu.module2.polymorphism.Rhombus2;
 
 /**
   @author   Alona Kashpruk
