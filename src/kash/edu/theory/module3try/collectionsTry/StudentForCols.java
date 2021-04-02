@@ -11,6 +11,7 @@ import kash.edu.theory.module3try.Gender;
 import java.time.LocalDate;
 
 public class StudentForCols {
+    // POJO class - classes's objects will be in the base where are only fields, no methods
     private String name;
     private LocalDate dateOfBirth;
     private Gender gender;

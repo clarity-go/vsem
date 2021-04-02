@@ -54,12 +54,13 @@ public class CollectionsTry {
         listInt.add(0,103);
         listInt.add(0,104);
 
-        // add to the middle
+        // add to the middle a particular number, do not use random()
         int indexOfCenter = listInt.size() / 2;
         listInt.add(indexOfCenter,200);
 
         System.out.println(listInt.get(3)); // access to the element of the list
         System.out.println("size" + listInt.size());
+        // add to the end (but NOT the last) till 1 element to the end; size-1 or size-5
 
         listInt.remove(2); // delete one of items depending on index
 
