@@ -244,7 +244,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            arrayList.remove(i);
+            arrayList.remove(0);
         }
 
         finish = LocalDateTime.now();
@@ -258,7 +258,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            linkedList.remove(i);
+            linkedList.remove(0);
         }
 
         finish = LocalDateTime.now();
@@ -272,7 +272,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            arrayList.remove(indexOfCenter + i);
+            arrayList.remove(indexOfCenter);
         }
 
         finish = LocalDateTime.now();
@@ -287,7 +287,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            linkedList.remove(indexOfCenter + i);
+            linkedList.remove(indexOfCenter);
         }
 
         finish = LocalDateTime.now();
@@ -300,7 +300,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            arrayList.remove(arrayList.size() - 1);
+            arrayList.remove(arrayList.size() - 2);
         }
 
         finish = LocalDateTime.now();
@@ -314,7 +314,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            linkedList.remove(linkedList.size() - 1);
+            linkedList.remove(linkedList.size() - 2);
         }
 
         finish = LocalDateTime.now();
@@ -322,7 +322,6 @@ public class Collections {
 
         System.out.println("LinkedList: \n • duration: " + duration +
                 " msec" + "\n • size: " + linkedList.size() + " elements");
-
     }
 }
 
