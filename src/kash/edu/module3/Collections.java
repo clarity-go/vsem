@@ -25,57 +25,6 @@ and from the end of ones. Compare time intervals.
 4. Delete 1000 elements  from the beginning, from the middle
 and from the end of ones. Compare time intervals.
 */
-/* OUTPUT:
---------------------------- Create ----------------------------
-ArrayList:                          LinkedList:
-• duration: 48 msec                 • duration: 18 msec
-• size: 100000 elements             • size: 100000 elements
-
------------------------- Insert (HEAD) ------------------------
-ArrayList:                          LinkedList:
-• duration: 39 msec                 • duration: 0 msec
-• size: 101000 elements             • size: 101000 elements
-
------------------------- Insert (MID) ------------------------
-ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 115 msec
-• size: 102000 elements             • size: 102000 elements
-
------------------------- Insert (END) ------------------------
-ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 0 msec
-• size: 103000 elements             • size: 103000 elements
-
------------------------- Update (HEAD)  ------------------------
-ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 0 msec
-• size: 103000 elements             • size: 103000 elements
-
------------------------- Update (MID) ------------------------
-ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 105 msec
-• size: 103000 elements             • size: 103000 elements
-
------------------------- Update (END) ------------------------
-ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 0 msec
-• size: 103000 elements             • size: 103000 elements
-
------------------------- Delete (HEAD) ------------------------
-ArrayList:                          LinkedList:
-• duration: 34 msec                 • duration: 3 msec
-• size: 102000 elements             • size: 102000 elements
-
------------------------- Delete (MID) ------------------------
-ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 110 msec
-• size: 101000 elements             • size: 101000 elements
-
------------------------- Delete (END) ------------------------
-ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 0 msec
-• size: 100000 elements             • size: 100000 elements
-*/
 
 public class Collections {
     public static void main(String[] args) {
@@ -376,3 +325,55 @@ public class Collections {
 
     }
 }
+
+/* OUTPUT:
+--------------------------- Create ----------------------------
+ArrayList:                          LinkedList:
+• duration: 48 msec                 • duration: 18 msec
+• size: 100000 elements             • size: 100000 elements
+
+------------------------ Insert (HEAD) ------------------------
+ArrayList:                          LinkedList:
+• duration: 39 msec                 • duration: 0 msec
+• size: 101000 elements             • size: 101000 elements
+
+------------------------ Insert (MID) ------------------------
+ArrayList:                          LinkedList:
+• duration: 0 msec                  • duration: 115 msec
+• size: 102000 elements             • size: 102000 elements
+
+------------------------ Insert (END) ------------------------
+ArrayList:                          LinkedList:
+• duration: 0 msec                  • duration: 0 msec
+• size: 103000 elements             • size: 103000 elements
+
+------------------------ Update (HEAD)  ------------------------
+ArrayList:                          LinkedList:
+• duration: 0 msec                  • duration: 0 msec
+• size: 103000 elements             • size: 103000 elements
+
+------------------------ Update (MID) ------------------------
+ArrayList:                          LinkedList:
+• duration: 0 msec                  • duration: 105 msec
+• size: 103000 elements             • size: 103000 elements
+
+------------------------ Update (END) ------------------------
+ArrayList:                          LinkedList:
+• duration: 0 msec                  • duration: 0 msec
+• size: 103000 elements             • size: 103000 elements
+
+------------------------ Delete (HEAD) ------------------------
+ArrayList:                          LinkedList:
+• duration: 34 msec                 • duration: 3 msec
+• size: 102000 elements             • size: 102000 elements
+
+------------------------ Delete (MID) ------------------------
+ArrayList:                          LinkedList:
+• duration: 0 msec                  • duration: 110 msec
+• size: 101000 elements             • size: 101000 elements
+
+------------------------ Delete (END) ------------------------
+ArrayList:                          LinkedList:
+• duration: 0 msec                  • duration: 0 msec
+• size: 100000 elements             • size: 100000 elements
+*/
