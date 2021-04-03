@@ -10,7 +10,7 @@ import java.util.Random;
 /**
   @author   Alona Kashpruk
   @project   vsem
-  @class  collections
+  @class  Collections
   @version  1.0.0 
   @since 31.03.2021 - 18.23
 **/
