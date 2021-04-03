@@ -70,7 +70,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            arrayList.add(0,666);
+            arrayList.add(0, 666);
         }
 
         finish = LocalDateTime.now();
@@ -84,7 +84,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            linkedList.add(0,666);
+            linkedList.add(0, 666);
         }
 
         finish = LocalDateTime.now();
@@ -99,7 +99,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            arrayList.add(indexOfCenter,666);
+            arrayList.add(indexOfCenter, 666);
         }
 
         finish = LocalDateTime.now();
@@ -114,7 +114,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            linkedList.add(indexOfCenter,666);
+            linkedList.add(indexOfCenter, 666);
         }
 
         finish = LocalDateTime.now();
@@ -128,7 +128,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            arrayList.add(arrayList.size() - 1,666);
+            arrayList.add(arrayList.size() - 1, 666);
         }
 
         finish = LocalDateTime.now();
@@ -142,7 +142,7 @@ public class Collections {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            linkedList.add(linkedList.size() - 1,666);
+            linkedList.add(linkedList.size() - 1, 666);
         }
 
         finish = LocalDateTime.now();
