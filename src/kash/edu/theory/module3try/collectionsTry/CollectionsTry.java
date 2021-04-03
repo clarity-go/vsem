@@ -112,9 +112,7 @@ public class CollectionsTry {
         Arrays.sort(arrayInt); // sort array
         listInt.sort(Comparator.comparing(Function.identity())); // sort list
 
-        // SOLID
         // include result, output, conclusion: that in this case the LinkedList works faster... 25 vs 36
-        //
 
         // update list, check time for the end of the list (tail)
         System.out.println("----reading TAIL: ArrayList-----");
@@ -187,7 +185,6 @@ public class CollectionsTry {
         start = LocalDateTime.now();
         for (int i = 0; i < 10000; i++) {
             linkedList.set(1, 100);
-            // set - just change what stands on what element, the number of elements is the same
         }
         finish = LocalDateTime.now();
         duration = (int) ChronoUnit.MILLIS.between(start, finish);
