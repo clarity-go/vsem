@@ -7,8 +7,6 @@ package kash.edu.theory.module3try.collectionsTry;
   @since 31.03.2021 - 18.56
 */
 
-import kash.edu.theory.module3try.Gender;
-
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;

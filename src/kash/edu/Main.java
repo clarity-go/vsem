@@ -145,7 +145,7 @@ public class Main {
         IGeometry figure1 = FigureFactory.create(3, Figures.TRIANGLE);
         System.out.println(figure1);
 
-        // -------------- Laboratory!!!!! ----------------------------
+        // -------------- Laborato2ry!!!!! ----------------------------
 
         IGeometry cube = (Cube) FigureFactory.create(3, Figures.CUBE);
         List<IGeometry> list = new ArrayList<>();

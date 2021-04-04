@@ -1,4 +1,5 @@
-package kash.edu.theory.module3try.LaboratoryWorkTry;/*
+package kash.edu.theory.module3try.LaboratoryWorkTry;
+/*
   @author   Alona Kashpruk
   @project   vsem
   @class  Colls
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class Colls {
     public static void main(String[] args) {
-        List<IAccounting> listOfCandies = new ArrayList<>(
+        List<IAccountingTry> listOfCandies = new ArrayList<>(
                 Arrays.asList(
                         new CandyBox("Swallow", 0.2, 150, 10, 2),
                         new CandyBox("Betty", 0.5, 50, 10, 2),
@@ -28,16 +29,16 @@ public class Colls {
         );
         // calculate the revenue
         double totalIncome = listOfCandies.stream()
-                .mapToDouble(IAccounting::getUltimatePrice).sum();
+                .mapToDouble(IAccountingTry::getUltimatePrice).sum();
 
         // get the most expensive buy
         double expensive = listOfCandies.stream()
-                .mapToDouble(IAccounting::getUltimatePrice).max().getAsDouble();
+                .mapToDouble(IAccountingTry::getUltimatePrice).max().getAsDouble();
         System.out.println(expensive);
 
         // get the most cheap buy
         double cheap = listOfCandies.stream()
-                .mapToDouble(IAccounting::getUltimatePrice).min().getAsDouble();
+                .mapToDouble(IAccountingTry::getUltimatePrice).min().getAsDouble();
         System.out.println(cheap);
 
     }

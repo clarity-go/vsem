@@ -1,4 +1,4 @@
-package kash.edu.theory.module3try;/*
+package kash.edu.theory.module3try.collectionsTry;/*
   @author   Alona Kashpruk
   @project   vsem
   @class  Gender

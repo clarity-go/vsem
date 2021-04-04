@@ -6,6 +6,6 @@ package kash.edu.theory.module3try.LaboratoryWorkTry;/*
   @since 31.03.2021 - 20.23
 */
 
-public interface IAccounting {
+public interface IAccountingTry {
     double getUltimatePrice();
 }

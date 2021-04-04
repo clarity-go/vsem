@@ -6,8 +6,6 @@ package kash.edu.theory.module3try.collectionsTry;/*
   @since 31.03.2021 - 19.08
 */
 
-import kash.edu.theory.module3try.Gender;
-
 import java.time.LocalDate;
 
 public class StudentForCols {

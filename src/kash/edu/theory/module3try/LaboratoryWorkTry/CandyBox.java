@@ -6,7 +6,7 @@ package kash.edu.theory.module3try.LaboratoryWorkTry;/*
   @since 31.03.2021 - 20.13
 */
 
-public class CandyBox implements IAccounting{
+public class CandyBox implements IAccountingTry {
     private String name;
     private double weight;
     private double priceForCandy;
