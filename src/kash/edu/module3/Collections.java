@@ -124,7 +124,7 @@ public class Collections {
                 " msec" + "\n • size: " + linkedList.size() + " elements");
 
 
-        //--------------------- Insert END (ArrayList) ---------------------
+        //--------------------- Insert TAIL (ArrayList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
@@ -134,11 +134,11 @@ public class Collections {
         finish = LocalDateTime.now();
         duration = (int) ChronoUnit.MILLIS.between(start, finish);
 
-        System.out.println("\n-------- Insert (END) --------" +
+        System.out.println("\n-------- Insert (TAIL) --------" +
                 "\nArrayList: \n • duration: " + duration +
                 " msec" + "\n • size: " + arrayList.size() + " elements");
 
-        //--------------------- Insert END (LinkedList) ---------------------
+        //--------------------- Insert TAIL (LinkedList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
@@ -210,7 +210,7 @@ public class Collections {
         System.out.println("LinkedList: \n • duration: " + duration +
                 " msec" + "\n • size: " + linkedList.size() + " elements");
 
-        //--------------------- Update END (ArrayList) ---------------------
+        //--------------------- Update TAIL (ArrayList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 2; i < 1002; i++) {
@@ -220,11 +220,11 @@ public class Collections {
         finish = LocalDateTime.now();
         duration = (int) ChronoUnit.MILLIS.between(start, finish);
 
-        System.out.println("\n-------- Update (END) --------" +
+        System.out.println("\n-------- Update (TAIL) --------" +
                 "\nArrayList: \n • duration: " + duration +
                 " msec" + "\n • size: " + arrayList.size() + " elements");
 
-        //--------------------- Update END (LinkedList) ---------------------
+        //--------------------- Update TAIL (LinkedList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 2; i < 1002; i++) {
@@ -296,7 +296,7 @@ public class Collections {
         System.out.println("LinkedList: \n • duration: " + duration +
                 " msec" + "\n • size: " + linkedList.size() + " elements");
 
-        //--------------------- Delete END (ArrayList) ---------------------
+        //--------------------- Delete TAIL (ArrayList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
@@ -306,11 +306,11 @@ public class Collections {
         finish = LocalDateTime.now();
         duration = (int) ChronoUnit.MILLIS.between(start, finish);
 
-        System.out.println("\n-------- Delete (END) --------" +
+        System.out.println("\n-------- Delete (TAIL) --------" +
                 "\nArrayList: \n • duration: " + duration +
                 " msec" + "\n • size: " + arrayList.size() + " elements");
 
-        //--------------------- Delete END (LinkedList) ---------------------
+        //--------------------- Delete TAIL (LinkedList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
@@ -325,7 +325,18 @@ public class Collections {
     }
 }
 
-/* OUTPUT:
+/*
+СONCLUSIONS:
+• The LinkedList is faster in creation of the list.
+• Inserting elements using the LinkedList is faster in the head of the
+list and slower in the middle. For the last elements both the ArrayList
+and the LinkedList are almost the same in terms of time performance.
+• In general, updating elements performs faster for the ArrayList
+• Removal of the elements is generally the same for the last ones in a list.
+However, the ArrayList works slower for the initial elements,
+but faster for the elements in the middle of the list.
+
+OUTPUT:
 --------------------------- Create ----------------------------
 ArrayList:                          LinkedList:
 • duration: 48 msec                 • duration: 18 msec
@@ -341,14 +352,14 @@ ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 115 msec
 • size: 102000 elements             • size: 102000 elements
 
------------------------- Insert (END) ------------------------
+------------------------ Insert (TAIL) ------------------------
 ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 0 msec
 • size: 103000 elements             • size: 103000 elements
 
 ------------------------ Update (HEAD)  ------------------------
 ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 0 msec
+• duration: 0 msec                  • duration: 98 msec
 • size: 103000 elements             • size: 103000 elements
 
 ------------------------ Update (MID) ------------------------
@@ -356,9 +367,9 @@ ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 105 msec
 • size: 103000 elements             • size: 103000 elements
 
------------------------- Update (END) ------------------------
+------------------------ Update (TAIL) ------------------------
 ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 0 msec
+• duration: 1 msec                  • duration: 87 msec
 • size: 103000 elements             • size: 103000 elements
 
 ------------------------ Delete (HEAD) ------------------------
@@ -368,10 +379,10 @@ ArrayList:                          LinkedList:
 
 ------------------------ Delete (MID) ------------------------
 ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 110 msec
+• duration: 40 msec                 • duration: 840 msec
 • size: 101000 elements             • size: 101000 elements
 
------------------------- Delete (END) ------------------------
+------------------------ Delete (TAIL) ------------------------
 ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 0 msec
 • size: 100000 elements             • size: 100000 elements
