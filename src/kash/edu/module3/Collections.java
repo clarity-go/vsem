@@ -14,7 +14,8 @@ import java.util.Random;
   @version  1.0.0 
   @since 31.03.2021 - 18.23
 **/
-/*         JavaCollectionsFramework. List.
+/*
+          JavaCollectionsFramework. List.
                        TASK:
 1. Create ArrayList and LinkedList containing 100000 Integer
 elements. Compare time intervals.
