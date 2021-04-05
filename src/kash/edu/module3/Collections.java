@@ -350,7 +350,7 @@ ArrayList:                          LinkedList:
 
 ------------------------ Insert (MID) ------------------------
 ArrayList:                          LinkedList:
-• duration: 0 msec                  • duration: 115 msec
+• duration: 115 msec                • duration: 0 msec
 • size: 102000 elements             • size: 102000 elements
 
 ------------------------ Insert (TAIL) ------------------------
