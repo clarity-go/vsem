@@ -124,7 +124,7 @@ public class Collections {
                 " msec" + "\n • size: " + linkedList.size() + " elements");
 
 
-        //--------------------- Insert END (ArrayList) ---------------------
+        //--------------------- Insert TAIL (ArrayList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
@@ -138,7 +138,7 @@ public class Collections {
                 "\nArrayList: \n • duration: " + duration +
                 " msec" + "\n • size: " + arrayList.size() + " elements");
 
-        //--------------------- Insert END (LinkedList) ---------------------
+        //--------------------- Insert TAIL (LinkedList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
@@ -210,7 +210,7 @@ public class Collections {
         System.out.println("LinkedList: \n • duration: " + duration +
                 " msec" + "\n • size: " + linkedList.size() + " elements");
 
-        //--------------------- Update END (ArrayList) ---------------------
+        //--------------------- Update TAIL (ArrayList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 2; i < 1002; i++) {
@@ -224,7 +224,7 @@ public class Collections {
                 "\nArrayList: \n • duration: " + duration +
                 " msec" + "\n • size: " + arrayList.size() + " elements");
 
-        //--------------------- Update END (LinkedList) ---------------------
+        //--------------------- Update TAIL (LinkedList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 2; i < 1002; i++) {
@@ -296,7 +296,7 @@ public class Collections {
         System.out.println("LinkedList: \n • duration: " + duration +
                 " msec" + "\n • size: " + linkedList.size() + " elements");
 
-        //--------------------- Delete END (ArrayList) ---------------------
+        //--------------------- Delete TAIL (ArrayList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
@@ -310,7 +310,7 @@ public class Collections {
                 "\nArrayList: \n • duration: " + duration +
                 " msec" + "\n • size: " + arrayList.size() + " elements");
 
-        //--------------------- Delete END (LinkedList) ---------------------
+        //--------------------- Delete TAIL (LinkedList) ---------------------
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
@@ -341,7 +341,7 @@ ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 115 msec
 • size: 102000 elements             • size: 102000 elements
 
------------------------- Insert (END) ------------------------
+------------------------ Insert (TAIL) ------------------------
 ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 0 msec
 • size: 103000 elements             • size: 103000 elements
@@ -356,7 +356,7 @@ ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 105 msec
 • size: 103000 elements             • size: 103000 elements
 
------------------------- Update (END) ------------------------
+------------------------ Update (TAIL) ------------------------
 ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 0 msec
 • size: 103000 elements             • size: 103000 elements
@@ -371,7 +371,7 @@ ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 110 msec
 • size: 101000 elements             • size: 101000 elements
 
------------------------- Delete (END) ------------------------
+------------------------ Delete (TAIL) ------------------------
 ArrayList:                          LinkedList:
 • duration: 0 msec                  • duration: 0 msec
 • size: 100000 elements             • size: 100000 elements
