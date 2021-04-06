@@ -39,48 +39,94 @@ public class Collections2 {
         // calculate the revenue
         double totalIncome = listOfOrderings.stream()
                 .mapToDouble(IAccounting::getUltimatePrice).sum();
-        System.out.println(totalIncome); // 773.0
+        System.out.println("Total income: " + totalIncome);
 
         // get the most expensive orders
-        OptionalDouble expensive = listOfOrderings.stream()
-                .mapToDouble(IAccounting::getUltimatePrice).max();
-        System.out.println(expensive); // 190.0
+        double expensive = listOfOrderings.stream()
+                .mapToDouble(IAccounting::getUltimatePrice).max().getAsDouble();
+        System.out.println("Price of the most expensive order: " + expensive);
 
         // get the most cheap orders
-        OptionalDouble cheap = listOfOrderings.stream()
-                .mapToDouble(IAccounting::getUltimatePrice).min();
-        System.out.println(cheap); // 40.0
+        double cheap = listOfOrderings.stream()
+                .mapToDouble(IAccounting::getUltimatePrice).min().getAsDouble();
+        System.out.println("Price of the cheapest order: " + cheap);
 
         // calculate the average sum of all orders
-        OptionalDouble average = listOfOrderings.stream()
-                .mapToDouble(IAccounting::getUltimatePrice).average();
-        System.out.println(average); // 110.4
+        double average = listOfOrderings.stream()
+                .mapToDouble(IAccounting::getUltimatePrice).average().getAsDouble();
+        System.out.println("Average sum of all orders: " + average);
 
         // calculate the average sum of only all orderings
-        OptionalDouble averageOnlyOrderingPrice = listOfOrderings.stream()
+        double averageOnlyOrderingPrice = listOfOrderings.stream()
                 .filter(item -> item instanceof Ordering)
-                .mapToDouble(IAccounting::getUltimatePrice).average();
+                .mapToDouble(IAccounting::getUltimatePrice).average().getAsDouble();
         System.out.println("Average price of only orderings: " +
-                averageOnlyOrderingPrice); // 97.6
+                averageOnlyOrderingPrice);
 
         // calculate the average sum of only all standard lunches
-        OptionalDouble averageOnlyStandardLunchesPrice = listOfOrderings.stream()
+        double averageOnlyStandardLunchesPrice = listOfOrderings.stream()
                 .filter(item -> item instanceof StandardLunch)
-                .mapToDouble(IAccounting::getUltimatePrice).average();
+                .mapToDouble(IAccounting::getUltimatePrice).average().getAsDouble();
         System.out.println("Average price of only standard lunches: " +
-                averageOnlyStandardLunchesPrice); // 142.5
+                averageOnlyStandardLunchesPrice);
+
+        // calculate the total sum of only all orderings
+        double totalOnlyOrderingPrice = listOfOrderings.stream()
+                .filter(item -> item instanceof Ordering)
+                .mapToDouble(IAccounting::getUltimatePrice).sum();
+        System.out.println("Total price of only orderings: " +
+                totalOnlyOrderingPrice);
+
+        // calculate the total sum of only all standard lunches
+        double totalOnlyStandardLunchesPrice = listOfOrderings.stream()
+                .filter(item -> item instanceof StandardLunch)
+                .mapToDouble(IAccounting::getUltimatePrice).sum();
+        System.out.println("Total price of only standard lunches: " +
+                totalOnlyStandardLunchesPrice);
+
+        // find out where is the highest sum of orders (in orderings or standard lunches)
+        System.out.println((totalOnlyOrderingPrice > totalOnlyStandardLunchesPrice) ?
+                "→ Orderings" : "→ Standard Lunches");
+        // Output: Ordering.
 
         // calculate the most expensive order from orderings
-        OptionalDouble expensiveOrdering = listOfOrderings.stream()
+        double expensiveOrdering = listOfOrderings.stream()
                 .filter(item -> item instanceof Ordering)
-                .mapToDouble(IAccounting::getUltimatePrice).max();
-        System.out.println(expensiveOrdering); // 150.0
+                .mapToDouble(IAccounting::getUltimatePrice).max().getAsDouble();
+        System.out.println("The most expensive order (orderings): " +
+                expensiveOrdering);
 
         // calculate the most expensive order from standard lunches
-        OptionalDouble expensiveStandardLunch = listOfOrderings.stream()
+        double expensiveStandardLunch = listOfOrderings.stream()
                 .filter(item -> item instanceof StandardLunch)
-                .mapToDouble(IAccounting::getUltimatePrice).max();
-        System.out.println(expensiveStandardLunch); // 190.0
+                .mapToDouble(IAccounting::getUltimatePrice).max().getAsDouble();
+        System.out.println("The most expensive order (standard lunches): "
+                + expensiveStandardLunch);
+
+        // find out where was the most expensive order
+        // (among orderings or standard lunches)
+        System.out.println((expensiveOrdering > expensiveStandardLunch) ?
+                "→ Orderings" : "→ Standard Lunches");
+        // Output: Ordering.
 
     }
 }
+/* --------------------------- OUTPUT: ---------------------------
+    Total income: 773.0
+
+    Price of the most expensive order: 190.0
+    Price of the cheapest order: 40.0
+
+    Average sum of all orders: 110.4
+
+    Average price of only orderings: 97.6
+    Average price of only standard lunches: 142.5
+
+    Total price of only orderings: 488.0
+    Total price of only standard lunches: 285.0
+    → Orderings
+
+    The most expensive order (orderings): 150.0
+    The most expensive order (standard lunches): 190.0
+    → Standard Lunches
+ */
