@@ -41,5 +41,36 @@ public class Colls {
                 .mapToDouble(IAccountingTry::getUltimatePrice).min().getAsDouble();
         System.out.println(cheap);
 
+        // get the object of the most expensive buy
+        IAccountingTry element = listOfCandies.stream()
+                .filter(item -> item.getUltimatePrice() == expensive)
+                .findFirst().orElse(null);
+        // CandyBox {name ='Swallow', weight =0.2, priceForCandy =150.0, priceForBox =10.0, amount =2}
+
+        // get total sum of the only candies in boxes (CandyBox)
+        double totalSumBoxed = listOfCandies.stream()
+                .filter(el -> el instanceof CandyBox)
+                .mapToDouble(IAccountingTry::getUltimatePrice).sum();
+
+        // get total sum of the only candies iby weight (CandyWeight)
+        double totalSumWeighted = listOfCandies.stream()
+                .filter(el -> el instanceof CandyWeight)
+                .mapToDouble(IAccountingTry::getUltimatePrice).sum();
+
+        // Variant 1: compare total sums of candies in boxes and by weight
+        if (totalSumBoxed > totalSumWeighted) {
+            System.out.println("Boxed");
+        } else {
+            System.out.println("Weighted");
+        }
+
+        // Variant 2: compare total sums of candies in boxes and by weight
+        System.out.println((totalSumBoxed > totalSumWeighted) ? "Boxed" : "Weighted");
+
+        // тернарный оператор
+        boolean hasPool = true;
+        int totalSum = 0;
+
+        totalSum = totalSum + ((hasPool) ? 10 : 0);
     }
 }
