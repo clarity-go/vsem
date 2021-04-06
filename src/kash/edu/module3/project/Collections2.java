@@ -87,7 +87,6 @@ public class Collections2 {
         // find out where is the highest sum of orders (in orderings or standard lunches)
         System.out.println((totalOnlyOrderingPrice > totalOnlyStandardLunchesPrice) ?
                 "→ Orderings" : "→ Standard Lunches");
-        // Output: Ordering.
 
         // calculate the most expensive order from orderings
         double expensiveOrdering = listOfOrderings.stream()
@@ -107,7 +106,6 @@ public class Collections2 {
         // (among orderings or standard lunches)
         System.out.println((expensiveOrdering > expensiveStandardLunch) ?
                 "→ Orderings" : "→ Standard Lunches");
-        // Output: Ordering.
 
     }
 }
