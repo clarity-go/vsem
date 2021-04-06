@@ -17,49 +17,49 @@ public class Ordering implements IAccounting {
     private double price;
     private int amount;
     private double tip;
-    private TypeOfOrdering typeOfOrdering;
+    private TypeOfOrdering type;
 
     public Ordering() {
     }
 
     public Ordering(FirstCourse firstCourseDish, double weight, double price,
-                    int amount, double tip, TypeOfOrdering typeOfOrdering) {
+                    int amount, double tip, TypeOfOrdering type) {
         this.firstCourseDish = firstCourseDish;
         this.weight = weight;
         this.price = price;
         this.amount = amount;
         this.tip = tip;
-        this.typeOfOrdering = typeOfOrdering;
+        this.type = type;
     }
 
     public Ordering(MainCourse mainCourseDish, double weight, double price,
-                    int amount, double tip, TypeOfOrdering typeOfOrdering) {
+                    int amount, double tip, TypeOfOrdering type) {
         this.mainCourseDish = mainCourseDish;
         this.weight = weight;
         this.price = price;
         this.amount = amount;
         this.tip = tip;
-        this.typeOfOrdering = typeOfOrdering;
+        this.type = type;
     }
 
     public Ordering(Dessert dessert, double weight, double price, int amount,
-                    double tip, TypeOfOrdering typeOfOrdering) {
+                    double tip, TypeOfOrdering type) {
         this.dessert = dessert;
         this.weight = weight;
         this.price = price;
         this.amount = amount;
         this.tip = tip;
-        this.typeOfOrdering = typeOfOrdering;
+        this.type = type;
     }
 
     public Ordering(Beverage beverage, double weight, double price, int amount,
-                    double tip, TypeOfOrdering typeOfOrdering) {
+                    double tip, TypeOfOrdering type) {
         this.beverage = beverage;
         this.weight = weight;
         this.price = price;
         this.amount = amount;
         this.tip = tip;
-        this.typeOfOrdering = typeOfOrdering;
+        this.type = type;
     }
 
     public FirstCourse getFirstCourseDish() {
@@ -130,14 +130,14 @@ public class Ordering implements IAccounting {
         this.tip = tip;
     }
 
-    public TypeOfOrdering getTypeOfOrdering() {
+    public TypeOfOrdering getType() {
 
-        return typeOfOrdering;
+        return type;
     }
 
-    public void setTypeOfOrdering(TypeOfOrdering typeOfOrdering) {
+    public void setType(TypeOfOrdering type) {
 
-        this.typeOfOrdering = typeOfOrdering;
+        this.type = type;
     }
 
     @Override
@@ -151,7 +151,7 @@ public class Ordering implements IAccounting {
                 ", price = " + price +
                 ", amount = " + amount +
                 ", tip = " + tip +
-                ", typeOfOrdering = " + typeOfOrdering +
+                ", typeOfOrdering = " + type +
                 '}';
     }
 
