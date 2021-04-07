@@ -9,7 +9,6 @@ package kash.edu.module3.project;
 
 public enum TypeOfOrdering {
 
-    DELIVERY, HERE_AND_NOW, WITH_ME
-    // HERE_AND_NOW - in cafe, WITH_ME - take food in additional box
+    DELIVERY, HERE_AND_NOW
 
 }

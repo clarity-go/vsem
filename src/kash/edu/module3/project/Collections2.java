@@ -26,13 +26,13 @@ public class Collections2 {
     public static void main(String[] args) {
         List<IAccounting> listOfOrderings = new ArrayList<>(
                 Arrays.asList(
-                        new StandardLunch("Standard Lunch", 85, 2, 20, TypeOfOrdering.HERE_AND_NOW),
+                        new StandardLunch("Standard Lunch", 85, 2, 20, TypeOfOrdering.DELIVERY),
                         new StandardLunch("Standard Lunch", 85, 1, 10, TypeOfOrdering.HERE_AND_NOW),
-                        new Ordering(FirstCourse.CARROT_SOUP, 0.8, 85, 1, 25, TypeOfOrdering.WITH_ME),
-                        new Ordering(FirstCourse.SHRIMP_SOUP, 0.25, 78, 1, 5, TypeOfOrdering.DELIVERY),
-                        new Ordering(MainCourse.CASSEROLE, 0.5, 95, 1, 10, TypeOfOrdering.HERE_AND_NOW),
-                        new Ordering(Dessert.BROWNIE, 0.3, 45, 3, 15, TypeOfOrdering.DELIVERY),
-                        new Ordering(Beverage.COFFEE, 0.3, 35, 1, 5, TypeOfOrdering.DELIVERY)
+                        new Ordering(1,2,0,0,10,TypeOfOrdering.DELIVERY),
+                        new Ordering(0,2,0,0,50,TypeOfOrdering.HERE_AND_NOW),
+                        new Ordering(1,1,0,1,20,TypeOfOrdering.DELIVERY),
+                        new Ordering(0,0,1,0,5,TypeOfOrdering.DELIVERY),
+                        new Ordering(1,0,1,1,35,TypeOfOrdering.HERE_AND_NOW)
                 )
         );
 
@@ -110,21 +110,21 @@ public class Collections2 {
     }
 }
 /* --------------------------- OUTPUT: ---------------------------
-    Total income: 773.0
+    Total income: 995.0
 
     Price of the most expensive order: 190.0
-    Price of the cheapest order: 40.0
+    Price of the cheapest order: 90.0
 
-    Average sum of all orders: 110.4
+    Average sum of all orders: 142.1
 
-    Average price of only orderings: 97.6
+    Average price of only orderings: 142.0
     Average price of only standard lunches: 142.5
 
-    Total price of only orderings: 488.0
+    Total price of only orderings: 710.0
     Total price of only standard lunches: 285.0
     → Orderings
 
-    The most expensive order (orderings): 150.0
+    The most expensive order (orderings): 180.0
     The most expensive order (standard lunches): 190.0
     → Standard Lunches
  */
