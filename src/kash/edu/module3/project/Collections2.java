@@ -28,6 +28,7 @@ public class Collections2 {
                 Arrays.asList(
                         new StandardLunch("Standard Lunch", 85, 2, 20, TypeOfOrdering.DELIVERY),
                         new StandardLunch("Standard Lunch", 85, 1, 10, TypeOfOrdering.HERE_AND_NOW),
+                        // amountOfFirstCourseDishes, amountOfMainCourseDishes, amountOfDesserts, amountOfBeverages
                         new Ordering(1,2,0,0,10,TypeOfOrdering.DELIVERY),
                         new Ordering(0,2,0,0,50,TypeOfOrdering.HERE_AND_NOW),
                         new Ordering(1,1,0,1,20,TypeOfOrdering.DELIVERY),
