@@ -1,4 +1,4 @@
-package kash.edu.theory.module3try.harryPotterColsStreams;/*
+package kash.edu.theory.module3try;/*
   @author   Alona Kashpruk
   @project   vsem
   @class  harryCols
@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class harryCols {
+public class harryColsEXAM {
     public static void main(String[] args) throws IOException {
 
         // Download a text of a novel about Harry Potter to string
