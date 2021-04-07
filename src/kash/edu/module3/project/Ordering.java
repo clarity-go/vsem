@@ -9,10 +9,10 @@ package kash.edu.module3.project;
 
 public class Ordering implements IAccounting {
 
-    private FirstCourse firstCourseDish;
-    private MainCourse mainCourseDish;
-    private Dessert dessert;
-    private Beverage beverage;
+    private boolean isFirstCourse;
+    private boolean isMainCourse;
+    private boolean isDessert;
+    private boolean isBeverage;
     private double weight;
     private double price;
     private int amount;
