@@ -13,12 +13,12 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
-public class filesManagement {
+public class filesManagementTry {
     public static void main(String[] args) throws IOException {
 
         LocalDateTime start = LocalDateTime.now();
 
-        String logs = new String(Files.readAllBytes(Paths.get("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs4.txt")));
+        String logs = new String(Files.readAllBytes(Paths.get("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt")));
 
         final String[] lines = logs.split("\n");
         // count the total number of logs (lines)

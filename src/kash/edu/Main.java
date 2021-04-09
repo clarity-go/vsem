@@ -1,10 +1,17 @@
 package kash.edu;
 
 import kash.edu.module2.patterns.builder.Student;
+import kash.edu.theory.module4try.LogsServiceTry;
+
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.temporal.ChronoUnit;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         // ----------------------------- RectangleTry -------------------------------
 /*
@@ -180,7 +187,7 @@ public class Main {
         // changes the student3 object's first name
         StudentTry student4 = student3;
         student4.setFirstName("Mark");
-*/
+
         // ---------------------- Builder: My -----------------------------
         Student student5 = new Student.Builder()
                 .setFirstName("Alona")
@@ -193,5 +200,31 @@ public class Main {
                 .setUniversity("KNLU")
                 .build();
         System.out.println(student6);
+
+ */
+        // ---------------------- Logs -----------------------------
+        // static method, create without creation of class object
+
+        System.out.println(LogsServiceTry.logsByDate("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
+                LocalDate.of(2020, Month.FEBRUARY, 14)).size()); // 2020, Month.FEBRUARY, 13 - 5315
+
+        LocalDateTime start = LocalDateTime.now();
+        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
+                LocalDate.of(2020, Month.FEBRUARY, 14));
+
+        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
+                LocalDate.of(2020, Month.FEBRUARY, 15));
+
+        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
+                LocalDate.of(2020, Month.FEBRUARY, 16));
+
+        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
+                LocalDate.of(2020, Month.FEBRUARY, 17));
+
+        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
+                LocalDate.of(2020, Month.FEBRUARY, 18));
+
+        LocalDateTime finish = LocalDateTime.now();
+        System.out.println(ChronoUnit.MILLIS.between(start, finish)); // 5315 msec
     }
 }
