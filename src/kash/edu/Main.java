@@ -202,29 +202,5 @@ public class Main {
         System.out.println(student6);
 
  */
-        // ---------------------- Logs -----------------------------
-        // static method, create without creation of class object
-
-        System.out.println(LogsServiceTry.logsByDate("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
-                LocalDate.of(2020, Month.FEBRUARY, 14)).size()); // 2020, Month.FEBRUARY, 13 - 5315
-
-        LocalDateTime start = LocalDateTime.now();
-        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
-                LocalDate.of(2020, Month.FEBRUARY, 14));
-
-        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
-                LocalDate.of(2020, Month.FEBRUARY, 15));
-
-        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
-                LocalDate.of(2020, Month.FEBRUARY, 16));
-
-        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
-                LocalDate.of(2020, Month.FEBRUARY, 17));
-
-        LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
-                LocalDate.of(2020, Month.FEBRUARY, 18));
-
-        LocalDateTime finish = LocalDateTime.now();
-        System.out.println(ChronoUnit.MILLIS.between(start, finish)); // 5315 msec
     }
 }
