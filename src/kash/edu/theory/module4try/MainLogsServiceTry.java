@@ -18,19 +18,19 @@ public class MainLogsServiceTry {
         // print total number of logs on a particular date
         // logsByDate - static method --> can create without creation of class object
         System.out.println(LogsServiceTry.logsByDate("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
-                LocalDate.of(2020, Month.FEBRUARY, 14)).size() + " logs"); // num of logs: 5315
+                LocalDate.of(2020, Month.FEBRUARY, 10)).size() + " logs"); // 6987 logs
 
         // ---------------------- sequential approach - последовательный подход -----------------------------
         // find all the ERROR logs for a specific date and write them into a specific file
         LocalDateTime start = LocalDateTime.now();
         // LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
         //        LocalDate.of(2020, Month.FEBRUARY, 14));
-        LocalDate date = LocalDate.of(2020, Month.FEBRUARY, 14);
+        LocalDate date = LocalDate.of(2020, Month.FEBRUARY, 10);
         for (int i = 0; i < 5; i++) {
             LogsServiceTry.logsByDateToFile("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt", date.plusDays(i));
         }
         LocalDateTime finish = LocalDateTime.now();
-        System.out.println(ChronoUnit.MILLIS.between(start, finish) + " msec"); // 5315 msec
+        System.out.println(ChronoUnit.MILLIS.between(start, finish) + " msec"); // 4795 msec
 
 
         // ---------------------- Threads: General info (1)  -----------------------------
@@ -42,9 +42,8 @@ public class MainLogsServiceTry {
         // Thread-0 Thread-1 Thread-5 Thread-2 Thread-4 Thread-7 Thread-8 Thread-3 Thread-6 Thread-9
 
 
-        // print total number of logs on a particular date
-
         // ---------------------- parallel approach - Multithreading (Variant 1) -----------------------------
+        // print total number of logs on a particular date
         // to run it need to change the void method getLogsCountByDate in LogsServiceTry2 into int (+ add return)
 /*      start = LocalDateTime.now();
 
@@ -71,34 +70,27 @@ public class MainLogsServiceTry {
         }
 /*
         OUTPUT:
-        Thread-0 has been started at 2021-04-15T11:50:31.913
-        Thread-3 has been started at 2021-04-15T11:50:31.913
-        Thread-4 has been started at 2021-04-15T11:50:31.913
-        Thread-1 has been started at 2021-04-15T11:50:31.913
-        Thread-2 has been started at 2021-04-15T11:50:31.913
-        2020-02-16 - 148
-        Thread-2 has been finished at 2021-04-15T11:50:33.410
-        Thread-2 DURATION is 1497
-        2020-02-17 - 5769
-        Thread-3 has been finished at 2021-04-15T11:50:33.424
-        Thread-3 DURATION is 1511
-        2020-02-15 - 2812
-        Thread-1 has been finished at 2021-04-15T11:50:33.453
-        Thread-1 DURATION is 1540
+        Thread-0 has been started at 2021-04-15T17:08:18.280
+        Thread-2 has been started at 2021-04-15T17:08:18.280
+        Thread-1 has been started at 2021-04-15T17:08:18.280
+        Thread-3 has been started at 2021-04-15T17:08:18.280
+        Thread-4 has been started at 2021-04-15T17:08:18.280
+        2020-02-13 - 4817
+        Thread-3 has been finished at 2021-04-15T17:08:19.507
+        Thread-3 DURATION is 1227
+        2020-02-12 - 4731
+        Thread-2 has been finished at 2021-04-15T17:08:19.572
+        Thread-2 DURATION is 1292
+        2020-02-11 - 7086
+        Thread-1 has been finished at 2021-04-15T17:08:19.601
+        Thread-1 DURATION is 1321
+        2020-02-10 - 6987
+        Thread-0 has been finished at 2021-04-15T17:08:19.647
+        Thread-0 DURATION is 1367
         2020-02-14 - 5315
-        Thread-0 has been finished at 2021-04-15T11:50:33.491
-        Thread-0 DURATION is 1578
-        2020-02-18 - 5601
-        Thread-4 has been finished at 2021-04-15T11:50:33.519
-        Thread-4 DURATION is 1606
+        Thread-4 has been finished at 2021-04-15T17:08:19.675
+        Thread-4 DURATION is 1395
 */
-
-
-
-
-
-
-
         // total time of all threads (difference between start of 1st and finish of the last one) about 6 sec
         // put in conclusion that usage of Multithreading reduces time it two times
     }

@@ -40,9 +40,6 @@ public class LogsServiceTry2 {
                 .filter(log -> log.contains(dateAsString)).count());
     }
 
-
-
-
         // Create a method that finds all the ERROR logs for a specific date
         // and writes them into a specific file (name = ERROR + Date  + .log)
         // Variant 1: using StringBuilder
