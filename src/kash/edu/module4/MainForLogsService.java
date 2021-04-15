@@ -66,13 +66,13 @@ public class MainForLogsService {
     Thread-0 has been started at 2021-04-15T18:35:29.409
     Thread-3 has been started at 2021-04-15T18:35:29.409
     Thread-3 has been finished at 2021-04-15T18:35:30.666
-    Thread-3 DURATION is 1257
+    Thread-3 DURATION is 1257 msec
     Thread-1 has been finished at 2021-04-15T18:35:30.687
-    Thread-1 DURATION is 1278
+    Thread-1 DURATION is 1278 msec
     Thread-2 has been finished at 2021-04-15T18:35:30.689
-    Thread-2 DURATION is 1280
+    Thread-2 DURATION is 1280 msec
     Thread-0 has been finished at 2021-04-15T18:35:30.725
-    Thread-0 DURATION is 1316
+    Thread-0 DURATION is 1316 msec
     Thread-4 has been finished at 2021-04-15T18:35:30.734
-    Thread-4 DURATION is 1325
+    Thread-4 DURATION is 1325 msec
 */

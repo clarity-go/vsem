@@ -48,7 +48,7 @@ public class MyThread extends Thread {
         LocalDateTime finish = LocalDateTime.now();
         System.out.println(this.getName() + " has been finished at " + finish);
         System.out.println(this.getName() + " DURATION is "
-                + ChronoUnit.MILLIS.between(start, finish));
+                + ChronoUnit.MILLIS.between(start, finish) + " msec");
     }
 
 }
