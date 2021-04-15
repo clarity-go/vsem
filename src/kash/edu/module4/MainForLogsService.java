@@ -46,16 +46,10 @@ public class MainForLogsService {
 
         // ---------------------- Parallel Approach (Multithreading) -----------------------
 
-        start = LocalDateTime.now();
-
         for (int l = 0; l < 5; l++) {
             new MyThread("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\logs.txt",
                     date.plusDays(l)).start();
         }
-
-        finish = LocalDateTime.now();
-        System.out.println("Parallel Approach: "
-                + ChronoUnit.MILLIS.between(start, finish) + " msec");
     }
 }
 // -------------------------------- OUTPUT --------------------------------
