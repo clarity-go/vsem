@@ -15,6 +15,9 @@ public class MyThreadTry extends Thread {
 
     private LocalDate date;
 
+    public MyThreadTry() {
+    }
+
     public void setDate(LocalDate date) {
         this.date = date;
     }
@@ -26,9 +29,10 @@ public class MyThreadTry extends Thread {
     public MyThreadTry(LocalDate date) {
         this.date = date;
     }
-/*
-    // RightMouseClick - Generate - override methods - run()void
-    @Override
+
+    // ---------------------- Threads: General info (1)  -----------------------------
+    // RightMouseClick - Generate - override methods - run():void
+/*    @Override
     public void run() {
         System.out.println(this.getName());
         // delay for 1 second
@@ -37,20 +41,20 @@ public class MyThreadTry extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }*/
+    }
+    */
     @Override
     public void run() {
         LocalDateTime start = LocalDateTime.now();
-        System.out.println(this.getName() + " has been started at" + start);
+        System.out.println(this.getName() + " has been started at " + start);
         try {
             LogsServiceTry2.getLogsCountByDate(this.getDate());
         } catch (IOException e){
             e.printStackTrace();
         }
         LocalDateTime finish = LocalDateTime.now();
-        System.out.println(this.getName() + " has been finished at" + finish);
-        System.out.println(this.getName() + " DURATION is" + ChronoUnit.MILLIS.between(start, finish));
+        System.out.println(this.getName() + " has been finished at " + finish);
+        System.out.println(this.getName() + " DURATION is " + ChronoUnit.MILLIS.between(start, finish));
+
     }
-
-
 }

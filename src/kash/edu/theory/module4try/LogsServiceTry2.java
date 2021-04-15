@@ -14,53 +14,64 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class LogsServiceTry2 {
-//    private final static String file = "C:\Users\Lenovo\Desktop\MY\Java\logs.txt";
+    private final static String file = "C:/Users/Lenovo/Desktop/MY/Java/logs.txt";
 
-/*    public LogsServiceTry() {
-    }
-
-    public LogsServiceTry(String file) {
-        this.file = file;
+    public LogsServiceTry2() {
     }
 
     public String getFile() {
         return file;
     }
 
-    public void setFile(String file) {
-        this.file = file;
-    }*/
-
+    // Create a method that returns the total number of logs on a particular date
+    // ---------------------- sequential approach (in a list) -----------------------------
     public static List<String> logsByDate(String file, LocalDate date) throws IOException {
-        // convert data to string
-        String dateAsSring = date.toString(); // for example: 2021-03-18
+        String dateAsString = date.toString(); // convert data to string, for example: "2021-03-18"
         List<String> list = Files.lines(Paths.get(file))
-                .filter(log -> log.contains(dateAsSring))
+                .filter(log -> log.contains(dateAsString))
                 .collect(Collectors.toList());
-
         return list;
     }
-
-    // Count the number of logs in a particular date
-    public static int getLogsCountByDate(LocalDate date) throws IOException {
-        String dateAsSring = date.toString();
+    // ----------------------  parallel approach (Multithreading) -----------------------------
+    public static void getLogsCountByDate(LocalDate date) throws IOException {
+        String dateAsString = date.toString();
         String file = "C:/Users/Lenovo/Desktop/MY/Java/logs.txt";
         System.out.println(date + " - " + Files.lines(Paths.get(file))
-                .filter(log -> log.contains(dateAsSring)).count());
+                .filter(log -> log.contains(dateAsString)).count());
     }
 
-    public static void logsByDateToFile(String file, LocalDate date) throws IOException {
-        String dateAsSring = date.toString(); // for example: 2021-03-18
-        String str = "";
-        StringBuilder sb = new StringBuilder(str);
-        Files.lines(Paths.get(file))
-                .filter(log -> log.contains(dateAsSring))
-                .filter(log -> log.contains("ERROR"))
-                .forEach(log -> sb.append(log + '\n'));
 
 
-        String fileOutput = "C:\\Users\\Lenovo\\Desktop\\MY\\Java\\" + "ERROR" + dateAsSring + ".log";
+
+        // Create a method that finds all the ERROR logs for a specific date
+        // and writes them into a specific file (name = ERROR + Date  + .log)
+        // Variant 1: using StringBuilder
+        public static void logsByDateToFile(String file, LocalDate date) throws IOException {
+            String dateAsString = date.toString(); // convert data to string, for example: "2021-03-18"
+            String str = "";
+            StringBuilder sb = new StringBuilder(str);
+
+            Files.lines(Paths.get(file))
+                    .filter(log -> log.contains(dateAsString))
+                    .filter(log -> log.contains("ERROR"))
+                    // .filter(log -> log.contains("2019"))
+                    .forEach(log -> sb.append(log + '\n'));
+
+            String fileOutput = "C:\\Users\\Lenovo\\Desktop\\MY\\Java\\" + "ERROR " + dateAsString + ".log";
+            Files.write(Paths.get(fileOutput), sb.toString().getBytes());
+/*
+        // Variant 2: Bad Way: String is an immutable object (Long)
+        // insert logs (which are in list) in the file, to do this need to convert list --> to String
+        for (String log: list){
+            str += log + '\n';
+        }
+        1. 1 строка. 1: "";
+        2. 2 строки. 1: "", 2: log1;
+        3. 3 строки. 1: "", 2: log1, 3: log1 + log2;
+        4. 4 строки. 1: "", 2: log1, 3: log1 + log2, 4: log1 + log2 + log3;
+        String fileOutput = "C:\\Users\\Lenovo\\Desktop\\MY\\Java\\" + "ERROR" + dateAsString + ".log";
         Files.write(Paths.get(fileOutput), str.getBytes());
+*/
     }
 }
 
