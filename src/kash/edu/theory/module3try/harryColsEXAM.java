@@ -49,8 +49,21 @@ public class harryColsEXAM {
             }
         }
 
-        map.entrySet().stream().limit(100).forEach(System.out::println);
+        // map.entrySet().stream().limit(100).forEach(System.out::println);
 
-        // EXAM: sort it by value
+        // sort it by value to define which words are mostly used
+        Map<String, Integer> sorted = new LinkedHashMap<>(); // use LinkedHashMap because it has order, HashMap don't have
+        map.entrySet().stream()
+                .sorted(Map.Entry.<String,Integer>comparingByValue().reversed())
+                .forEachOrdered(entry -> sorted.put(entry.getKey(), entry.getValue()));
+
+        // sort by alphabet
+/*
+        map.entrySet().stream()
+                .sorted(Map.Entry.<String,Integer>comparingByKey())
+                .forEachOrdered(entry -> sorted.put(entry.getKey(), entry.getValue()));
+
+*/
+        sorted.entrySet().stream().limit(100).forEach(System.out::println);
     }
 }
