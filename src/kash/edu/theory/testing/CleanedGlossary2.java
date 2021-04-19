@@ -73,6 +73,7 @@ public class CleanedGlossary2 {
         // Find all proper names in the text
         List<String> allProperNames = new ArrayList<>();
         Matcher matchingWord = Pattern.compile("\\b[A-Z][a-z]{4,}\\b").matcher(text);
+        // Matcher matchingWord = Pattern.compile("\\b[A-Z][a-z]{4,}\\b").matcher(text);
         while (matchingWord.find())
         {
             allProperNames.add(matchingWord.group());
