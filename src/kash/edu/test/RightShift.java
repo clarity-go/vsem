@@ -37,3 +37,9 @@ public class RightShift {
         System.out.println(Arrays.toString(rightShift(array3, 21))); // [50, 10, 20, 30, 40]
     }
 }
+/*
+----------------- OUTPUT: -----------------
+[30, 10, 20]
+[40, 50, 10, 20, 30]
+[50, 10, 20, 30, 40]
+*/

@@ -32,3 +32,8 @@ public class Duplicates {
         System.out.println(hasDuplicates(array)); // true
     }
 }
+/*
+----------------- OUTPUT: -----------------
+ false
+ true
+*/

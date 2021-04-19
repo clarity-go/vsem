@@ -33,3 +33,8 @@ public class CommonPrefix {
 
     }
 }
+/*
+----------------- OUTPUT: -----------------
+ ab
+ abc
+*/

@@ -114,6 +114,8 @@ public class Glossary {
     }
 }
 /*
+----------------- OUTPUT: -----------------
+
 ✦✦✦--------✦✦✦ Final Task ✦✦✦--------✦✦✦
 Word: the, the number of occurrences: 3628
 Word: and, the number of occurrences: 1919
