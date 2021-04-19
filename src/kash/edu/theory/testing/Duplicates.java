@@ -16,17 +16,16 @@ import java.util.stream.Collectors;
 
 public class Duplicates {
     public  static  boolean hasDuplicates(int[] array){
+        Arrays.sort(array);
+        int numberOfIntersections = 0;
 
-        // Create the initial list
-        List<Integer> initialList = new ArrayList<Integer>(array.length);
-        for (int i : array) { initialList.add(i); }
+        for (int i = 0; i < array.length - 1; i++) {
+            if(array[i] == array[i + 1]){
+                numberOfIntersections++;
+            }
+        }
+        return (numberOfIntersections == 0) ? false : true;
 
-        // Delete the duplicates in the list
-        List<Integer> list2 = Arrays.stream(array).boxed()
-                .distinct().collect(Collectors.toList());
-
-        // return true or false depending on the compared sizes of the lists
-        return initialList.size() == list2.size() ? false : true;
     }
 
     public static void main(String[] args) {
@@ -37,3 +36,17 @@ public class Duplicates {
     }
 }
 
+//---------------------------
+
+        /*
+
+        // Create the initial list
+        List<Integer> initialList = new ArrayList<Integer>(array.length);
+        for (int i : array) { initialList.add(i); }
+
+        // Delete the duplicates in the list
+        List<Integer> list2 = Arrays.stream(array).boxed()
+                .distinct().collect(Collectors.toList());
+
+        // return true or false depending on the compared sizes of the lists
+        return initialList.size() == list2.size() ? false : true;*/
