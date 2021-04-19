@@ -7,17 +7,16 @@ package kash.edu.theory.testing;/*
 */
 
 // 2. RightShift: Develop a method to realize right shift in an array.
-
 import java.util.Arrays;
 
 public class RightShiftClear {
-    public static int[] rightShift(int[] array, int step){
+    public static int[] rightShift(int[] array, int step) {
 
         for (int i = 0; i < step; i++) {
             // take out the last element
             int temp = array[array.length - 1];
             for (int j = array.length - 1; j > 0; j--) {
-                // shift the array elements towards right by one place
+                // shift the array elements towards right by one step
                 array[j] = array[j - 1];
             }
             array[0] = temp;
@@ -30,6 +29,8 @@ public class RightShiftClear {
 
         int[] array2 = {10, 20, 30, 40, 50};
         System.out.println(Arrays.toString(rightShift(array2, 2))); // [40, 50, 10, 20, 30]
-        System.out.println(Arrays.toString(rightShift(array2, 21))); // [50, 10, 20, 30, 40]
+
+        int[] array3 = {10, 20, 30, 40, 50};
+        System.out.println(Arrays.toString(rightShift(array3, 21))); // [50, 10, 20, 30, 40]
     }
 }

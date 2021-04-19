@@ -6,7 +6,7 @@ package kash.edu.theory.testing;/*
   @since 19.04.2021 - 18.04
 */
 
-// 2. RightShift: Develop a method to realize right shift in an array.
+// 2. RightShift: Develop a method to realize right shift in an array
 
 import java.util.Arrays;
 

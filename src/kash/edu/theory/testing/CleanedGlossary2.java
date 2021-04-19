@@ -1,4 +1,10 @@
-package kash.edu.theory.testing;
+package kash.edu.theory.testing;/*
+  @author   Alona Kashpruk
+  @project   vsem
+  @class  CleanedGlossary2
+  @version  1.0.0 
+  @since 19.04.2021 - 20.36
+*/
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -10,31 +16,8 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.Map.Entry;
 
-/**
-  @author   Alona Kashpruk
-  @project   vsem
-  @class  CleanedGlossary
-  @version  1.0.0 
-  @since 18.04.2021 - 15.03
-**/
-
-/* 1. GLOSSARY - 10 points
-        1.1. Download a text about Harry Potter.
-        1.2. For each distinct word in the text calculate the number of occurrence.
-        1.3. Use RegEx.
-        1.4. Sort in the DESC mode by the number of occurrence.
-        1.5. Find the first 20 pairs.
-        1.6  Find all the proper names.
-        1.7. Count them and arrange in alphabetic order.
-        1.8. First 20 pairs and names write into to a file test.txt.
-        1.9. Create a fine header for the file.
-        1.10 Use Java Collections to demonstrate your experience (Map, List).
-
-*/
-
-public class CleanedGlossary {
+public class CleanedGlossary2 {
     public static void main(String[] args) throws IOException {
         // Get a text of a novel about Harry Potter from the file
         String text = new String(Files.readAllBytes(Paths.get("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\harry.txt")));
@@ -85,28 +68,6 @@ public class CleanedGlossary {
         // String sortedToString = sorted20.toString();
         Files.write(path, sortedPairs.toString().getBytes(StandardCharsets.UTF_8));
 
-        //---------------------------------
-/*
-        // Create iterator 'items' to be able to switch to next sortedByCount map element from the beginning
-        Iterator<Map.Entry<String, Integer>> items = sortedByCount.entrySet().iterator();
-
-        // Define a path where first 20 pairs and proper names will be written
-        Path path = Paths.get("C:\\Users\\Lenovo\\Desktop\\MY\\Java\\test.txt");
-
-        // Write first 20 pairs of the most commonly used distinct words to the file test.txt
-        for (int i = 0; i < 20; i++)
-        {
-            // Get next item
-            Map.Entry<String, Integer> pair = items.next();
-
-            System.out.println("Word: " + pair.getKey() + ", the number of occurrences: " + pair.getValue());
-
-            // Write occurrence pair to the file
-            Files.write(path, ("Word: " + pair.getKey() + ", the number of occurrences: " + pair.getValue() + "\n")
-                            .getBytes(), StandardOpenOption.APPEND);
-        }
-        */
-
         // ------------------------------- Proper Names -------------------------------
 
         // Find all proper names in the text
@@ -124,14 +85,6 @@ public class CleanedGlossary {
         // Count the number of distinct proper names
         int properNamesAmountDistinct = distinctProperNames.size();
         System.out.println("Proper names amount: " + properNamesAmountDistinct);
-
-/*
-        // Print first 20 distinct proper names
-        System.out.println("\tProper Names: ");
-        for (int i = 0; i < 20; i++) {
-            System.out.println(distinctProperNames.get(i));
-        }
-*/
 
         // Sort proper names in alphabetic order
         Collections.sort(distinctProperNames);

@@ -12,6 +12,17 @@ package kash.edu.theory.testing;
 public class Prefix {
     public static String prefix(String[] array) {
 
+        String prefix = array[0];
+        for (int i = 1; i < array.length; i++) {
+            while (array[i].indexOf(prefix) != 0) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+                if (prefix.equals("")) return "";
+            }
+        }
+        return prefix;
+
+
+        /*
         String commonPrefix = "";
         if (array.length > 0) {
             commonPrefix = array[0];
@@ -27,6 +38,7 @@ public class Prefix {
             commonPrefix = array[i].substring(0, j);
         }
         return commonPrefix;
+        */
     }
 
     public static void main(String[] args) {
