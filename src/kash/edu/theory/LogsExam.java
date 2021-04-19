@@ -7,9 +7,6 @@ package kash.edu.theory;
   @since 18.04.2021 - 18.01
 */
 
-import kash.edu.theory.module3try.collectionsTry.Gender;
-import kash.edu.theory.module3try.collectionsTry.StudentForCols;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
