@@ -156,5 +156,6 @@ public class Rhombus {
     Hash code of 2nd rhombus: 20317121
  */
 
+
 }
 
